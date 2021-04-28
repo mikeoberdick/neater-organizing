@@ -1,30 +1,30 @@
 <?php
 
-//Product CPT
-//add_action( 'init', 'product_post_type', 0 );
+//Testimonial CPT
+add_action( 'init', 'testimonial_post_type', 0 );
 
-function product_post_type() {
+function testimonial_post_type() {
 // Set UI labels
   $labels = array(
-    'name'                => 'Products',
-    'singular_name'       => 'Product',
-    'menu_name'           => 'Products',
-    'parent_item_colon'   => 'Parent Product',
-    'all_items'           => 'All Products',
-    'view_item'           => 'View Product',
-    'add_new_item'        => 'Add New Product',
-    'add_new'             => 'Add Product',
-    'edit_item'           => 'Edit Product',
-    'update_item'         => 'Update Product',
-    'search_items'        => 'Search Products',
-    'not_found'           => 'No Products Found',
-    'not_found_in_trash'  => 'No Products Found in Trash',
+    'name'                => 'Testimonials',
+    'singular_name'       => 'Testimonial',
+    'menu_name'           => 'Testimonials',
+    'parent_item_colon'   => 'Parent Testimonial',
+    'all_items'           => 'All Testimonials',
+    'view_item'           => 'View Testimonial',
+    'add_new_item'        => 'Add New Testimonial',
+    'add_new'             => 'Add Testimonial',
+    'edit_item'           => 'Edit Testimonial',
+    'update_item'         => 'Update Testimonial',
+    'search_items'        => 'Search Testimonials',
+    'not_found'           => 'No Testimonials Found',
+    'not_found_in_trash'  => 'No Testimonials Found in Trash',
   );
   
 // Set other options
   $args = array(
-    'label'               => 'Products',
-    'description'         => 'A list of the Cargill Legends products.',
+    'label'               => 'Testimonials',
+    'description'         => 'Neater Organizing testimonials.',
     'labels'              => $labels,
     'supports'            => array(
         'title',
@@ -44,11 +44,11 @@ function product_post_type() {
     'exclude_from_search' => false,
     'publicly_queryable'  => true,
     'capability_type'     => 'page',
-    'menu_icon'           => 'dashicons-awards'
+    'menu_icon'           => 'dashicons-editor-quote'
   );
   
 //Register the CPT
-  register_post_type( 'product', $args );
+  register_post_type( 'testimonial', $args );
 }
 
 

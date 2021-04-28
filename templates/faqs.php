@@ -1,4 +1,4 @@
-<?php /* Template Name: About */ 
+<?php /* Template Name: FAQs */ 
 
 //Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
@@ -7,9 +7,9 @@ defined( 'ABSPATH' ) || exit;
 
 <div id="content" class = "page-wrapper" tabindex="-1">
 	<main id="main" class="site-main">
-		<div id="about">
-			<h1>About Page</h1>
-		</div><!-- #about -->
+		<div id="faqs">
+			<h1>FAQs Page</h1>
+		</div><!-- #faqs -->
 	</main><!-- #main -->
 </div><!-- #content -->
 
