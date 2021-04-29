@@ -14,27 +14,92 @@ defined( 'ABSPATH' ) || exit;
 
 <div id="js-heightControl" style="height: 0;">&nbsp;</div>
 
-<footer class = "container-fluid">
+<?php $mc = get_field('mailchimp_subscribe', 'options'); $bg = $mc['background']; ?>
+<section id="mailchimp" style = "background: url('<?php echo $bg['url']; ?>');">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="inner-container">
+					<h1><?php echo $mc['header']; ?></h1>
+					<div class = "wysiwyg"><?php echo $mc['content']; ?></div><!-- .wysiwyg -->
+					<span>[MC FORM HERE]</span>
+				</div><!-- .inner-container -->
+			</div><!-- .col-sm-12 -->
+		</div><!-- .row -->
+	</div><!-- .container -->
+</section><!-- #mailchimp -->
+
+<section id="instagram">
+	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 text-center">
-				<div class = "d-inline-flex mb-3">
-					<a class = "social-link facebook mr-2" rel="noreferrer" target = "_blank" href="<?php the_field('facebook_url', 'options') ?>"><i class="fa fa-facebook" aria-hidden="true"></i><span class = "sr-only sr-only-focusable">Facebook</span></a>
-					<a class = "social-link twitter mr-2" rel="noreferrer" target = "_blank" href="<?php the_field('twitter_url', 'options') ?>"><i class="fa fa-twitter" aria-hidden="true"></i><span class = "sr-only sr-only-focusable">Twitter</span></a>
-					<a class = "social-link linkedin" rel="noreferrer" target = "_blank" href="<?php the_field('linkedin_url', 'options') ?>"><i class="fa fa-linkedin" aria-hidden="true"></i><span class = "sr-only sr-only-focusable">Linked In</span></a>	
-				</div>
-				<p class = "mb-0">&copy <?php echo bloginfo('name'); ?></p>
-				<p class = "mb-0">Website designed and developed by <a rel="noreferrer" target = "_blank" href = "https://pixelstrikecreative.com" alt = "Pixelstrike Creative Site">Pixelstrike Creative</a></p>
-			</div><!--col-md-12 -->
-		</div><!-- row -->
-	</footer>
+				<h1 class="h5 subheader">Follow Us On Instagram</h1>
+				<h2>@NeaterOrganizing</h2>
+			</div><!-- .col-sm-12 -->
+		</div><!-- .row -->
+	</div><!-- .container -->
+</section><!-- #instagram -->
+
+<footer>
+	<div class="inner-wrapper">
+		<div id="footerLogo">
+			<?php $img = get_field('logo', 'options'); ?>
+			<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+		</div><!-- #footerLogo -->
+		<div id="footerLinks">
+			<div class="left">
+				<ul class = "list-unstyled">
+				<?php $leftUrls = get_field('footer_links_left', 'options'); ?>
+				<?php foreach( $leftUrls as $post ): ?>
+			        <li>
+			            <a class = "h5 subheader" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+			        </li>
+	        	<?php endforeach; wp_reset_postdata(); ?>
+	        	</ul>
+			</div><!-- .left -->
+			<div class="right">
+				<ul class = "list-unstyled">
+					<?php $rightUrls = get_field('footer_links_right', 'options'); ?>
+					<?php foreach( $rightUrls as $post ): ?>
+				        <li>
+				            <a class = "h5 subheader" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+				        </li>
+		        	<?php endforeach; wp_reset_postdata(); ?>
+		        </ul>	
+			</div><!-- .right -->
+		</div><!-- #footerLinks -->
+		<div id="contact">
+			<?php $phone = preg_replace('/[^0-9]/', '', get_field('phone_number', 'option')); ?>
+			<a href="tel:<?php echo $phone ?>"><h5 class = "subheader">Call Us At <?php the_field('phone_number', 'option'); ?></h5></a>
+			<h5 class = "subheader" >Or Find Us Online</h5>
+			<div class="social-links">
+				<a class = "social-link instagram mr-2" rel="noreferrer" target = "_blank" href="<?php the_field('instagram_url', 'options') ?>"><i class="fa fa-instagram" aria-hidden="true"></i><span class = "sr-only sr-only-focusable">Instagram</span></a>
+				<a class = "social-link facebook mr-2" rel="noreferrer" target = "_blank" href="<?php the_field('facebook_url', 'options') ?>"><i class="fa fa-facebook" aria-hidden="true"></i><span class = "sr-only sr-only-focusable">Facebook</span></a>
+				<a class = "social-link facebook mr-2" rel="noreferrer" target = "_blank" href="<?php the_field('facebook_url', 'options') ?>"><i class="fa fa-facebook" aria-hidden="true"></i><span class = "sr-only sr-only-focusable">Facebook</span></a>
+				<a class = "social-link pinterest" rel="noreferrer" target = "_blank" href="<?php the_field('pinterest_url', 'options') ?>"><i class="fa fa-pinterest" aria-hidden="true"></i><span class = "sr-only sr-only-focusable">Pinterest</span></a>
+			</div><!-- .social-links -->
+		</div><!-- #contact -->	
+	</div><!-- .inner-wrapper -->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<p class = "mb-0 small"><?php echo date('Y') . '&copy ' . get_bloginfo('name') . ' All Rights Reserved.'; ?>
+					<a href="/privacy-policy">Privacy Policy.</a>
+					<a href="/terms-and-conditions">Terms & Conditions.</a>
+				</p>
+				<p class = "mb-0 small">Site design by <a rel="noreferrer" target = "_blank" href = "https://www.saraholiviamarketing.com/" alt = "Sarah Olivia Marketing">Sarah Olivia Marketing</a></p>	
+			</div><!-- .col-sm-12 -->
+		</div><!-- .row -->
+	</div><!-- .container -->			
+</footer>
 
 <?php wp_footer(); ?>
 
 <?php if (is_page_template('templates/homepage.php')) : ?>
 <script>
 	jQuery(document).ready(function() {
-  		jQuery('#productSlider').slick({
-		    slidesToShow: 3,
+  		jQuery('#testimonialSlider').slick({
+		    slidesToShow: 1,
 		    slidesToScroll: 1,
   		});
 	});

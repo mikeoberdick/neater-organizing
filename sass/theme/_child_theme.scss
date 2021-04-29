@@ -8,11 +8,12 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-	color: $color;
+	color: $red;
 	font-family: $font;
+  margin-bottom: 0;
 }
 
-h1 {  
+h1 {
   font-size: $mod_1*$mod_1*$mod_1*$mod_1 *1rem; 
   @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
 }
@@ -26,7 +27,7 @@ h3 {
 }
 
 body {
-	color: #000;
+	color: $black;
 	font-family: $font;
 }
 
@@ -38,13 +39,39 @@ a {
   }
 }
 
+.subheader {
+  text-transform: uppercase;
+  color: $black;
+}
+
 /*------------------------------------------------*/
-/*--------------------[NAV]----------------------*/
+/*-------------------[HEADER]---------------------*/
 /*------------------------------------------------*/
+#notificationBar {
+  background-color: $blue;
+  padding: 15px 0;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    margin-left: 5px;
+  }
+}
+
+#wrapper-navbar {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
 #main-menu {
   a {
     font-family: $font;
-    color: $color;
+    text-transform: uppercase;
+    font-weight: bold;
+    &:hover {
+      color: $red;
+    }
   }
 }
 
@@ -62,34 +89,127 @@ a {
 
 .btn {
   font-family: $font;
-  border: 3px solid transparent;
+  border: 0 !important;
   text-transform: uppercase;
-  border-radius: 5px;
+  border-radius: 37px;
   padding: .5rem 1.5rem;
   white-space: normal;
+  color: #fff !important;
 }
 
-.primary-button {
-  color: #fff !important;
-  background-color: $color !important;
+.blue-button {
+  background-color: $blue !important;
+  font-weight: bold;
   &:hover {
-    background-color: darken( $color, 10% ) !important;
-    border: 0;
+    background-color: darken( $blue, 10% ) !important;
     }
+}
+
+.brown-button {
+  background-color: $brown !important;
+  &:hover {
+    background-color: darken( $brown, 10% ) !important;
+    }
+}
+
+.outline-button {
+  color: $red !important;
+  border: solid 2px $blue;
+  background-color: transparent !important;
+}
+
+/*------------------------------------------------*/
+/*-------------------[GENERAL]--------------------*/
+/*------------------------------------------------*/
+.hero {
+  padding-top: 24.53%;
+  box-shadow: rgba(255,255,255,.85) 0 0 0 1000px inset;
+  position: relative;
+  @include media-breakpoint-up(lg) {
+    padding-top: 0;
+    min-height: 400px;
+  }
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
 }
 
 /*------------------------------------------------*/
 /*--------------------[HOME]----------------------*/
 /*------------------------------------------------*/
 #homepage {
-  
+  .hero {
+    padding-top: 42.81%;
+    box-shadow: none;
+    @include media-breakpoint-up(lg) {
+      padding-top: 0;
+      min-height: 650px;
+    }
+    .inner-container {
+      @include media-breakpoint-up(lg) {
+        width: 50%;
+        text-align: left;
+      }
+    }
+  }
 }
 
 /*------------------------------------------------*/
 /*--------------------[FOOTER]--------------------*/
 /*------------------------------------------------*/
+#mailchimp {
+  padding-top: 41.51%;
+  position: relative;
+  @include media-breakpoint-up(lg) {
+    padding-top: 0;
+    min-height: 500px;
+  }
+  .container {
+    padding: 5% 5% 2.5% 5%;
+    background: #ffffffb8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;  
+  }
+}
 footer {
-
+  background-color: $blue;
+  padding-top: 100px;
+  padding-bottom: 25px;
+  padding-left: 10%;
+  padding-right: 10%;
+  a {
+    &:hover {
+      color: $black;
+    }
+  }
+  .inner-wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    margin-bottom: 100px;
+    #footerLogo {
+      flex-basis: 25%;
+      margin-right: 10%;
+    }
+    #footerLinks {
+      flex-basis: 30%;
+      display: flex;
+      .left {
+        flex-basis: 50%;
+      }
+    }
+    #contact {
+      margin-left: 10%;
+      flex-basis: 25%;
+    }
+  }
 }
 
 /*------------------------------------------------*/
@@ -107,7 +227,7 @@ footer {
     margin-bottom: 25px;
   }
   .nf-response-msg {
-      border: solid 1px $light-blue;
+      border: solid 1px $color;
       padding: 10px 25px;
       margin-bottom: 15px;
       border-radius: 5px;
@@ -116,7 +236,7 @@ footer {
       }
   }
   label {
-    color: $gray;
+    color: $color;
   }
   .list-container {
     ul {
@@ -139,7 +259,7 @@ footer {
     }
     &:after {
       background: #fff;
-      border-color: $green;
+      border-color: $color;
       border-width: 2px;
       border-radius: 5px;
       width: 25px;
@@ -148,26 +268,26 @@ footer {
     }
   }
   .listcheckbox-wrap .nf-field-element label.nf-checked-label:after {
-    border-color: $green;
+    border-color: $color;
   }
   input:not([type="button"]), textarea {
     padding: 10px 15px;
-    border: solid 2px $green !important;
+    border: solid 2px $color !important;
     border-radius: 10px !important;
     background: #fff;
 
   }
   ::-webkit-input-placeholder {
-    color: $gray;
+    color: $color;
   }
   :-ms-input-placeholder {
-    color: $gray;
+    color: $color;
   }
   ::placeholder {
-    color: $gray;
+    color: $color;
   }
   .nf-error.field-wrap .nf-field-element:after {
-    background: $green;
+    background: $color;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
   }

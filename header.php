@@ -42,6 +42,16 @@ defined( 'ABSPATH' ) || exit;
 <body <?php body_class(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
 
+<div id="notificationBar">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<a href="/services-and-pricing-guide"><span class = "h5 subheader">View Our Services And Pricing Guide</span><img src = "<?php echo get_stylesheet_directory_uri() . '/img/long_arrow.png'; ?>"></a>
+			</div><!-- .col-sm-12 -->
+		</div><!-- .row -->
+	</div><!-- .container -->
+</div><!-- #notificationBar -->
+
 	<!-- ******************* The Navbar Area ******************* -->
 	<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 

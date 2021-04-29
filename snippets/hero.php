@@ -1,14 +1,22 @@
-<?php $hero = get_field('hero'); ?>
+<?php $hero = get_field('hero');
+$img = $hero['background_image']; 
+if ( $hero['header'] ) {
+	$title = $hero['header'];
+} else {
+	$title = get_the_title();
+} ?>
 
-<?php $img = $hero['background_image']; ?>
 <section class = "hero" style = "background: url(<?php echo $img['url']; ?>)">
-	<div class="container h-100">
-		<div class="row h-100">
-			<div class="col-sm-12 h-100">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
 				<div class="inner-container">
 					<h1 class = "header"><?php echo $title; ?></h1>
-					<?php if ( $hero['text'] ) : ?>
-					<p class = "text"><?php echo $hero['text']; ?></p>
+					<?php if ( $hero['copy'] ) : ?>
+					<p class = "copy"><?php echo $hero['copy']; ?></p>
+					<?php endif; ?>
+					<?php if ( $hero['button_text'] ) : ?>
+					<a href = "<?php echo $hero['button_link']; ?>"><button role = "button" class = "btn blue-button"><?php echo $hero["button_text"]; ?></button></a>
 					<?php endif; ?>
 				</div><!-- .inner-container -->
 			</div><!-- .col-sm-12 -->
