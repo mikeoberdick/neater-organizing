@@ -80,7 +80,22 @@ p {
 }
 
 .wysiwyg {
-
+  ul {
+    list-style: none;
+    li {
+      &:before {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\f111";
+        margin-right: 10px;
+        font-size: 8px;
+      }
+    }
+  }
 }
 
 /*------------------------------------------------*/
@@ -127,6 +142,39 @@ p {
   max-width: 75%;
 }
 
+.dropdown-menu {
+  margin-top: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: #F6F5F4;
+  .dropdown-item {
+    &:active {
+    color: $red;
+    text-decoration: none;
+    background-color: #F6F5F4;
+    }
+  }
+  li {
+    a {
+      text-align: center;
+    }
+  }
+}
+
+.dropdown-toggle {
+  &:after {
+    transition: all .5s;
+    font: normal normal normal 14px/1 FontAwesome;
+    border: 0;
+    content: "\f078"; 
+  }
+  &:hover {
+    &:after {
+      transform: rotate(180deg); 
+    }
+  }
+}
+
 /*------------------------------------------------*/
 /*-------------------[BUTTONS]--------------------*/
 /*------------------------------------------------*/
@@ -141,10 +189,11 @@ p {
   color: #fff !important;
 }
 
-.brown-button {
-  background-color: $brown !important;
+.blue-button {
+  background-color: $blue !important;
   &:hover {
-    background-color: darken( $brown, 10% ) !important;
+    color: $red !important;
+    background-color: transparent !important;
     }
 }
 
@@ -179,18 +228,22 @@ p {
   }
 }
 
+.hero, section {
+  margin-bottom: 100px;
+}
+
+.full-width-image {
+  margin-bottom: 75px;
+}
+
 /*------------------------------------------------*/
 /*--------------------[HOME]----------------------*/
 /*------------------------------------------------*/
 #homepage {
-  section {
-    margin-bottom: 100px;
-  }
   .hero {
     padding-top: 42.81%;
     box-shadow: none;
     background-size: contain;
-    margin-bottom: 100px;
     @include media-breakpoint-up(lg) {
       padding-top: 0;
       min-height: 650px;
@@ -203,9 +256,6 @@ p {
     }
   }
   #sectionTwo {
-    .full-width-image {
-      margin-bottom: 75px;
-    }
     h1 {
       margin-bottom: 75px;
     } 
@@ -213,7 +263,7 @@ p {
   #sectionThree {
     background-color: $blue;
   }
-    #sectionFour {
+  #sectionFour {
     .horizontal-card {
       flex-basis: 20%;
       background-color: #fff;
@@ -221,7 +271,81 @@ p {
     }
   }
 }
+/*------------------------------------------------*/
+/*----------------[MEET ANNETTE]-----------------*/
+/*------------------------------------------------*/
+#meetAnnette {
+  #sectionOne {
+    text-align: center;
+    h1 {
+      margin-bottom: 35px;
+    }
+  }
+  #sectionTwo {
+    background-color: rgba(166,180,179,.30);
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+}
 
+/*-----------------------------------------------*/
+/*---------------[TESTIMONIALS]------------------*/
+/*------------------------------------------------*/
+#testimonials {
+  .testimonial {
+    .pull-quote {
+      margin-bottom: 25px;
+    }
+  }
+  #sectionTwo {
+    .testimonial {
+      background-color: #DFE2E2;
+      &:first-of-type {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+/*------------------------------------------------*/
+/*-----------[FAQs]-------------*/
+/*------------------------------------------------*/
+#faqs {
+  #questionContainer {
+    margin-bottom: 37.5px;
+    .question-container {
+      border-bottom: solid 1px #707070;
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+      cursor: pointer;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      .question {
+        img {
+          transition: all .5s;
+        }
+      }
+      a {
+        &[aria-expanded="true"] {
+          img {
+            transform: rotate(180deg);
+          }
+        }
+      }
+      .question-text {
+        color: $black;
+        font-family: $freightNeoBold;
+        text-transform: uppercase;
+      }
+      .card-body {
+        padding: 25px 0 0 25px;
+        p:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
 /*------------------------------------------------*/
 /*-----------[HOME OFFICE ORGANIZING]-------------*/
 /*------------------------------------------------*/
@@ -238,16 +362,44 @@ p {
         }
       }  
     }
+    margin-bottom: 0;
   }
   #sectionThree {
     background-color: rgba(166,180,179,.40);
     padding-top: 50px;
     padding-bottom: 50px;
+    margin-bottom: 0;
     .inner-container {
       display: flex;
       align-items: flex-start;
       img {
         margin-right: 25px;
+      }
+    }
+    .btn {
+      &:hover {
+        background-color: $brown !important;
+        border-color: #7F423D !important;
+      }
+    }
+  }
+  #sectionFour {
+    padding-top: 48.07%;
+    position: relative;
+    background-size: cover;
+    @include media-breakpoint-up(lg) {
+      padding-top: 0;
+      min-height: 650px;
+    }
+    .container-fluid {    
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      .inner-container {
+        padding: 50px;
+        background: #ffffffb8;
+        text-align: center;
       }
     }
   }

@@ -10613,6 +10613,19 @@ a {
 p {
   margin-bottom: 25px; }
 
+.wysiwyg ul {
+  list-style: none; }
+  .wysiwyg ul li:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f111";
+    margin-right: 10px;
+    font-size: 8px; }
+
 /*------------------------------------------------*/
 /*-------------------[HEADER]---------------------*/
 /*------------------------------------------------*/
@@ -10653,6 +10666,29 @@ p {
 #logoLink {
   max-width: 75%; }
 
+.dropdown-menu {
+  margin-top: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: #F6F5F4; }
+  .dropdown-menu .dropdown-item:active {
+    color: #6D1919;
+    text-decoration: none;
+    background-color: #F6F5F4; }
+  .dropdown-menu li a {
+    text-align: center; }
+
+.dropdown-toggle:after {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  font: normal normal normal 14px/1 FontAwesome;
+  border: 0;
+  content: "\f078"; }
+
+.dropdown-toggle:hover:after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
 /*------------------------------------------------*/
 /*-------------------[BUTTONS]--------------------*/
 /*------------------------------------------------*/
@@ -10665,10 +10701,11 @@ p {
   white-space: normal;
   color: #fff !important; }
 
-.brown-button {
-  background-color: #7F423D !important; }
-  .brown-button:hover {
-    background-color: #5d302c !important; }
+.blue-button {
+  background-color: #A6B4B3 !important; }
+  .blue-button:hover {
+    color: #6D1919 !important;
+    background-color: transparent !important; }
 
 .outline-button {
   color: #6D1919 !important;
@@ -10699,18 +10736,20 @@ p {
             transform: translate(-50%, -50%);
     text-align: center; }
 
+.hero, section {
+  margin-bottom: 100px; }
+
+.full-width-image {
+  margin-bottom: 75px; }
+
 /*------------------------------------------------*/
 /*--------------------[HOME]----------------------*/
 /*------------------------------------------------*/
-#homepage section {
-  margin-bottom: 100px; }
-
 #homepage .hero {
   padding-top: 42.81%;
   -webkit-box-shadow: none;
           box-shadow: none;
-  background-size: contain;
-  margin-bottom: 100px; }
+  background-size: contain; }
   @media (min-width: 992px) {
     #homepage .hero {
       padding-top: 0;
@@ -10719,9 +10758,6 @@ p {
     #homepage .hero .inner-container {
       width: 50%;
       text-align: left; } }
-
-#homepage #sectionTwo .full-width-image {
-  margin-bottom: 75px; }
 
 #homepage #sectionTwo h1 {
   margin-bottom: 75px; }
@@ -10736,12 +10772,64 @@ p {
   padding: 15px; }
 
 /*------------------------------------------------*/
+/*----------------[MEET ANNETTE]-----------------*/
+/*------------------------------------------------*/
+#meetAnnette #sectionOne {
+  text-align: center; }
+  #meetAnnette #sectionOne h1 {
+    margin-bottom: 35px; }
+
+#meetAnnette #sectionTwo {
+  background-color: rgba(166, 180, 179, 0.3);
+  padding-top: 75px;
+  padding-bottom: 75px; }
+
+/*-----------------------------------------------*/
+/*---------------[TESTIMONIALS]------------------*/
+/*------------------------------------------------*/
+#testimonials .testimonial .pull-quote {
+  margin-bottom: 25px; }
+
+#testimonials #sectionTwo .testimonial {
+  background-color: #DFE2E2; }
+  #testimonials #sectionTwo .testimonial:first-of-type {
+    margin-bottom: 25px; }
+
+/*------------------------------------------------*/
+/*-----------[FAQs]-------------*/
+/*------------------------------------------------*/
+#faqs #questionContainer {
+  margin-bottom: 37.5px; }
+  #faqs #questionContainer .question-container {
+    border-bottom: solid 1px #707070;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    cursor: pointer; }
+    #faqs #questionContainer .question-container:last-of-type {
+      margin-bottom: 0; }
+    #faqs #questionContainer .question-container .question img {
+      -webkit-transition: all .5s;
+      transition: all .5s; }
+    #faqs #questionContainer .question-container a[aria-expanded="true"] img {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg); }
+    #faqs #questionContainer .question-container .question-text {
+      color: #2D2D2B;
+      font-family: "Freight Neo Bold";
+      text-transform: uppercase; }
+    #faqs #questionContainer .question-container .card-body {
+      padding: 25px 0 0 25px; }
+      #faqs #questionContainer .question-container .card-body p:last-of-type {
+        margin-bottom: 0; }
+
+/*------------------------------------------------*/
 /*-----------[HOME OFFICE ORGANIZING]-------------*/
 /*------------------------------------------------*/
 #homeOfficeOrganizing #sectionTwo {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  margin-bottom: 0; }
   @media (max-width: 767.98px) {
     #homeOfficeOrganizing #sectionTwo {
       -ms-flex-wrap: wrap;
@@ -10753,7 +10841,8 @@ p {
 #homeOfficeOrganizing #sectionThree {
   background-color: rgba(166, 180, 179, 0.4);
   padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  margin-bottom: 0; }
   #homeOfficeOrganizing #sectionThree .inner-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -10763,6 +10852,28 @@ p {
             align-items: flex-start; }
     #homeOfficeOrganizing #sectionThree .inner-container img {
       margin-right: 25px; }
+  #homeOfficeOrganizing #sectionThree .btn:hover {
+    background-color: #7F423D !important;
+    border-color: #7F423D !important; }
+
+#homeOfficeOrganizing #sectionFour {
+  padding-top: 48.07%;
+  position: relative;
+  background-size: cover; }
+  @media (min-width: 992px) {
+    #homeOfficeOrganizing #sectionFour {
+      padding-top: 0;
+      min-height: 650px; } }
+  #homeOfficeOrganizing #sectionFour .container-fluid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+    #homeOfficeOrganizing #sectionFour .container-fluid .inner-container {
+      padding: 50px;
+      background: #ffffffb8;
+      text-align: center; }
 
 /*------------------------------------------------*/
 /*--------------------[FOOTER]--------------------*/

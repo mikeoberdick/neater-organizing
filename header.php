@@ -27,10 +27,6 @@ defined( 'ABSPATH' ) || exit;
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
-<?php  
-	//<link rel="preconnect" href="https://fonts.gstatic.com">
-	//<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-?>
 	<!-- STOPS GOOGLE FROM INDEXING SITE ON STAGING -->
 	<!-- NEED TO REMOVE ON PRODUCTION -->
 	<meta name="robots" content="noindex">
@@ -46,7 +42,7 @@ defined( 'ABSPATH' ) || exit;
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 text-center">
-				<a href="/services-and-pricing-guide"><span class = "h5 subheader">View Our Services And Pricing Guide</span><img src = "<?php echo get_stylesheet_directory_uri() . '/img/long_arrow.png'; ?>"></a>
+				<a href="/services-and-pricing-guide"><span class = "h5 subheader">View Our Services And Pricing Guide</span><img class = "ml-2" src = "<?php echo get_stylesheet_directory_uri() . '/img/long_arrow.png'; ?>"></a>
 			</div><!-- .col-sm-12 -->
 		</div><!-- .row -->
 	</div><!-- .container -->

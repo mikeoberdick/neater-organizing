@@ -73,10 +73,10 @@ defined( 'ABSPATH' ) || exit;
 			<a href="tel:<?php echo $phone ?>"><h5 class = "subheader">Call Us At <?php the_field('phone_number', 'option'); ?></h5></a>
 			<h5 class = "subheader" >Or Find Us Online</h5>
 			<div class="social-links">
-				<a class = "social-link instagram mr-2" rel="noreferrer" target = "_blank" href="<?php the_field('instagram_url', 'options') ?>"><i class="fa fa-instagram" aria-hidden="true"></i><span class = "sr-only sr-only-focusable">Instagram</span></a>
-				<a class = "social-link facebook mr-2" rel="noreferrer" target = "_blank" href="<?php the_field('facebook_url', 'options') ?>"><i class="fa fa-facebook" aria-hidden="true"></i><span class = "sr-only sr-only-focusable">Facebook</span></a>
-				<a class = "social-link facebook mr-2" rel="noreferrer" target = "_blank" href="<?php the_field('facebook_url', 'options') ?>"><i class="fa fa-facebook" aria-hidden="true"></i><span class = "sr-only sr-only-focusable">Facebook</span></a>
-				<a class = "social-link pinterest" rel="noreferrer" target = "_blank" href="<?php the_field('pinterest_url', 'options') ?>"><i class="fa fa-pinterest" aria-hidden="true"></i><span class = "sr-only sr-only-focusable">Pinterest</span></a>
+				<a class = "social-link instagram mr-2" rel="noreferrer" target = "_blank" href="<?php the_field('instagram_url', 'options') ?>"><img class = "mr-2" src = "<?php echo get_stylesheet_directory_uri() . '/img/instagram.png'; ?>"><span class = "sr-only sr-only-focusable">Instagram</span></a>
+				<a class = "social-link facebook mr-2" rel="noreferrer" target = "_blank" href="<?php the_field('facebook_url', 'options') ?>"><img class = "mr-2" src = "<?php echo get_stylesheet_directory_uri() . '/img/facebook.png'; ?>"><span class = "sr-only sr-only-focusable">Facebook</span></a>
+				<a class = "social-link yelp mr-2" rel="noreferrer" target = "_blank" href="<?php the_field('yelp_url', 'options') ?>"><img class = "mr-2" src = "<?php echo get_stylesheet_directory_uri() . '/img/yelp.png'; ?>"><span class = "sr-only sr-only-focusable">Yelp</span></a>
+				<a class = "social-link pinterest" rel="noreferrer" target = "_blank" href="<?php the_field('pinterest_url', 'options') ?>"><img src = "<?php echo get_stylesheet_directory_uri() . '/img/pinterest.png'; ?>"><span class = "sr-only sr-only-focusable">Pinterest</span></a>
 			</div><!-- .social-links -->
 		</div><!-- #contact -->	
 	</div><!-- .inner-wrapper -->
@@ -122,8 +122,8 @@ defined( 'ABSPATH' ) || exit;
 			$slider.slick({
 			    slidesToShow: 1,
 			    slidesToScroll: 1,
-			    prevArrow: $('testimonialSliderOuterWrapper .prev-arrow'),
-        		nextArrow: $('testimonialSliderOuterWrapper .next-arrow')
+			    prevArrow: $('.testimonialSliderOuterWrapper').find('.prev-arrow'),
+        		nextArrow: $('.testimonialSliderOuterWrapper').find('.next-arrow')
 	  		});
 		}
 	});

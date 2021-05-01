@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 			<section id="sectionOne">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-12">
+						<div class="col-sm-12 text-center">
 							<h1 class="h2"><?php the_field('section_one'); ?></h1>
 						</div><!-- .col-sm-12 -->
 					</div><!-- .row -->
@@ -40,7 +40,7 @@ defined( 'ABSPATH' ) || exit;
 								<div class="wysiwyg"><?php echo $three['content']; ?></div><!-- .wysiwyg -->
 							</div><!-- .inner-container -->
 							<div class="text-center mt-3">
-								<a href = "<?php echo $three['button_link']; ?>"><button role = "button" class = "btn brown-button"><?php echo $three["button_text"]; ?></button></a>
+								<a href = "<?php echo $three['button_link']; ?>"><button role = "button" class = "btn outline-button"><?php echo $three["button_text"]; ?></button></a>
 							</div>
 						</div><!-- .col-md-8 -->
 					</div>
@@ -67,9 +67,9 @@ defined( 'ABSPATH' ) || exit;
 			<section id="sectionFive">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-12">
+						<div class="col-sm-12 text-center">
 							<h1 class = "h2 section-title"><?php echo $five['header']; ?></h2>
-							<div class = "wysiwyg"><?php echo $five['content']; ?></div><!-- .wysiwyg -->
+							<p><?php echo $five['content']; ?></p>
 							<a href = "<?php echo $five['button_link']; ?>"><button role = "button" class = "btn outline-button"><?php echo $five["button_text"]; ?></button></a>
 						</div><!-- .col-sm-12 -->
 					</div><!-- .row -->

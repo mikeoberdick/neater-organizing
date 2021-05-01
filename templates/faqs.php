@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 			<section id="sectionOne">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-12">
+						<div class="col-sm-12 text-center">
 							<h1 class="h5 subheader"><?php the_field('subheader'); ?></h1>
 							<h2 class = "section-title"><?php the_field('header'); ?></h2>
 						</div><!-- .col-sm-12 -->
@@ -24,7 +24,7 @@ defined( 'ABSPATH' ) || exit;
 			<section id="sectionTwo">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-12">
+						<div id = "questionContainer" class="col-sm-12">
 							<div class="w-100 accordion md-accordion" id="faqAccordion" role="tablist" aria-multiselectable="true">
 								<?php $i = 0; ?>
 								<?php while ( have_rows('questions_and_answers') ) : the_row(); ?>
@@ -32,7 +32,7 @@ defined( 'ABSPATH' ) || exit;
 						        		<div class="card-wrapper" role="tab" id="<?php echo 'question-' . $i; ?>">
 				  							<a data-toggle="collapse" data-target="<?php echo '#collapse-question-' . $i; ?>" aria-expanded="<?php if ( $i == 0 ) {echo 'true';} else {echo 'false';}; ?>" aria-controls="<?php echo 'collapse-question-' . $i; ?>">
 				  								<div class = "question">
-				    								<i class="d-inline fa fa-chevron-down mr-1" aria-hidden="true"></i>
+				    								<img class = "mr-1" src = "<?php echo get_stylesheet_directory_uri() . '/img/red_chevron.png'; ?>">
 				    								<h3 class="question-text d-inline mb-0 h5"><?php the_sub_field('question'); ?></h3>
 				  								</div><!-- .question -->
 				  							
@@ -49,20 +49,13 @@ defined( 'ABSPATH' ) || exit;
 								<?php endwhile; ?>
 							</div><!-- .accordion -->
 						</div><!-- .col-sm-12 -->
-					</div><!-- .row -->
-				</div><!-- .container -->
-			</section><!-- #sectionTwo -->
-			
-			</section><!-- #sectionThree -->
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12">
+						<div class="col-sm-12 text-center">
 							<p><?php the_field('disclaimer_text'); ?></p>
-							<a href = "<?php echo $link['button_link']; ?>"><button role = "button" class = "btn outline-button"><?php echo $link["button_text"]; ?></button></a>
+							<a href = "<?php the_field('button_link'); ?>"><button role = "button" class = "btn outline-button"><?php the_field('button_text'); ?></button></a>
 						</div><!-- .col-sm-12 -->
 					</div><!-- .row -->
 				</div><!-- .container -->
-			</section><!-- #sectionThree -->
+			</section><!-- #sectionTwo -->
 		</div><!-- #faqs -->
 	</main><!-- #main -->
 </div><!-- #content -->

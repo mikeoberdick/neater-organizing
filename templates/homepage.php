@@ -19,10 +19,12 @@ defined( 'ABSPATH' ) || exit;
 							<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 						</div><!-- .col-lg-3 -->
 						<div class="col-lg-6 text-center justify-content-center d-flex flex-column">
-							<h1 class="h5 subheader"><?php echo $one['subheader']; ?></h1>
-							<h2 class = "section-title"><?php echo $one['header']; ?></h2>
-							<p><?php echo $one['content']; ?></p>
-							<a href = "<?php echo $one['button_url']; ?>"><button role = "button" class = "btn outline-button"><?php echo $one["button_text"]; ?></button></a>
+							<div class="inner-container p-3">
+								<h1 class="h5 subheader"><?php echo $one['subheader']; ?></h1>
+								<h2 class = "section-title"><?php echo $one['header']; ?></h2>
+								<p><?php echo $one['content']; ?></p>
+								<a href = "<?php echo $one['button_url']; ?>"><button role = "button" class = "btn outline-button"><?php echo $one["button_text"]; ?></button></a>	
+							</div><!-- .inner-container -->
 						</div><!-- .col-lg-6 -->
 						<?php $img = $one['right_image']; ?>
 						<div class="col-lg-3 pr-lg-0">
@@ -82,13 +84,13 @@ defined( 'ABSPATH' ) || exit;
 										<?php foreach( $testimonials as $post ): setup_postdata($post); ?>
 								            <div class="testimonial-slide">
 								            	<div class="wysiwyg"><?php the_field('testimonial'); ?></div><!-- .wysiwyg -->
-								            	<span><?php the_field('author'); ?></span>
+								            	<span class = "mb-3 d-inline-block"><?php the_field('author'); ?></span>
 								            </div><!-- .testimonial-slide -->
 								    	<?php endforeach; wp_reset_postdata(); ?>
 									</div><!-- #testimonialSlider -->
 									<div id="counter" class = "d-inline">
 										<a class="prev-arrow"><img id = "prev" src = "/wp-content/themes/neater-organizing/img/chevron_left.png" alt = "Previous" /></a>
-										<span></span>
+										<span class = "font-weight-bold"></span>
 										<a class="next-arrow"><img id = "next" src = "/wp-content/themes/neater-organizing/img/chevron_right.png" alt = "Next" /></a>
 									</div>
 								</div><!-- .testimonialSliderOuterWrapper -->
