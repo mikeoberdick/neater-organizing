@@ -33,14 +33,16 @@ defined( 'ABSPATH' ) || exit;
 			<section id="sectionThree">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-lg-8 offset-lg-2">
+						<div class="col-md-8 offset-md-2">
 							<div class="inner-container">
 								<?php $img = $three['icon']; ?>
 								<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 								<div class="wysiwyg"><?php echo $three['content']; ?></div><!-- .wysiwyg -->
 							</div><!-- .inner-container -->
-							<a href = "<?php echo $three['button_link']; ?>"><button role = "button" class = "btn brown-button"><?php echo $three["button_text"]; ?></button></a>
-						</div><!-- .col-lg-8 -->
+							<div class="text-center mt-3">
+								<a href = "<?php echo $three['button_link']; ?>"><button role = "button" class = "btn brown-button"><?php echo $three["button_text"]; ?></button></a>
+							</div>
+						</div><!-- .col-md-8 -->
 					</div>
 				</div>
 			</section><!-- #sectionThree -->

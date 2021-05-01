@@ -1,6 +1,30 @@
 /*------------------------------------------------*/
 /*-------------------[FONTS]----------------------*/
 /*------------------------------------------------*/
+@font-face {
+    font-family: 'Freight Big Pro';
+    src: url('../fonts/freight_big_pro-webfont.woff2') format('woff2'),
+         url('../fonts/freight_big_pro-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Freight Neo Pro';
+    src: url('../fonts/freight_neo-webfont.woff2') format('woff2'),
+         url('../fonts/freight_neo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Freight Neo Bold';
+    src: url('../fonts/freight_neo_bold-webfont.woff2') format('woff2'),
+         url('../fonts/freight_neo_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 html {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
@@ -9,7 +33,7 @@ html {
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	color: $red;
-	font-family: $font;
+	font-family: 'Freight Big Pro';
   margin-bottom: 0;
 }
 
@@ -28,7 +52,8 @@ h3 {
 
 body {
 	color: $black;
-	font-family: $font;
+	font-family: $freightNeo;
+  background-color: rgba(246,245,244,.52);
 }
 
 a {
@@ -42,6 +67,20 @@ a {
 .subheader {
   text-transform: uppercase;
   color: $black;
+  margin-bottom: 25px;
+  font-family: $freightNeoBold;
+}
+
+.section-title {
+  margin-bottom: 35px;
+}
+
+p {
+  margin-bottom: 25px;
+}
+
+.wysiwyg {
+
 }
 
 /*------------------------------------------------*/
@@ -50,6 +89,11 @@ a {
 #notificationBar {
   background-color: $blue;
   padding: 15px 0;
+  font-family: $freightBig; 
+  font-weight: bold;
+  .subheader {
+    margin-bottom: 0;
+  }
   a {
     display: flex;
     justify-content: center;
@@ -66,7 +110,7 @@ a {
 }
 #main-menu {
   a {
-    font-family: $font;
+    font-family: $freightNeo;
     text-transform: uppercase;
     font-weight: bold;
     &:hover {
@@ -88,21 +132,13 @@ a {
 /*------------------------------------------------*/
 
 .btn {
-  font-family: $font;
-  border: 0 !important;
+  font-family: $freightNeoBold;
+  border: solid 2px $blue !important;
   text-transform: uppercase;
   border-radius: 37px;
-  padding: .5rem 1.5rem;
+  padding: .5rem 3rem;
   white-space: normal;
   color: #fff !important;
-}
-
-.blue-button {
-  background-color: $blue !important;
-  font-weight: bold;
-  &:hover {
-    background-color: darken( $blue, 10% ) !important;
-    }
 }
 
 .brown-button {
@@ -116,6 +152,10 @@ a {
   color: $red !important;
   border: solid 2px $blue;
   background-color: transparent !important;
+  &:hover {
+    color: #fff !important;
+    background-color: $blue !important;
+  }
 }
 
 /*------------------------------------------------*/
@@ -125,6 +165,7 @@ a {
   padding-top: 24.53%;
   box-shadow: rgba(255,255,255,.85) 0 0 0 1000px inset;
   position: relative;
+  background-size: contain;
   @include media-breakpoint-up(lg) {
     padding-top: 0;
     min-height: 400px;
@@ -142,9 +183,14 @@ a {
 /*--------------------[HOME]----------------------*/
 /*------------------------------------------------*/
 #homepage {
+  section {
+    margin-bottom: 100px;
+  }
   .hero {
     padding-top: 42.81%;
     box-shadow: none;
+    background-size: contain;
+    margin-bottom: 100px;
     @include media-breakpoint-up(lg) {
       padding-top: 0;
       min-height: 650px;
@@ -153,6 +199,55 @@ a {
       @include media-breakpoint-up(lg) {
         width: 50%;
         text-align: left;
+      }
+    }
+  }
+  #sectionTwo {
+    .full-width-image {
+      margin-bottom: 75px;
+    }
+    h1 {
+      margin-bottom: 75px;
+    } 
+  }
+  #sectionThree {
+    background-color: $blue;
+  }
+    #sectionFour {
+    .horizontal-card {
+      flex-basis: 20%;
+      background-color: #fff;
+      padding: 15px;
+    }
+  }
+}
+
+/*------------------------------------------------*/
+/*-----------[HOME OFFICE ORGANIZING]-------------*/
+/*------------------------------------------------*/
+#homeOfficeOrganizing {
+  #sectionTwo {
+    display: flex;
+    @include media-breakpoint-down(sm) {
+      flex-wrap: wrap;
+    }
+    @include media-breakpoint-up(md) {
+      .image-wrapper {
+        &:nth-of-type(1), &:nth-of-type(2) {
+          margin-right: 15px;
+        }
+      }  
+    }
+  }
+  #sectionThree {
+    background-color: rgba(166,180,179,.40);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .inner-container {
+      display: flex;
+      align-items: flex-start;
+      img {
+        margin-right: 25px;
       }
     }
   }

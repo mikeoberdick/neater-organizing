@@ -97,11 +97,35 @@ defined( 'ABSPATH' ) || exit;
 
 <?php if (is_page_template('templates/homepage.php')) : ?>
 <script>
-	jQuery(document).ready(function() {
-  		jQuery('#testimonialSlider').slick({
-		    slidesToShow: 1,
-		    slidesToScroll: 1,
-  		});
+	jQuery(document).ready(function($) {
+		var $slider = $('#testimonialSlider');
+
+		if ($slider.length) {
+		  var currentSlide;
+		  var slidesCount;
+		  var sliderCounter = $('#counter span');
+  
+		  var updateSliderCounter = function(slick, currentIndex) {
+		    currentSlide = slick.slickCurrentSlide() + 1;
+		    slidesCount = slick.slideCount;
+		    $(sliderCounter).text(currentSlide + ' OF ' +slidesCount)
+		  };
+
+		  $slider.on('init', function(event, slick) {
+		    updateSliderCounter(slick);
+		  });
+
+		  $slider.on('afterChange', function(event, slick, currentSlide) {
+		    updateSliderCounter(slick, currentSlide);
+		  });
+
+			$slider.slick({
+			    slidesToShow: 1,
+			    slidesToScroll: 1,
+			    prevArrow: $('testimonialSliderOuterWrapper .prev-arrow'),
+        		nextArrow: $('testimonialSliderOuterWrapper .next-arrow')
+	  		});
+		}
 	});
 </script>
 <?php endif; ?>

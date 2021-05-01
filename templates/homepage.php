@@ -15,17 +15,17 @@ defined( 'ABSPATH' ) || exit;
 				<div class="container-fluid">
 					<div class="row">
 						<?php $img = $one['left_image']; ?>
-						<div class="col-lg-3">
+						<div class="col-lg-3 pl-lg-0">
 							<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 						</div><!-- .col-lg-3 -->
-						<div class="col-lg-6">
+						<div class="col-lg-6 text-center justify-content-center d-flex flex-column">
 							<h1 class="h5 subheader"><?php echo $one['subheader']; ?></h1>
 							<h2 class = "section-title"><?php echo $one['header']; ?></h2>
 							<p><?php echo $one['content']; ?></p>
-							<a href = "<?php echo $one['button_url']; ?>"><button role = "button" class = "btn"><?php echo $one["button_text"]; ?></button></a>
+							<a href = "<?php echo $one['button_url']; ?>"><button role = "button" class = "btn outline-button"><?php echo $one["button_text"]; ?></button></a>
 						</div><!-- .col-lg-6 -->
 						<?php $img = $one['right_image']; ?>
-						<div class="col-lg-3">
+						<div class="col-lg-3 pr-lg-0">
 							<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 						</div><!-- .col-lg-3 -->
 					</div><!-- .row -->
@@ -35,28 +35,28 @@ defined( 'ABSPATH' ) || exit;
 			<?php $two = get_field('section_two'); ?>
 			<section id="sectionTwo">
 				<?php $img = $two['hero_image']; ?>
-				<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+				<img class = "full-width-image" src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">
-							<h1 class="h5 subheader"><?php echo $two['subheader']; ?></h1>
+							<h1 class="h5 subheader text-center"><?php echo $two['subheader']; ?></h1>
 						</div><!-- .col-sm-12 -->
 						<?php while(have_rows('section_two')) : the_row(); ?>
 							<?php while(have_rows('buckets')) : the_row(); ?>
 								<div class="col-md-6">
-									<div class="icon-and-title">
+									<div class="icon-and-title d-flex align-items-center mb-3">
 										<?php $img = get_sub_field('icon'); ?>
-										<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
-										<h2 class="h5 subheader"><?php the_sub_field('header'); ?></h2>
+										<img class = "mr-3" src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+										<h2 class="h5 subheader mb-0"><?php the_sub_field('header'); ?></h2>
 									</div><!-- .icon-and-title -->
 									<div class="wysiwyg">
-										<?php the_sub_field('cotnent'); ?>
+										<?php the_sub_field('content'); ?>
 									</div><!-- .wysiwyg -->
 								</div><!-- .col-md-6 -->
 							<?php endwhile; ?>
 						<?php endwhile; ?>
-						<div class="col-sm-12">
-							<a href = "<?php echo $two['button_link']; ?>"><button role = "button" class = "btn"><?php echo $two["button_text"]; ?></button></a>
+						<div class="col-sm-12 text-center">
+							<a href = "<?php echo $two['button_link']; ?>"><button role = "button" class = "btn outline-button"><?php echo $two["button_text"]; ?></button></a>
 						</div><!-- .col-sm-12 -->
 					</div><!-- .row -->
 				</div><!-- .container -->
@@ -66,13 +66,13 @@ defined( 'ABSPATH' ) || exit;
 			<section id="sectionThree">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-6 pl-md-0">
 							<?php $img = $three['left_image']; ?>
 							<div class="image-container">
 								<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 							</div><!-- .image-container -->	
 						</div><!-- .col-md-6 -->
-						<div class="col-md-4">
+						<div class="col-md-4 d-flex flex-column justify-content-center">
 							<div class="content-container">
 								<h1 class="h5 subheader"><?php echo $three['subheader']; ?></h1>
 								<h2 class = "section-title"><?php echo $three['header']; ?></h2>
@@ -81,14 +81,16 @@ defined( 'ABSPATH' ) || exit;
 										<?php $testimonials = $three['testimonials']; ?>
 										<?php foreach( $testimonials as $post ): setup_postdata($post); ?>
 								            <div class="testimonial-slide">
-								            	<div class="wysiwyg"><?php the_field('testionial'); ?></div><!-- .wysiwyg -->
+								            	<div class="wysiwyg"><?php the_field('testimonial'); ?></div><!-- .wysiwyg -->
 								            	<span><?php the_field('author'); ?></span>
 								            </div><!-- .testimonial-slide -->
 								    	<?php endforeach; wp_reset_postdata(); ?>
 									</div><!-- #testimonialSlider -->
-									<div class="slider-arrows">
-										<p id = "counter"><span></span> of <span></span></p>
-									</div><!-- .slider-arrows -->
+									<div id="counter" class = "d-inline">
+										<a class="prev-arrow"><img id = "prev" src = "/wp-content/themes/neater-organizing/img/chevron_left.png" alt = "Previous" /></a>
+										<span></span>
+										<a class="next-arrow"><img id = "next" src = "/wp-content/themes/neater-organizing/img/chevron_right.png" alt = "Next" /></a>
+									</div>
 								</div><!-- .testimonialSliderOuterWrapper -->
 							</div><!-- .content-container -->
 						</div><!-- .col-md-4 -->
@@ -96,23 +98,23 @@ defined( 'ABSPATH' ) || exit;
 				</div><!-- .container-fluid -->
 			</section><!-- #sectionThree -->
 
-			<?php $sectionFour = get_field('section_four'); ?>
+			<?php $four = get_field('section_four'); ?>
 			<section id="sectionFour">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-12">
+						<div class="col-sm-12 text-center">
 							<h1 class="h5 subheader"><?php echo $four['subheader']; ?></h1>
 							<h2 class = "section-title"><?php echo $four['header']; ?></h2>
 						</div><!-- .col-sm-12 -->
 					</div><!-- .row -->
 				</div><!-- .container -->
-				<div id="cards">
+				<div id="cards" class = "d-flex justify-content-around">
 					<?php while(have_rows('section_four')) : the_row(); ?>
 						<?php while(have_rows('buckets')) : the_row(); ?>
-							<div class="card">
+							<div class="horizontal-card d-flex align-items-center justify-content-center">
 								<?php $img = get_sub_field('icon'); ?>
-								<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
-								<p><?php the_sub_field('text'); ?></p>
+								<img class = "mr-3" src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+								<p class = "mb-0"><?php the_sub_field('text'); ?></p>
 							</div><!-- .card -->
 						<?php endwhile; ?>	
 					<?php endwhile; ?>

@@ -10522,6 +10522,24 @@ figure.woocommerce-product-gallery__wrapper {
 /*------------------------------------------------*/
 /*-------------------[FONTS]----------------------*/
 /*------------------------------------------------*/
+@font-face {
+  font-family: 'Freight Big Pro';
+  src: url("../fonts/freight_big_pro-webfont.woff2") format("woff2"), url("../fonts/freight_big_pro-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Freight Neo Pro';
+  src: url("../fonts/freight_neo-webfont.woff2") format("woff2"), url("../fonts/freight_neo-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Freight Neo Bold';
+  src: url("../fonts/freight_neo_bold-webfont.woff2") format("woff2"), url("../fonts/freight_neo_bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 html {
   scroll-behavior: smooth; }
   html {
@@ -10536,7 +10554,7 @@ html {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #6D1919;
-  font-family: "LuloCleanOne", sans-serif;
+  font-family: 'Freight Big Pro';
   margin-bottom: 0; }
 
 h1 {
@@ -10574,7 +10592,8 @@ h3 {
 
 body {
   color: #2D2D2B;
-  font-family: "LuloCleanOne", sans-serif; }
+  font-family: "Freight Neo Pro";
+  background-color: rgba(246, 245, 244, 0.52); }
 
 a {
   color: #221F20;
@@ -10584,14 +10603,26 @@ a {
 
 .subheader {
   text-transform: uppercase;
-  color: #2D2D2B; }
+  color: #2D2D2B;
+  margin-bottom: 25px;
+  font-family: "Freight Neo Bold"; }
+
+.section-title {
+  margin-bottom: 35px; }
+
+p {
+  margin-bottom: 25px; }
 
 /*------------------------------------------------*/
 /*-------------------[HEADER]---------------------*/
 /*------------------------------------------------*/
 #notificationBar {
   background-color: #A6B4B3;
-  padding: 15px 0; }
+  padding: 15px 0;
+  font-family: "Freight Big Pro";
+  font-weight: bold; }
+  #notificationBar .subheader {
+    margin-bottom: 0; }
   #notificationBar a {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -10610,7 +10641,7 @@ a {
   padding-bottom: 25px; }
 
 #main-menu a {
-  font-family: "LuloCleanOne", sans-serif;
+  font-family: "Freight Neo Pro";
   text-transform: uppercase;
   font-weight: bold; }
   #main-menu a:hover {
@@ -10626,19 +10657,13 @@ a {
 /*-------------------[BUTTONS]--------------------*/
 /*------------------------------------------------*/
 .btn {
-  font-family: "LuloCleanOne", sans-serif;
-  border: 0 !important;
+  font-family: "Freight Neo Bold";
+  border: solid 2px #A6B4B3 !important;
   text-transform: uppercase;
   border-radius: 37px;
-  padding: .5rem 1.5rem;
+  padding: .5rem 3rem;
   white-space: normal;
   color: #fff !important; }
-
-.blue-button {
-  background-color: #A6B4B3 !important;
-  font-weight: bold; }
-  .blue-button:hover {
-    background-color: #8a9d9b !important; }
 
 .brown-button {
   background-color: #7F423D !important; }
@@ -10649,6 +10674,9 @@ a {
   color: #6D1919 !important;
   border: solid 2px #A6B4B3;
   background-color: transparent !important; }
+  .outline-button:hover {
+    color: #fff !important;
+    background-color: #A6B4B3 !important; }
 
 /*------------------------------------------------*/
 /*-------------------[GENERAL]--------------------*/
@@ -10657,7 +10685,8 @@ a {
   padding-top: 24.53%;
   -webkit-box-shadow: rgba(255, 255, 255, 0.85) 0 0 0 1000px inset;
           box-shadow: rgba(255, 255, 255, 0.85) 0 0 0 1000px inset;
-  position: relative; }
+  position: relative;
+  background-size: contain; }
   @media (min-width: 992px) {
     .hero {
       padding-top: 0;
@@ -10673,10 +10702,15 @@ a {
 /*------------------------------------------------*/
 /*--------------------[HOME]----------------------*/
 /*------------------------------------------------*/
+#homepage section {
+  margin-bottom: 100px; }
+
 #homepage .hero {
   padding-top: 42.81%;
   -webkit-box-shadow: none;
-          box-shadow: none; }
+          box-shadow: none;
+  background-size: contain;
+  margin-bottom: 100px; }
   @media (min-width: 992px) {
     #homepage .hero {
       padding-top: 0;
@@ -10685,6 +10719,50 @@ a {
     #homepage .hero .inner-container {
       width: 50%;
       text-align: left; } }
+
+#homepage #sectionTwo .full-width-image {
+  margin-bottom: 75px; }
+
+#homepage #sectionTwo h1 {
+  margin-bottom: 75px; }
+
+#homepage #sectionThree {
+  background-color: #A6B4B3; }
+
+#homepage #sectionFour .horizontal-card {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  background-color: #fff;
+  padding: 15px; }
+
+/*------------------------------------------------*/
+/*-----------[HOME OFFICE ORGANIZING]-------------*/
+/*------------------------------------------------*/
+#homeOfficeOrganizing #sectionTwo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (max-width: 767.98px) {
+    #homeOfficeOrganizing #sectionTwo {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
+  @media (min-width: 768px) {
+    #homeOfficeOrganizing #sectionTwo .image-wrapper:nth-of-type(1), #homeOfficeOrganizing #sectionTwo .image-wrapper:nth-of-type(2) {
+      margin-right: 15px; } }
+
+#homeOfficeOrganizing #sectionThree {
+  background-color: rgba(166, 180, 179, 0.4);
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  #homeOfficeOrganizing #sectionThree .inner-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+    #homeOfficeOrganizing #sectionThree .inner-container img {
+      margin-right: 25px; }
 
 /*------------------------------------------------*/
 /*--------------------[FOOTER]--------------------*/
