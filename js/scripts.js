@@ -1,4 +1,4 @@
-jQuery(function($){
+jQuery(function($) {
 	$(document).ready(function() {
 		//Smooth scroll behavior for jump links
 		$(".scroll-down").on('click', function(event) {
@@ -45,7 +45,7 @@ jQuery(function($){
 			}
 			
 		});
-		$('#ajaxCategoryFilter .close-icon').on('click', function() {
+		$('#ajaxCategoryFilter .close-icon, #ajaxCategoryFilter li').on('click', function() {
 			$('#ajaxCategoryFilter').slideUp();
 		});
 

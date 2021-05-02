@@ -57,4 +57,7 @@ include("functions/widgets.php");
 //Admin Modifications
 include("functions/admin-modifications.php");
 
+//AJAX Functions
+include("functions/ajax-category-functions.php");
+
 ?>
