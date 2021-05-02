@@ -68,11 +68,8 @@ defined( 'ABSPATH' ) || exit;
 			<section id="sectionThree">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-md-6 pl-md-0">
-							<?php $img = $three['left_image']; ?>
-							<div class="image-container">
-								<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
-							</div><!-- .image-container -->	
+						<?php $img = $three['left_image']; ?>
+						<div class="col-md-6 pl-md-0" style = "background-image: url('<?php echo $img['url']; ?>'); ">	
 						</div><!-- .col-md-6 -->
 						<div class="col-md-4 d-flex flex-column justify-content-center">
 							<div class="content-container">

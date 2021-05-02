@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 			<section id="sectionOne">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-12">
+						<div class="col-sm-12 text-center">
 							<h1 class="h2"><?php the_field('section_one'); ?></h1>
 						</div><!-- .col-sm-12 -->
 					</div><!-- .row -->
@@ -41,13 +41,13 @@ defined( 'ABSPATH' ) || exit;
 			<section id="sectionThree">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-lg-4 offset-lg-2">
+						<div class="col-lg-4 offset-lg-2 text-center">
 							<h1 class="h5 subheader"><?php echo $three['subheader']; ?></h1>
 							<h2 class = "section-title"><?php echo $three['header']; ?></h2>
 							<p><?php echo $three['content']; ?></p>
-							<a href = "<?php echo $three['button_url']; ?>"><button role = "button" class = "btn"><?php echo $three["button_text"]; ?></button></a>
+							<a href = "<?php echo $three['button_url']; ?>"><button role = "button" class = "btn outline-button"><?php echo $three["button_text"]; ?></button></a>
 						</div><!-- .col-lg-4 offset-lg-2 -->
-						<div class="col-lg-4 offset-lg-1">
+						<div class="col-lg-5 offset-lg-1 pr-lg-0">
 							<?php $img = $three['image']; ?>
 							 <img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">	
 						</div><!-- .col-lg-4 -->
@@ -59,7 +59,7 @@ defined( 'ABSPATH' ) || exit;
 			<section id="sectionFour">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-12">
+						<div class="col-sm-12 text-center">
 							<h1 class = "h2 section-title"><?php echo $four['header']; ?></h2>
 							<p><?php echo $four['content']; ?></p>
 							<a href = "<?php echo $four['button_link']; ?>"><button role = "button" class = "btn outline-button"><?php echo $four["button_text"]; ?></button></a>

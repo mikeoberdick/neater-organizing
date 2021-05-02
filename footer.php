@@ -122,10 +122,27 @@ defined( 'ABSPATH' ) || exit;
 			$slider.slick({
 			    slidesToShow: 1,
 			    slidesToScroll: 1,
+			    //adaptiveHeight: true,
 			    prevArrow: $('.testimonialSliderOuterWrapper').find('.prev-arrow'),
         		nextArrow: $('.testimonialSliderOuterWrapper').find('.next-arrow')
 	  		});
 		}
+	});
+</script>
+<?php endif; ?>
+
+<?php if ( is_page_template('templates/blog.php') ) : ?>
+<script>
+	var containerEl = document.querySelector('#sortContainer');
+	var mixer = mixitup(containerEl, {
+    	callbacks: {
+    		onMixStart: function(state, futureState) {
+        		console.log(futureState.activeFilter.selector);
+    		}
+		},
+		pagination: {
+	        limit: 3
+	    }
 	});
 </script>
 <?php endif; ?>

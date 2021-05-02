@@ -29,6 +29,26 @@ jQuery(function($){
 		$(this).find('.dropdown-menu').removeClass('d-block').first().stop(true, true).delay(100).slideUp().removeClass('tst');
 		});
 
+		//Move the first blog post into the featured section
+		if ($('#blog').length > 0) {
+		  var firstPost = $('#sortContainer .the-post').first().find('.post-wrapper');
+		  $( "#featuredPost" ).append( firstPost );
+		  $('#sortContainer .the-post').first().remove();
+		}
+
+		//Handle the ajax category functionality
+		$('#categoryButton').on('click', function() {
+			if ( $(this).parent().find('#ajaxCategoryFilter:hidden').length != 0) {
+				$(this).parent().find('#ajaxCategoryFilter').slideDown();	
+			} else {
+				$(this).parent().find('#ajaxCategoryFilter').slideUp();
+			}
+			
+		});
+		$('#ajaxCategoryFilter .close-icon').on('click', function() {
+			$('#ajaxCategoryFilter').slideUp();
+		});
+
 		//if ($(window).width() < 992) {
 		   //do some mobile stuff
 		//}

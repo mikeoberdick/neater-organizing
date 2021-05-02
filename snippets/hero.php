@@ -1,4 +1,8 @@
-<?php $hero = get_field('hero');
+<?php if (is_home()) {
+	$hero = get_field('hero', 55);
+} else {
+	$hero = get_field('hero');
+}
 $img = $hero['background_image']; 
 if ( $hero['header'] ) {
 	$title = $hero['header'];
