@@ -103,6 +103,26 @@ p {
   color: $red;
 }
 
+#searchform {
+  input {
+    border: solid 2px $red;
+    padding: 10px 50px 10px 15px;
+    width: 350px;
+  }
+  button {
+    height: 100%;
+    background: transparent;
+      border: 0;
+      position: absolute;
+      right: 5px;
+      img {
+        z-index: 3;
+        position: relative;
+        height: 25px;
+      }
+  }
+} 
+
 /*------------------------------------------------*/
 /*-------------------[HEADER]---------------------*/
 /*------------------------------------------------*/
@@ -611,26 +631,7 @@ p {
         }
         
       }
-    }
-    #searchform {
-      input {
-        border: solid 2px $red;
-        padding: 10px 50px 10px 15px;
-        width: 350px;
-      }
-      button {
-        height: 100%;
-        background: transparent;
-          border: 0;
-          position: absolute;
-          right: 5px;
-          img {
-            z-index: 3;
-            position: relative;
-            height: 25px;
-          }
-      }
-    }  
+    } 
   }
   #sectionTwo {
     margin-bottom: 50px;
@@ -728,6 +729,19 @@ p {
       }
     }
   }
+  #sectionFive {
+    background-color: #E7DFD7;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 0;
+    #productWrapper {
+      width: 100%;
+      display: flex;
+      .recommended-product {
+        flex-basis: 25%;
+      }
+    }
+  }
 }
 /*------------------------------------------------*/
 /*-----------[SINGLE]-------------*/
@@ -794,6 +808,16 @@ p {
 /*-----------[SERVICES PRICING GUIDE]-------------*/
 /*------------------------------------------------*/
 #servicesPricingGuide {
+  .table {
+    thead {
+      th {
+        border: 0;
+      }
+    }
+    td {
+      border: 0;
+    }
+  }
   .hero {
     margin-bottom: 0;
   }

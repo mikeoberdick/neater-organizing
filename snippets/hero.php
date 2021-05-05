@@ -1,4 +1,4 @@
-<?php if (is_home()) {
+<?php if (is_home() || is_search() ){
 	$hero = get_field('hero', 55);
 } else {
 	$hero = get_field('hero');

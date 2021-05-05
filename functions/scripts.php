@@ -11,6 +11,7 @@ function psc_enqueue_files () {
         wp_enqueue_script( 'MIU JS', get_stylesheet_directory_uri() . '/js/mixitup.min.js', array('jquery'), '1.0.0', true );
         wp_enqueue_script( 'MIU-Pagination', get_stylesheet_directory_uri() . '/js/mixitup-pagination.min.js', array('jquery'), '1.0.0', true );
     }
+
     if ( is_page_template( array( 'templates/homepage.php', 'templates/about.php' ) ) ) {
         wp_enqueue_style( 'Slick CSS', get_stylesheet_directory_uri() . '/slick/slick.css' );
         wp_enqueue_style( 'Slick Theme CSS', get_stylesheet_directory_uri() . '/slick/slick-theme.css' );

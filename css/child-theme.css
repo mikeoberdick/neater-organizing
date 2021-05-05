@@ -10630,6 +10630,22 @@ p {
 .red {
   color: #6D1919; }
 
+#searchform input {
+  border: solid 2px #6D1919;
+  padding: 10px 50px 10px 15px;
+  width: 350px; }
+
+#searchform button {
+  height: 100%;
+  background: transparent;
+  border: 0;
+  position: absolute;
+  right: 5px; }
+  #searchform button img {
+    z-index: 3;
+    position: relative;
+    height: 25px; }
+
 /*------------------------------------------------*/
 /*-------------------[HEADER]---------------------*/
 /*------------------------------------------------*/
@@ -11082,20 +11098,6 @@ p {
       cursor: pointer; }
       #blog #sectionOne #categories #ajaxCategoryFilter li .subheader:hover {
         color: #2D2D2B; }
-  #blog #sectionOne #searchform input {
-    border: solid 2px #6D1919;
-    padding: 10px 50px 10px 15px;
-    width: 350px; }
-  #blog #sectionOne #searchform button {
-    height: 100%;
-    background: transparent;
-    border: 0;
-    position: absolute;
-    right: 5px; }
-    #blog #sectionOne #searchform button img {
-      z-index: 3;
-      position: relative;
-      height: 25px; }
 
 #blog #sectionTwo {
   margin-bottom: 50px; }
@@ -11179,6 +11181,20 @@ p {
     #blog #sectionFour .pagination .page-item:last-of-type .page-link, #blog #sectionFour .ajax-pagination .page-item:last-of-type .page-link {
       margin-right: 0; }
 
+#blog #sectionFive {
+  background-color: #E7DFD7;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 0; }
+  #blog #sectionFive #productWrapper {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    #blog #sectionFive #productWrapper .recommended-product {
+      -ms-flex-preferred-size: 25%;
+          flex-basis: 25%; }
+
 /*------------------------------------------------*/
 /*-----------[SINGLE]-------------*/
 /*------------------------------------------------*/
@@ -11226,6 +11242,12 @@ p {
 /*------------------------------------------------*/
 /*-----------[SERVICES PRICING GUIDE]-------------*/
 /*------------------------------------------------*/
+#servicesPricingGuide .table thead th {
+  border: 0; }
+
+#servicesPricingGuide .table td {
+  border: 0; }
+
 #servicesPricingGuide .hero {
   margin-bottom: 0; }
 
