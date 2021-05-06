@@ -47,9 +47,9 @@ defined( 'ABSPATH' ) || exit;
 							<p><?php echo $three['content']; ?></p>
 							<a href = "<?php echo $three['button_url']; ?>"><button role = "button" class = "btn outline-button"><?php echo $three["button_text"]; ?></button></a>
 						</div><!-- .col-lg-4 offset-lg-2 -->
-						<div class="col-lg-5 offset-lg-1 pr-lg-0">
+						<div class="col-lg-5 offset-lg-1 pr-lg-0 d-flex justify-content-center">
 							<?php $img = $three['image']; ?>
-							 <img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">	
+							 <img class = "mt-3 mt-lg-0" src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">	
 						</div><!-- .col-lg-4 -->
 					</div><!-- .row -->
 				</div><!-- .container-fluid -->

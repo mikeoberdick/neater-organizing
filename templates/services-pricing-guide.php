@@ -14,16 +14,18 @@ defined( 'ABSPATH' ) || exit;
 			<section id="sectionOne">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-lg-4 pl-lg-0">
+						<div class="col-lg-4 pl-lg-0 d-flex align-items-center justify-content-center mb-3 mb-lg-0 mt-3 mt-lg-0">
 							<?php $img = $one['image']; ?>
 							<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 						</div><!-- .col-lg-4 -->
-						<div class="col-lg-6 d-flex flex-column align-items-start justify-content-center">
+						<div class="right col-lg-6 d-flex flex-column align-items-start justify-content-center">
 							<?php $img = $one['icon']; ?>
-							<img class = "pl-3 mb-3" src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
-							<h1 class="h2 section-title"><?php echo $one['header']; ?></h1>
+							<div class="text-center text-lg-left mx-auto mx-lg-0">
+							<img class = "pl-0 pl-lg-3 mb-3" src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+							<h1 class="text-center text-lg-left h2 section-title"><?php echo $one['header']; ?></h1>
+							</div>
 							<div class="inner-container pl-3">
-								<p><?php echo $one['copy']; ?></p>
+								<p class = "text-center text-lg-left"><?php echo $one['copy']; ?></p>
 								<table class="table">
 								  <thead>
 								    <tr>
@@ -58,13 +60,15 @@ defined( 'ABSPATH' ) || exit;
 			<section id="sectionTwo">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-lg-6 offset-lg-2 d-flex align-items-center">
+						<div class="col-lg-6 offset-lg-2 d-flex align-items-center order-2 order-lg-0 mkb-3 mb-lg-0">
 							<div class="inner-wrapper">
 								<?php $img = $two['icon']; ?>
+								<div class="text-center text-lg-left mx-auto mx-lg-0">
 								<img class = "pl-3 mb-3" src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 								<h1 class="h2 section-title"><?php echo $two['header']; ?></h1>
+								</div>
 								<div class="inner-container pl-3">
-									<p><?php echo $two['copy']; ?></p>
+									<p class = "text-center text-lg-left"><?php echo $two['copy']; ?></p>
 									<table class="table">
 									  <thead>
 									    <tr>
@@ -92,7 +96,7 @@ defined( 'ABSPATH' ) || exit;
 								</div><!-- .inner-container -->	
 							</div><!-- .inner-wrapper -->
 						</div><!-- .col-lg-6 -->
-						<div class="col-lg-4 pr-lg-0">
+						<div class="col-lg-4 pr-lg-0 d-flex align-items-center justify-content-center mb-3 mb-lg-0">
 							<?php $img = $one['image']; ?>
 							<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 						</div><!-- .col-lg-4 -->
@@ -104,16 +108,18 @@ defined( 'ABSPATH' ) || exit;
 			<section id="sectionThree">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-lg-4 pl-lg-0">
+						<div class="col-lg-4 pl-lg-0 d-flex align-items-center justify-content-center mb-3 mb-lg-0">
 							<?php $img = $three['image']; ?>
 							<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 						</div><!-- .col-lg-4 -->
 						<div class="col-lg-6 d-flex flex-column justify-content-center align-items-start">
 							<?php $img = $three['icon']; ?>
+							<div class="text-center text-lg-left mx-auto mx-lg-0">
 							<img class = "pl-3 mb-3" src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 							<h1 class="h2 section-title"><?php echo $three['header']; ?></h1>
+							</div>
 							<div class="inner-container pl-3">
-								<p><?php echo $three['copy']; ?></p>
+								<p class = "text-center text-lg-left"><?php echo $three['copy']; ?></p>
 								<table class="table">
 								  <thead>
 								    <tr>

@@ -52,7 +52,7 @@ defined( 'ABSPATH' ) || exit;
 							 <?php endwhile; ?>	
 						</div><!-- .col-lg-6 -->
 						<?php $img = $three['image']; ?>
-						<div class="col-lg-6 pr-lg-0" style = "background-image: url('<?php echo $img['url']; ?>'); ">	
+						<div id = "bgImg" class="col-lg-6 pr-lg-0" style = "background-image: url('<?php echo $img['url']; ?>'); ">	
 						</div><!-- .col-lg-6 -->
 					</div><!-- .row -->
 				</div><!-- .container-fluid -->

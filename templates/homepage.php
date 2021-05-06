@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 				<div class="container-fluid">
 					<div class="row">
 						<?php $img = $one['left_image']; ?>
-						<div class="col-lg-3 pl-lg-0">
+						<div class="col-lg-3 pl-lg-0 text-center">
 							<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 						</div><!-- .col-lg-3 -->
 						<div class="col-lg-6 text-center justify-content-center d-flex flex-column">
@@ -27,7 +27,7 @@ defined( 'ABSPATH' ) || exit;
 							</div><!-- .inner-container -->
 						</div><!-- .col-lg-6 -->
 						<?php $img = $one['right_image']; ?>
-						<div class="col-lg-3 pr-lg-0">
+						<div class="col-lg-3 pr-lg-0 text-center">
 							<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 						</div><!-- .col-lg-3 -->
 					</div><!-- .row -->
@@ -69,9 +69,9 @@ defined( 'ABSPATH' ) || exit;
 				<div class="container-fluid">
 					<div class="row">
 						<?php $img = $three['left_image']; ?>
-						<div class="col-md-6 pl-md-0" style = "background-image: url('<?php echo $img['url']; ?>'); ">	
-						</div><!-- .col-md-6 -->
-						<div class="col-md-4 d-flex flex-column justify-content-center">
+						<div id = "testimonialImage" class="col-lg-6 pl-lg-0" style = "background-image: url('<?php echo $img['url']; ?>'); ">	
+						</div><!-- .col-lg-6 -->
+						<div id = "testimonials" class="col-lg-6 d-flex flex-column justify-content-center">
 							<div class="content-container">
 								<h1 class="h5 subheader"><?php echo $three['subheader']; ?></h1>
 								<h2 class = "section-title"><?php echo $three['header']; ?></h2>
@@ -92,7 +92,7 @@ defined( 'ABSPATH' ) || exit;
 									</div>
 								</div><!-- .testimonialSliderOuterWrapper -->
 							</div><!-- .content-container -->
-						</div><!-- .col-md-4 -->
+						</div><!-- .col-lg-4 -->
 					</div><!-- .row -->
 				</div><!-- .container-fluid -->
 			</section><!-- #sectionThree -->

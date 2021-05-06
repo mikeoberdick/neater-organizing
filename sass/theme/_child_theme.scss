@@ -277,6 +277,11 @@ p {
     padding-top: 42.81%;
     box-shadow: none;
     background-size: contain;
+    min-height: 350px;
+    @include media-breakpoint-down(md) {
+      background-size: cover !important;
+      box-shadow: rgba(256,256,256,.5) 0 0 0 500px inset;
+    }
     @include media-breakpoint-up(lg) {
       padding-top: 0;
       min-height: 650px;
@@ -295,6 +300,20 @@ p {
   }
   #sectionThree {
     background-color: $blue;
+    @include media-breakpoint-down(md) {
+      #testimonialImage {
+        background-color: #faf9f9;
+        padding-top: 88.37%;
+        background-size: contain !important;
+        background-repeat: no-repeat;
+        background-position: center center !important;
+      }
+      #testimonials {
+        @include media-breakpoint-up(lg) {
+          max-width: 600px;  
+        }
+      }
+    }
     .content-container {
       padding: 50px;
     }
@@ -303,7 +322,31 @@ p {
     }
   }
   #sectionFour {
+    #cards {
+      @include media-breakpoint-down(lg) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
     .horizontal-card {
+      @include media-breakpoint-down(md) {
+      flex-direction: column;
+      width: 75%;
+      text-align: center;
+      img {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      }
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 25px;
+        &:last-of-type {
+          margin-bottom: 0;
+        } 
+      }
+      @include media-breakpoint-only(lg) {
+        min-width: 431px;
+      }
       flex-basis: 20%;
       background-color: #fff;
       padding: 15px;
@@ -324,6 +367,14 @@ p {
     background-color: rgba(166,180,179,.30);
     padding-top: 75px;
     padding-bottom: 75px;
+    img {
+      @include media-breakpoint-down(md) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 25px;
+      }
+    }
   }
 }
 
@@ -393,6 +444,7 @@ p {
     display: flex;
     @include media-breakpoint-down(sm) {
       flex-wrap: wrap;
+      justify-content: center;
     }
     @include media-breakpoint-up(md) {
       .image-wrapper {
@@ -423,18 +475,30 @@ p {
     }
   }
   #sectionFour {
-    padding-top: 48.07%;
     position: relative;
     background-size: cover;
+    @include media-breakpoint-only(md) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    @include media-breakpoint-up(lg) {
+      padding-top: 48.07%;
+    }
     @include media-breakpoint-up(lg) {
       padding-top: 0;
       min-height: 650px;
     }
-    .container-fluid {    
+    .container-fluid {
+    @include media-breakpoint-down(md) {
+       padding-left: 0;
+       padding-right: 0;
+     } 
+    @include media-breakpoint-up(lg) {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%); 
+      } 
       .inner-container {
         padding: 50px;
         background: #ffffffb8;
@@ -456,8 +520,18 @@ p {
       display: flex;
       justify-content: center;
       align-items: flex-start;
+      @include media-breakpoint-down(md) {
+        align-items: center;
+      }
+      @include media-breakpoint-down(xs) {
+        flex-direction: column;
+      }
       img {
         margin-right: 25px;
+        @include media-breakpoint-down(xs) {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
       }
       .wysiwyg {
         ul {
@@ -473,6 +547,15 @@ p {
       margin-bottom: 25px;
       &:last-of-type {
         margin-bottom: 0;
+      }
+    }
+    #bgImg {
+      @include media-breakpoint-down(md) {
+        margin-top: 50px;
+        padding-top: 145%;
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
       }
     }
   }
@@ -498,8 +581,18 @@ p {
       display: flex;
       justify-content: center;
       align-items: flex-start;
+      @include media-breakpoint-down(md) {
+        align-items: center;
+      }
+      @include media-breakpoint-down(xs) {
+        flex-direction: column;
+      }
       img {
         margin-right: 25px;
+        @include media-breakpoint-down(xs) {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
       }
       .wysiwyg {
         ul {
@@ -548,17 +641,28 @@ p {
   }
 }
 /*------------------------------------------------*/
-/*-----------[OUR WORK]-------------*/
+/*-----------[CONTACT]-------------*/
 /*------------------------------------------------*/
 #contact {
   #sectionOne {
     margin-bottom: 50px;
     #sidebar {
+      @include media-breakpoint-down(md) {
+        text-align: center;
+      }
+      .contact-section {
+        @media only screen and (max-width: 1318px) {
+          margin-bottom: 25px;  
+        }
+      }
       .inner-container {
         padding: 50px;
         background-color: rgba(231,223,215,.4); 
         display: flex;
         justify-content: space-between;
+        @media only screen and (max-width: 1318px) {
+          flex-direction: column;  
+        }
         a {
           &:hover {
             color: $black;
@@ -737,9 +841,22 @@ p {
     #productWrapper {
       width: 100%;
       display: flex;
-      .recommended-product {
-        flex-basis: 25%;
+      justify-content: space-between;
+      @include media-breakpoint-only(xs) {
+        flex-direction: column;
       }
+      @include media-breakpoint-down(md) {
+        flex-wrap: wrap;
+      }
+      .recommended-product {
+        @include media-breakpoint-down(md) {
+          flex-basis: 48%;
+          margin-bottom: 25px;
+        }
+        @include media-breakpoint-up(lg) {
+        flex-basis: 23.5%;
+      }
+      }      
     }
   }
 }
@@ -747,6 +864,7 @@ p {
 /*-----------[SINGLE]-------------*/
 /*------------------------------------------------*/
 #singlePost {
+  margin-bottom: 100px;
   .full-width-image {
     margin-bottom: 37.5px;
   } 
@@ -763,6 +881,10 @@ p {
   .post-footer {
     display: flex;
     justify-content: space-between;
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      text-align: center;
+    }
     .back {
       .btn {
         color: $black !important;
@@ -775,7 +897,9 @@ p {
     }
     .social-sharing {
       .subheader {
-        text-align: right;
+        @include media-breakpoint-up(lg) {
+          text-align: right;  
+        }
         margin-bottom: 15px;
       }
       .addtoany_shortcode {
@@ -810,6 +934,9 @@ p {
 #servicesPricingGuide {
   .table {
     thead {
+      tr {
+        background-color: transparent !important;
+      }
       th {
         border: 0;
       }
@@ -817,12 +944,19 @@ p {
     td {
       border: 0;
     }
+    tr:nth-of-type(odd) {
+      background-color: #EFEDE7;
+    }
   }
   .hero {
     margin-bottom: 0;
   }
   #sectionOne {
     margin-bottom: 0;
+    .right {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
   }
   #sectionTwo {
     margin-bottom: 0;
@@ -871,23 +1005,53 @@ footer {
   }
   .inner-wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-content: flex-start;
     margin-bottom: 100px;
+    @include media-breakpoint-down(md) {
+      text-align: center;
+    }
     #footerLogo {
-      flex-basis: 25%;
-      margin-right: 10%;
+      flex-basis: 100%;
+      @include media-breakpoint-down(md) {
+        margin-bottom: 25px;
+      }
+      @include media-breakpoint-up(lg) {
+        flex-basis: 25%;
+        margin-right: 10%;  
+      }
+      
     }
     #footerLinks {
+      flex-basis: 100%;
+      @include media-breakpoint-down(md) {
+        margin-bottom: 25px;
+      }
+      @include media-breakpoint-up(lg) {
       flex-basis: 30%;
-      display: flex;
+      display: flex;  
+      }
       .left {
         flex-basis: 50%;
+        .list-unstyled {
+          @include media-breakpoint-down(md) {
+            margin-bottom: 0;
+          }
+        }
       }
     }
     #contact {
+      flex-basis: 100%;
+      @include media-breakpoint-up(lg) {
       margin-left: 10%;
-      flex-basis: 25%;
+      flex-basis: 25%;  
+      }
+      .subheader {
+        @include media-breakpoint-down(md) {
+          margin-bottom: 10px;
+        }
+      }
     }
   }
 }
@@ -925,8 +1089,16 @@ footer {
     ul {
       display: flex;
       flex-wrap: wrap;
+      @include media-breakpoint-down(md) {
+        flex-direction: column;
+      }
+      @include media-breakpoint-up(lg) {
+        justify-content: space-between;
+      }
       li {
-        flex: 0 1 50%;
+        @include media-breakpoint-up(lg) {
+          flex: 0 1 49%;
+        }
         label {
           font-weight: 400;
         }

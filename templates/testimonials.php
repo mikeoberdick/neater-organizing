@@ -25,9 +25,9 @@ defined( 'ABSPATH' ) || exit;
 			<section id="sectionTwo">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-lg-6 pl-lg-0">
+						<div class="col-lg-6 pl-lg-0 d-flex align-items-center">
 							<?php $img = $two['image']; ?>
-							<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+							<img class = "mb-3 mb-lg-0" src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 						</div><!-- .col-lg-6 -->
 						<div class="col-lg-6 pr-lg-0 d-flex flex-column justify-content-center"> 
 							<?php $testimonials = $two['testimonials']; ?>
@@ -51,7 +51,7 @@ defined( 'ABSPATH' ) || exit;
 					<div class="row">
 						<?php $testimonials = $three['testimonials']; ?>
 						<?php foreach( $testimonials as $post ) : setup_postdata($post); ?>
-        					<div class="testimonial col-md-4">
+        					<div class="testimonial col-lg-4">
         						<div class="inner-container p-5 text-center">
         						<?php if (get_field('featured_line')) : ?>
         						<h1 class="h3 pull-quote"><?php the_field('featured_line'); ?></h1>
@@ -69,7 +69,7 @@ defined( 'ABSPATH' ) || exit;
 			<section id="sectionFour">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-md-6 offset-md-1">
+						<div class="col-lg-6 offset-lg-1">
 							<?php $testimonial = $four['testimonial']; ?>
 							<?php foreach( $testimonial as $post ) : setup_postdata($post); ?>
 	        					<div class="testimonial">
@@ -80,11 +80,11 @@ defined( 'ABSPATH' ) || exit;
 	        						<span class="author">- <?php the_field('author'); ?></span>
 	        					</div><!-- .testimonial -->
 							<?php endforeach; wp_reset_postdata(); ?>
-						</div><!-- .col-md-8 -->
-						<div class="col-md-4 offset-md-1 pr-md-0">
+						</div><!-- .col-lg-8 -->
+						<div class="col-lg-4 offset-lg-1 pr-lg-0 d-flex justify-content-center">
 							<?php $img = $four['right_image']; ?>
-							<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
-						</div><!-- .col-md-4 -->
+							<img class = "mt-3 mt-lg-0" src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+						</div><!-- .col-lg-4 -->
 					</div><!-- .row -->
 				</div><!-- .container-fluid -->
 			</section><!-- #sectionFour -->
@@ -95,7 +95,7 @@ defined( 'ABSPATH' ) || exit;
 					<div class="row">
 						<?php $testimonials = $five['testimonials']; ?>
 						<?php foreach( $testimonials as $post ) : setup_postdata($post); ?>
-        					<div class="testimonial col-md-4">
+        					<div class="testimonial col-lg-4">
         						<div class="inner-container p-5 text-center">
         						<?php if (get_field('featured_line')) : ?>
         						<h1 class="h3 pull-quote"><?php the_field('featured_line'); ?></h1>
@@ -113,11 +113,11 @@ defined( 'ABSPATH' ) || exit;
 			<section id="sectionSix">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-md-4 pl-md-0">
+						<div class="col-lg-4 pl-lg-0 d-flex justify-content-center">
 							<?php $img = $six['image']; ?>
-							<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
-						</div><!-- .col-md-4 -->
-						<div class="col-md-6 offset-md-1 d-flex flex-column justify-content-center">
+							<img class = "mb-3 mb-lg-0" src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+						</div><!-- .col-lg-4 -->
+						<div class="col-lg-6 offset-lg-1 d-flex flex-column justify-content-center">
 							<?php $testimonial = $six['testimonial']; ?>
 							<?php foreach( $testimonial as $post ) : setup_postdata($post); ?>
 	        					<div class="testimonial">
@@ -128,7 +128,7 @@ defined( 'ABSPATH' ) || exit;
 	        						<span class="author">- <?php the_field('author'); ?></span>
 	        					</div><!-- .testimonial -->
 							<?php endforeach; wp_reset_postdata(); ?>
-						</div><!-- .col-md-8 -->
+						</div><!-- .col-lg-8 -->
 					</div><!-- .row -->
 				</div><!-- .container-fluid -->
 			</section><!-- #sectionSix -->

@@ -36,7 +36,7 @@ get_header();
 						</div><!-- .inner-container -->
 						<div class="post-footer">
 							<div class="back">
-								<a href = "/blog"><button role = "button" class = "btn outline-button"><img class = "mr-2" src = "<?php echo get_stylesheet_directory_uri() . '/img/chevron_left.png'; ?>">Back To Blog</button></a>
+								<a href = "/blog"><button role = "button" class = "btn outline-button mb-3 mb-lg-0"><img class = "mr-2" src = "<?php echo get_stylesheet_directory_uri() . '/img/chevron_left.png'; ?>">Back To Blog</button></a>
 							</div><!-- .back -->
 							<div class="social-sharing">
 								<h6 class="subheader">Share With A Friend</h6>
