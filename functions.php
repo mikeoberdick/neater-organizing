@@ -60,4 +60,7 @@ include("functions/admin-modifications.php");
 //AJAX Functions
 include("functions/ajax-category-functions.php");
 
+//COMMENTS
+include("functions/comments.php");
+
 ?>

@@ -11334,6 +11334,8 @@ p {
 /*------------------------------------------------*/
 #singlePost {
   margin-bottom: 100px; }
+  #singlePost #thePost {
+    margin-bottom: 0; }
   #singlePost .full-width-image {
     margin-bottom: 37.5px; }
   #singlePost .inner-container {
@@ -11381,6 +11383,54 @@ p {
     #singlePost .post-footer .social-sharing .addtoany_shortcode a:hover span {
       border-color: #2D2D2B;
       opacity: 1; }
+  #singlePost #comments .btn {
+    color: #2D2D2B !important;
+    border-color: #2D2D2B !important; }
+    #singlePost #comments .btn:hover {
+      color: #2D2D2B !important;
+      background-color: transparent !important; }
+  #singlePost #comments #cancel-comment-reply-link {
+    font-size: 1rem;
+    margin-left: 10px; }
+    #singlePost #comments #cancel-comment-reply-link:hover {
+      color: #2D2D2B; }
+  #singlePost #comments .comment-form-url {
+    display: none; }
+  #singlePost #comments .comment {
+    border-bottom: solid 2px #E7DFD7; }
+    #singlePost #comments .comment:first-of-type {
+      border-bottom: 0; }
+  #singlePost #comments .says {
+    display: none; }
+  #singlePost #comments .avatar {
+    border-radius: 50% !important; }
+  #singlePost #comments .comment-reply {
+    margin-bottom: 20px;
+    padding: 0 !important;
+    border: 0 !important; }
+    #singlePost #comments .comment-reply a:hover {
+      color: #2D2D2B; }
+  #singlePost #comments .children {
+    padding-left: 0; }
+    #singlePost #comments .children .comment {
+      padding-bottom: 0;
+      margin-bottom: 25px;
+      border-bottom: 0;
+      padding-left: 25px;
+      border-left: solid #6D1919; }
+    #singlePost #comments .children .children {
+      padding-left: 25px; }
+  #singlePost #comments .children > .children {
+    padding-bottom: 25px;
+    border-bottom: solid 2px #E7DFD7;
+    margin-bottom: 25px; }
+  #singlePost #comments .comment-form .logged-in-as a {
+    color: inherit; }
+  #singlePost #comments .comment-form input {
+    border-color: #6D1919; }
+  #singlePost #comments .comment-form textarea {
+    border-color: #6D1919;
+    height: 150px; }
 
 /*------------------------------------------------*/
 /*-----------[SERVICES PRICING GUIDE]-------------*/

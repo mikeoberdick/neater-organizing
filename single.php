@@ -18,7 +18,7 @@ get_header();
 			<img class = "full-width-image" src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 			<div class="container">
 				<div class="row">
-					<div id = "thePost" class="col-sm-12">
+					<section id = "thePost" class="col-sm-12">
 						<div class="inner-container">
 							<h1 class="h2 section-title"><?php the_title(); ?></h1>
 							<div class = "h6 subheader"><?php $cats = '';
@@ -43,10 +43,16 @@ get_header();
 								<?php echo do_shortcode('[addtoany]'); ?>
 							</div><!-- .social-sharing -->
 						</div><!-- .post-footer -->	
-						</section><!-- #thePost -->	
-					</div><!-- .col-sm-12 -->
+					</section><!-- #thePost -->
 				</div><!-- .row -->
 			</div><!-- .container -->
+			<section id="commentContainer" class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<?php comments_template(); ?>
+					</div><!-- .col-sm-12 -->
+				</div><!-- .row -->
+			</section><!-- #commentContainer.container -->
 		</div><!-- #singlePost -->
 	</main><!-- #main -->
 </div><!-- #content -->
