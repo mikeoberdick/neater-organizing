@@ -22,22 +22,42 @@ defined( 'ABSPATH' ) || exit;
 				<div class="inner-container">
 					<h1><?php echo $mc['header']; ?></h1>
 					<div class = "wysiwyg"><?php echo $mc['content']; ?></div><!-- .wysiwyg -->
-					<span>[MC FORM HERE]</span>
+					<!-- Begin Mailchimp Signup Form -->
+						<div id="mc_embed_signup">
+						<form action="https://neaterorganizing.us4.list-manage.com/subscribe/post?u=bf0569b5291a889e6e574d996&amp;id=7c07f8e24b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+						    <div id="mc_embed_signup_scroll">
+							
+						<div class="mc-field-group">
+							<input type="email" value="" name="EMAIL" placeholder = "Email Address" class="required email" id="mce-EMAIL">
+						</div>
+							<div id="mce-responses" class="clear">
+								<div class="response" id="mce-error-response" style="display:none"></div>
+								<div class="response" id="mce-success-response" style="display:none"></div>
+							</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+						    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bf0569b5291a889e6e574d996_7c07f8e24b" tabindex="-1" value=""></div>
+						    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn outline-button"></div>
+						    </div>
+						</form>
+						</div>
+						<!--End mc_embed_signup-->
 				</div><!-- .inner-container -->
 			</div><!-- .col-sm-12 -->
 		</div><!-- .row -->
 	</div><!-- .container -->
 </section><!-- #mailchimp -->
 
-<section id="instagram">
+<section id="instagram" class = "mb-0">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 text-center">
-				<h1 class="h5 subheader">Follow Us On Instagram</h1>
-				<h2>@NeaterOrganizing</h2>
+				<h1 class="h5 subheader mb-2">Follow Us On Instagram</h1>
+				<a href="<?php the_field('instagram_url', 'options'); ?>"><h2 class = "mb-3">@NeaterOrganizing</h2></a>
 			</div><!-- .col-sm-12 -->
 		</div><!-- .row -->
 	</div><!-- .container -->
+	<div id="instagramFeed">
+		<?php echo do_shortcode('[instagram-feed]'); ?>
+	</div><!-- #instagramFeed -->
 </section><!-- #instagram -->
 
 <footer>
