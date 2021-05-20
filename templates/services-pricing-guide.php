@@ -169,11 +169,11 @@ defined( 'ABSPATH' ) || exit;
 
 <!-- GIFT CARD MODAL -->
 <div class="modal fade" id="giftCardModal" tabindex="-1" role="dialog" aria-labelledby="Gift Card Contact Form" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-body">
       	<div id = "modalTop" class = "d-flex align-items-center">	
-			<a class="modal-close" data-dismiss="modal"><i class="fa fa-times-thin light-blue" aria-hidden="true"></i></a>		
+			<a class="modal-close" data-dismiss="modal"><i class="fa fa-times-thin" aria-hidden="true"></i></a>		
       	</div>
       	<h1 class="h2 section-title"><?php the_field('gift_card_header', 'options'); ?></h1>
       	<p><?php the_field('gift_card_content', 'options'); ?></p>

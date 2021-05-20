@@ -30,7 +30,7 @@ defined( 'ABSPATH' ) || exit;
 							<?php $img = $two['image']; ?>
 							<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 						</div><!-- .col-lg-5 -->
-						<div class="col-lg-4 d-flex flex-column justify-content-center">
+						<div class="col-lg-4 d-flex flex-column justify-content-center pl-lg-4">
 							<h1 class="h5 subheader"><?php echo $two['subheader']; ?></h1>
 							<h2 class = "section-title"><?php echo $two['header']; ?></h2>
 							<div class="wysiwyg"><?php echo $two['content']; ?></div><!-- .wysiwyg -->

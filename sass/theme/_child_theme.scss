@@ -7,7 +7,12 @@
          url('../fonts/freight_big_pro-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
+}
+@font-face {
+    font-family: 'Freight Big Pro Book';
+    src: url('../fonts/freight_big_pro_book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
     font-family: 'Freight Neo Pro';
@@ -15,7 +20,6 @@
          url('../fonts/freight_neo-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 @font-face {
     font-family: 'Freight Neo Bold';
@@ -23,9 +27,14 @@
          url('../fonts/freight_neo_bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
-
+@font-face {
+    font-family: 'Freight Neo Book';
+    src: url('../fonts/freight_neo_book.woff2') format('woff2'),
+         url('../fonts/freight_neo_book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 html {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
   scroll-behavior: smooth;
@@ -33,7 +42,7 @@ html {
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	color: $red;
-	font-family: 'Freight Big Pro';
+	font-family: 'Freight Big Pro Book';
   margin-bottom: 0;
 }
 
@@ -54,6 +63,7 @@ body {
 	color: $black;
 	font-family: $freightNeo;
   background-color: rgba(246,245,244,.52);
+  line-height: 2;
 }
 
 a {
@@ -69,6 +79,7 @@ a {
   color: $black;
   margin-bottom: 25px;
   font-family: $freightNeoBold;
+  letter-spacing: .15rem;
 }
 
 .section-title {
@@ -77,6 +88,11 @@ a {
 
 p {
   margin-bottom: 25px;
+}
+
+p + a {
+  display: inline-block;
+  margin-top: 25px;
 }
 
 .wysiwyg {
@@ -133,6 +149,8 @@ p {
   font-weight: bold;
   .subheader {
     margin-bottom: 0;
+    font-family: 'Freight Big Pro';
+    letter-spacing: .3rem;
   }
   a {
     display: flex;
@@ -149,12 +167,20 @@ p {
   padding-bottom: 25px;
 }
 #main-menu {
-  a {
-    font-family: $freightNeo;
-    text-transform: uppercase;
-    font-weight: bold;
-    &:hover {
-      color: $red;
+  li {
+    margin-right: 10px;
+    a {
+      font-family: $freightNeo;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: .15rem;
+      font-size: 16px;
+      &:hover {
+        color: $red;
+      }
+    }
+    &:last-of-type {
+      margin-right: 0;
     }
   }
 }
@@ -165,6 +191,12 @@ p {
 
 #logoLink {
   max-width: 75%;
+  img {
+    width: 66%;
+    @include media-breakpoint-up(lg) {
+      width: 300px;   
+    }
+  }
 }
 
 .dropdown-menu {
@@ -191,7 +223,8 @@ p {
     transition: all .5s;
     font: normal normal normal 14px/1 FontAwesome;
     border: 0;
-    content: "\f078"; 
+    content: "\f078";
+    vertical-align: 0;
   }
   &:hover {
     &:after {
@@ -212,6 +245,7 @@ p {
   padding: .5rem 3rem !important;
   white-space: normal;
   color: #fff !important;
+  letter-spacing: .1rem;
 }
 
 .blue-button {
@@ -244,14 +278,14 @@ p {
 /*------------------------------------------------*/
 .hero {
   padding-top: 24.53%;
-  box-shadow: rgba(255,255,255,.61) 0 0 0 1000px inset;
+  box-shadow: rgba(255,255,255,.75) 0 0 0 1000px inset;
   position: relative;
   background-size: contain;
   background-position: center center !important;
   @include media-breakpoint-up(lg) {
     padding-top: 0;
     min-height: 400px;
-  }
+  }box-shadow: rgba(255,255,255,.75) 0 0 0 1000px inset;
   .container {
     position: absolute;
     top: 50%;
@@ -286,10 +320,19 @@ p {
       padding-top: 0;
       min-height: 650px;
     }
-    .inner-container {
+    .container {
+      text-align: left;
       @include media-breakpoint-up(lg) {
-        width: 50%;
-        text-align: left;
+        text-align: center;
+      }
+      .inner-container {
+        @include media-breakpoint-up(lg) {
+          width: 50%;
+          text-align: left;
+        }
+        h1 {
+          margin-bottom: 35px;
+        }
       }
     }
   }
@@ -299,29 +342,40 @@ p {
     } 
   }
   #sectionThree {
-    background-color: $blue;
-    @include media-breakpoint-down(md) {
-      #testimonialImage {
+    background-color: rgba(166,180,179,.30);
+    #testimonialImage {
+      background-position: center center !important;
+      background-size: contain !important;
+      background-repeat: no-repeat !important;  
+      @include media-breakpoint-down(md) {
         background-color: #faf9f9;
         padding-top: 88.37%;
-        background-size: contain !important;
-        background-repeat: no-repeat;
-        background-position: center center !important;
       }
+    }
       #testimonials {
         @include media-breakpoint-up(lg) {
           max-width: 600px;  
         }
+        .section-title {
+          font-family: $freightNeoBook;
+        }
       }
-    }
     .content-container {
       padding: 50px;
     }
     .prev-arrow, .next-arrow {
       cursor: pointer;
     }
+    .prev-arrow {
+      margin-right: 5px;
+    }
+    .next-arrow {
+      margin-left: 5px;
+    }
   }
   #sectionFour {
+    margin-top: 50px;
+    margin-bottom: 150px;
     #cards {
       @include media-breakpoint-down(lg) {
         flex-direction: column;
@@ -361,6 +415,8 @@ p {
     text-align: center;
     h1 {
       margin-bottom: 35px;
+      letter-spacing: .025rem;
+      font-family: 'Freight Neo Book';
     }
   }
   #sectionTwo {
@@ -376,12 +432,24 @@ p {
       }
     }
   }
+  #setionThree {
+    text-align: center;
+  }
+  #sectionFour {
+    margin-bottom: 150px;
+    .full-width-image {
+      margin-bottom: 150px;
+    }
+  }
 }
 
 /*-----------------------------------------------*/
 /*---------------[TESTIMONIALS]------------------*/
 /*------------------------------------------------*/
 #testimonials {
+  .hero {
+    box-shadow: rgba(255,255,255,.40) 0 0 0 1000px inset;
+  }
   .testimonial {
     .pull-quote {
       margin-bottom: 25px;
@@ -1068,7 +1136,7 @@ p {
   position: relative;
   @include media-breakpoint-up(lg) {
     padding-top: 0;
-    min-height: 500px;
+    min-height: 600px;
   }
   .container {
     padding: 5%;
@@ -1089,9 +1157,15 @@ p {
       }
     }
   }
+  .btn {
+    &:hover {
+      border-color: $blue !important;
+      color: #fff !important;
+    }
+  }
 }
 footer {
-  background-color: $blue;
+  background-color: rgba(166,180,179,.59);
   padding-top: 100px;
   padding-bottom: 25px;
   padding-left: 10%;
@@ -1138,6 +1212,9 @@ footer {
           }
         }
       }
+      li {
+        margin-bottom: 10px;
+      }
     }
     #contact {
       flex-basis: 100%;
@@ -1148,6 +1225,11 @@ footer {
       .subheader {
         @include media-breakpoint-down(md) {
           margin-bottom: 10px;
+        }
+      }
+      .social-link {
+        img {
+          height: 20px;
         }
       }
     }
@@ -1250,7 +1332,9 @@ footer {
       border-color: #2D2D2B !important;
       color: #2D2D2B !important;
       &:hover {
-        background-color: transparent !important;
+        background-color: $blue !important;
+        color: #fff !important;
+        border-color: $blue !important;
       }
     }
   }
@@ -1274,11 +1358,34 @@ footer {
       border-radius: 0;
     }
   }
-  .btn {
-    border-color: $black !important;
-    color: $black !important;
-    &:hover {
-      background-color: transparent !important;
+}
+
+/*------------------------------------------------*/
+/*------------------[MODAL]-----------------*/
+/*------------------------------------------------*/
+.modal-close {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  .fa-times-thin:before {
+    content: '\00d7';
+    color: $red;
+    font-size: 24px;
+  }  
+}
+
+.modal-content {
+    background-color: #EFEDE7;
+    border-radius: 0;
+    padding: 50px;
+    .modal-body {
+      padding: 0;
     }
-  }
+    .btn {
+      &:hover {
+        background-color: $blue !important;
+        color: #fff !important;
+        border-color: $blue !important;
+      }
+    }
 }

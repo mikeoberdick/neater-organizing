@@ -48,6 +48,10 @@ jQuery(function($) {
 		$('#ajaxCategoryFilter .close-icon, #ajaxCategoryFilter li').on('click', function() {
 			$('#ajaxCategoryFilter').slideUp();
 		});
+//Open gift card modal if the pricing page is hit with the hash #giftcerticate
+if( window.location.hash && window.location.hash == '#giftCertificate') {
+  $('#giftCardModal').modal('show');
+};
 
 		//if ($(window).width() < 992) {
 		   //do some mobile stuff

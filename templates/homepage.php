@@ -15,12 +15,12 @@ defined( 'ABSPATH' ) || exit;
 				<div class="container-fluid">
 					<div class="row">
 						<?php $img = $one['left_image']; ?>
-						<div class="col-lg-3 pl-lg-0 text-center">
+						<div class="col-lg-3 pl-lg-0 text-center mb-2 mb-lg-0">
 							<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 						</div><!-- .col-lg-3 -->
 						<div class="col-lg-6 text-center justify-content-center d-flex flex-column">
 							<div class="inner-container p-3">
-								<h1 class="h5 subheader"><?php echo $one['subheader']; ?></h1>
+								<h1 class="h6 subheader"><?php echo $one['subheader']; ?></h1>
 								<h2 class = "section-title"><?php echo $one['header']; ?></h2>
 								<p><?php echo $one['content']; ?></p>
 								<a href = "<?php echo $one['button_url']; ?>"><button role = "button" class = "btn outline-button"><?php echo $one["button_text"]; ?></button></a>	
@@ -41,7 +41,7 @@ defined( 'ABSPATH' ) || exit;
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">
-							<h1 class="h5 subheader text-center"><?php echo $two['subheader']; ?></h1>
+							<h1 class="h6 subheader text-center"><?php echo $two['subheader']; ?></h1>
 						</div><!-- .col-sm-12 -->
 						<?php while(have_rows('section_two')) : the_row(); ?>
 							<?php while(have_rows('buckets')) : the_row(); ?>
@@ -49,7 +49,7 @@ defined( 'ABSPATH' ) || exit;
 									<div class="icon-and-title d-flex align-items-center mb-3">
 										<?php $img = get_sub_field('icon'); ?>
 										<img class = "mr-3" src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
-										<h2 class="h5 subheader mb-0"><?php the_sub_field('header'); ?></h2>
+										<h2 class="h6 subheader mb-0"><?php the_sub_field('header'); ?></h2>
 									</div><!-- .icon-and-title -->
 									<div class="wysiwyg">
 										<?php the_sub_field('content'); ?>
@@ -57,7 +57,7 @@ defined( 'ABSPATH' ) || exit;
 								</div><!-- .col-md-6 -->
 							<?php endwhile; ?>
 						<?php endwhile; ?>
-						<div class="col-sm-12 text-center">
+						<div class="col-sm-12 text-center mt-3">
 							<a href = "<?php echo $two['button_link']; ?>"><button role = "button" class = "btn outline-button"><?php echo $two["button_text"]; ?></button></a>
 						</div><!-- .col-sm-12 -->
 					</div><!-- .row -->
@@ -73,7 +73,7 @@ defined( 'ABSPATH' ) || exit;
 						</div><!-- .col-lg-6 -->
 						<div id = "testimonials" class="col-lg-6 d-flex flex-column justify-content-center">
 							<div class="content-container">
-								<h1 class="h5 subheader"><?php echo $three['subheader']; ?></h1>
+								<h1 class="h6 subheader"><?php echo $three['subheader']; ?></h1>
 								<h2 class = "section-title"><?php echo $three['header']; ?></h2>
 								<div class="testimonialSliderOuterWrapper">
 									<div id="testimonialSlider">
@@ -102,7 +102,7 @@ defined( 'ABSPATH' ) || exit;
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12 text-center">
-							<h1 class="h5 subheader"><?php echo $four['subheader']; ?></h1>
+							<h1 class="h6 subheader"><?php echo $four['subheader']; ?></h1>
 							<h2 class = "section-title"><?php echo $four['header']; ?></h2>
 						</div><!-- .col-sm-12 -->
 					</div><!-- .row -->

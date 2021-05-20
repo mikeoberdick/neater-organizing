@@ -51,7 +51,7 @@ defined( 'ABSPATH' ) || exit;
 		<div class="row">
 			<div class="col-sm-12 text-center">
 				<h1 class="h5 subheader mb-2">Follow Us On Instagram</h1>
-				<a href="<?php the_field('instagram_url', 'options'); ?>"><h2 class = "mb-3">@NeaterOrganizing</h2></a>
+				<a href="<?php the_field('instagram_url', 'options'); ?>"><h2 class = "h2 mb-3">@NeaterOrganizing</h2></a>
 			</div><!-- .col-sm-12 -->
 		</div><!-- .row -->
 	</div><!-- .container -->
@@ -72,7 +72,7 @@ defined( 'ABSPATH' ) || exit;
 				<?php $leftUrls = get_field('footer_links_left', 'options'); ?>
 				<?php foreach( $leftUrls as $post ): ?>
 			        <li>
-			            <a class = "h5 subheader" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+			            <a class = "h6 subheader" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 			        </li>
 	        	<?php endforeach; wp_reset_postdata(); ?>
 	        	</ul>
@@ -82,16 +82,19 @@ defined( 'ABSPATH' ) || exit;
 					<?php $rightUrls = get_field('footer_links_right', 'options'); ?>
 					<?php foreach( $rightUrls as $post ): ?>
 				        <li>
-				            <a class = "h5 subheader" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+				            <a class = "h6 subheader" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 				        </li>
 		        	<?php endforeach; wp_reset_postdata(); ?>
+		        	<li>
+			            <a class = "h6 subheader" href="/services-pricing-guide#giftCertificate">Gift Certificates</a>
+			        </li>
 		        </ul>	
 			</div><!-- .right -->
 		</div><!-- #footerLinks -->
 		<div id="contact">
 			<?php $phone = preg_replace('/[^0-9]/', '', get_field('phone_number', 'option')); ?>
-			<a href="tel:<?php echo $phone ?>"><h5 class = "subheader">Call Us At <?php the_field('phone_number', 'option'); ?></h5></a>
-			<h5 class = "subheader" >Or Find Us Online</h5>
+			<a href="tel:<?php echo $phone ?>"><h5 class = "h6 subheader">Call Us At <?php the_field('phone_number', 'option'); ?></h5></a>
+			<h5 class = "h6 subheader" >Or Find Us Online</h5>
 			<div class="social-links">
 				<a class = "social-link instagram mr-2" rel="noreferrer" target = "_blank" href="<?php the_field('instagram_url', 'options') ?>"><img class = "mr-2" src = "<?php echo get_stylesheet_directory_uri() . '/img/instagram.png'; ?>"><span class = "sr-only sr-only-focusable">Instagram</span></a>
 				<a class = "social-link facebook mr-2" rel="noreferrer" target = "_blank" href="<?php the_field('facebook_url', 'options') ?>"><img class = "mr-2" src = "<?php echo get_stylesheet_directory_uri() . '/img/facebook.png'; ?>"><span class = "sr-only sr-only-focusable">Facebook</span></a>
@@ -103,11 +106,11 @@ defined( 'ABSPATH' ) || exit;
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 text-center">
-				<p class = "mb-0 small"><?php echo date('Y') . '&copy ' . get_bloginfo('name') . ' All Rights Reserved.'; ?>
+				<p class = "mb-0 small"><?php echo '&copy ' . get_bloginfo('name') . ' ' . date('Y') . '. All Rights Reserved.'; ?>
 					<a href="/privacy-policy">Privacy Policy.</a>
 					<a href="/terms-and-conditions">Terms & Conditions.</a>
 				</p>
-				<p class = "mb-0 small">Site design by <a rel="noreferrer" target = "_blank" href = "https://www.saraholiviamarketing.com/" alt = "Sarah Olivia Marketing">Sarah Olivia Marketing</a></p>	
+				<p class = "mb-0 small">Website by <a rel="noreferrer" target = "_blank" href = "https://www.saraholiviamarketing.com/" alt = "Sarah Olivia Marketing">Sarah Olivia Marketing</a></p>	
 			</div><!-- .col-sm-12 -->
 		</div><!-- .row -->
 	</div><!-- .container -->			

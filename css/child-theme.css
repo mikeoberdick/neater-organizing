@@ -10529,6 +10529,12 @@ figure.woocommerce-product-gallery__wrapper {
   font-style: normal; }
 
 @font-face {
+  font-family: 'Freight Big Pro Book';
+  src: url("../fonts/freight_big_pro_book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
   font-family: 'Freight Neo Pro';
   src: url("../fonts/freight_neo-webfont.woff2") format("woff2"), url("../fonts/freight_neo-webfont.woff") format("woff");
   font-weight: normal;
@@ -10540,21 +10546,27 @@ figure.woocommerce-product-gallery__wrapper {
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'Freight Neo Book';
+  src: url("../fonts/freight_neo_book.woff2") format("woff2"), url("../fonts/freight_neo_book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 html {
   scroll-behavior: smooth; }
   html {
     font-size: 14px; }
     @media screen and (min-width: 320px) {
       html {
-        font-size: calc(14px + 4 * ((100vw - 320px) / 880)); } }
+        font-size: calc(14px + 2 * ((100vw - 320px) / 880)); } }
     @media screen and (min-width: 1200px) {
       html {
-        font-size: 18px; } }
+        font-size: 16px; } }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #6D1919;
-  font-family: 'Freight Big Pro';
+  font-family: 'Freight Big Pro Book';
   margin-bottom: 0; }
 
 h1 {
@@ -10593,7 +10605,8 @@ h3 {
 body {
   color: #2D2D2B;
   font-family: "Freight Neo Pro";
-  background-color: rgba(246, 245, 244, 0.52); }
+  background-color: rgba(246, 245, 244, 0.52);
+  line-height: 2; }
 
 a {
   color: #221F20;
@@ -10605,13 +10618,18 @@ a {
   text-transform: uppercase;
   color: #2D2D2B;
   margin-bottom: 25px;
-  font-family: "Freight Neo Bold"; }
+  font-family: "Freight Neo Bold";
+  letter-spacing: .15rem; }
 
 .section-title {
   margin-bottom: 35px; }
 
 p {
   margin-bottom: 25px; }
+
+p + a {
+  display: inline-block;
+  margin-top: 25px; }
 
 .wysiwyg ul {
   list-style: none;
@@ -10655,7 +10673,9 @@ p {
   font-family: "Freight Big Pro";
   font-weight: bold; }
   #notificationBar .subheader {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-family: 'Freight Big Pro';
+    letter-spacing: .3rem; }
   #notificationBar a {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -10673,18 +10693,29 @@ p {
   padding-top: 25px;
   padding-bottom: 25px; }
 
-#main-menu a {
-  font-family: "Freight Neo Pro";
-  text-transform: uppercase;
-  font-weight: bold; }
-  #main-menu a:hover {
-    color: #6D1919; }
+#main-menu li {
+  margin-right: 10px; }
+  #main-menu li a {
+    font-family: "Freight Neo Pro";
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .15rem;
+    font-size: 16px; }
+    #main-menu li a:hover {
+      color: #6D1919; }
+  #main-menu li:last-of-type {
+    margin-right: 0; }
 
 .mobileToggle {
   color: #221F20; }
 
 #logoLink {
   max-width: 75%; }
+  #logoLink img {
+    width: 66%; }
+    @media (min-width: 992px) {
+      #logoLink img {
+        width: 300px; } }
 
 .dropdown-menu {
   margin-top: 0;
@@ -10703,7 +10734,8 @@ p {
   transition: all .5s;
   font: normal normal normal 14px/1 FontAwesome;
   border: 0;
-  content: "\f078"; }
+  content: "\f078";
+  vertical-align: 0; }
 
 .dropdown-toggle:hover:after {
   -webkit-transform: rotate(180deg);
@@ -10719,7 +10751,8 @@ p {
   border-radius: 37px;
   padding: .5rem 3rem !important;
   white-space: normal;
-  color: #fff !important; }
+  color: #fff !important;
+  letter-spacing: .1rem; }
 
 .blue-button {
   background-color: #A6B4B3 !important; }
@@ -10745,11 +10778,12 @@ p {
 /*------------------------------------------------*/
 .hero {
   padding-top: 24.53%;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.61) 0 0 0 1000px inset;
-          box-shadow: rgba(255, 255, 255, 0.61) 0 0 0 1000px inset;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.75) 0 0 0 1000px inset;
+          box-shadow: rgba(255, 255, 255, 0.75) 0 0 0 1000px inset;
   position: relative;
   background-size: contain;
-  background-position: center center !important; }
+  background-position: center center !important;
+  box-shadow: rgba(255, 255, 255, 0.75) 0 0 0 1000px inset; }
   @media (min-width: 992px) {
     .hero {
       padding-top: 0;
@@ -10786,66 +10820,81 @@ p {
     #homepage .hero {
       padding-top: 0;
       min-height: 650px; } }
-  @media (min-width: 992px) {
-    #homepage .hero .inner-container {
-      width: 50%;
-      text-align: left; } }
+  #homepage .hero .container {
+    text-align: left; }
+    @media (min-width: 992px) {
+      #homepage .hero .container {
+        text-align: center; } }
+    @media (min-width: 992px) {
+      #homepage .hero .container .inner-container {
+        width: 50%;
+        text-align: left; } }
+    #homepage .hero .container .inner-container h1 {
+      margin-bottom: 35px; }
 
 #homepage #sectionTwo h1 {
   margin-bottom: 75px; }
 
 #homepage #sectionThree {
-  background-color: #A6B4B3; }
-  @media (max-width: 991.98px) {
-    #homepage #sectionThree #testimonialImage {
-      background-color: #faf9f9;
-      padding-top: 88.37%;
-      background-size: contain !important;
-      background-repeat: no-repeat;
-      background-position: center center !important; } }
-
-@media (max-width: 991.98px) and (min-width: 992px) {
-  #homepage #sectionThree #testimonials {
-    max-width: 600px; } }
+  background-color: rgba(166, 180, 179, 0.3); }
+  #homepage #sectionThree #testimonialImage {
+    background-position: center center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important; }
+    @media (max-width: 991.98px) {
+      #homepage #sectionThree #testimonialImage {
+        background-color: #faf9f9;
+        padding-top: 88.37%; } }
+  @media (min-width: 992px) {
+    #homepage #sectionThree #testimonials {
+      max-width: 600px; } }
+  #homepage #sectionThree #testimonials .section-title {
+    font-family: "Freight Neo Book"; }
   #homepage #sectionThree .content-container {
     padding: 50px; }
   #homepage #sectionThree .prev-arrow, #homepage #sectionThree .next-arrow {
     cursor: pointer; }
+  #homepage #sectionThree .prev-arrow {
+    margin-right: 5px; }
+  #homepage #sectionThree .next-arrow {
+    margin-left: 5px; }
 
-@media (max-width: 1199.98px) {
-  #homepage #sectionFour #cards {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; } }
-
-#homepage #sectionFour .horizontal-card {
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
-  background-color: #fff;
-  padding: 15px; }
-  @media (max-width: 991.98px) {
-    #homepage #sectionFour .horizontal-card {
+#homepage #sectionFour {
+  margin-top: 50px;
+  margin-bottom: 150px; }
+  @media (max-width: 1199.98px) {
+    #homepage #sectionFour #cards {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      width: 75%;
-      text-align: center; }
-      #homepage #sectionFour .horizontal-card img {
-        margin-right: 0;
-        margin-bottom: 15px; } }
-  @media (max-width: 1199.98px) {
-    #homepage #sectionFour .horizontal-card {
-      margin-bottom: 25px; }
-      #homepage #sectionFour .horizontal-card:last-of-type {
-        margin-bottom: 0; } }
-  @media (min-width: 992px) and (max-width: 1199.98px) {
-    #homepage #sectionFour .horizontal-card {
-      min-width: 431px; } }
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
+  #homepage #sectionFour .horizontal-card {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+    background-color: #fff;
+    padding: 15px; }
+    @media (max-width: 991.98px) {
+      #homepage #sectionFour .horizontal-card {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        width: 75%;
+        text-align: center; }
+        #homepage #sectionFour .horizontal-card img {
+          margin-right: 0;
+          margin-bottom: 15px; } }
+    @media (max-width: 1199.98px) {
+      #homepage #sectionFour .horizontal-card {
+        margin-bottom: 25px; }
+        #homepage #sectionFour .horizontal-card:last-of-type {
+          margin-bottom: 0; } }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      #homepage #sectionFour .horizontal-card {
+        min-width: 431px; } }
 
 /*------------------------------------------------*/
 /*----------------[MEET ANNETTE]-----------------*/
@@ -10853,7 +10902,9 @@ p {
 #meetAnnette #sectionOne {
   text-align: center; }
   #meetAnnette #sectionOne h1 {
-    margin-bottom: 35px; }
+    margin-bottom: 35px;
+    letter-spacing: .025rem;
+    font-family: 'Freight Neo Book'; }
 
 #meetAnnette #sectionTwo {
   background-color: rgba(166, 180, 179, 0.3);
@@ -10866,9 +10917,21 @@ p {
       margin-right: auto;
       margin-bottom: 25px; } }
 
+#meetAnnette #setionThree {
+  text-align: center; }
+
+#meetAnnette #sectionFour {
+  margin-bottom: 150px; }
+  #meetAnnette #sectionFour .full-width-image {
+    margin-bottom: 150px; }
+
 /*-----------------------------------------------*/
 /*---------------[TESTIMONIALS]------------------*/
 /*------------------------------------------------*/
+#testimonials .hero {
+  -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 0 0 1000px inset;
+          box-shadow: rgba(255, 255, 255, 0.4) 0 0 0 1000px inset; }
+
 #testimonials .testimonial .pull-quote {
   margin-bottom: 25px; }
 
@@ -11487,7 +11550,7 @@ p {
   @media (min-width: 992px) {
     #mailchimp {
       padding-top: 0;
-      min-height: 500px; } }
+      min-height: 600px; } }
   #mailchimp .container {
     padding: 5%;
     background: #ffffffb8;
@@ -11504,9 +11567,12 @@ p {
       #mailchimp .container .inner-container {
         width: 75%;
         margin: 0 auto; } }
+  #mailchimp .btn:hover {
+    border-color: #A6B4B3 !important;
+    color: #fff !important; }
 
 footer {
-  background-color: #A6B4B3;
+  background-color: rgba(166, 180, 179, 0.59);
   padding-top: 100px;
   padding-bottom: 25px;
   padding-left: 10%;
@@ -11558,6 +11624,8 @@ footer {
         @media (max-width: 991.98px) {
           footer .inner-wrapper #footerLinks .left .list-unstyled {
             margin-bottom: 0; } }
+      footer .inner-wrapper #footerLinks li {
+        margin-bottom: 10px; }
     footer .inner-wrapper #contact {
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%; }
@@ -11569,6 +11637,8 @@ footer {
       @media (max-width: 991.98px) {
         footer .inner-wrapper #contact .subheader {
           margin-bottom: 10px; } }
+      footer .inner-wrapper #contact .social-link img {
+        height: 20px; }
 
 /*------------------------------------------------*/
 /*------------------[NINJA FORMS]-----------------*/
@@ -11670,7 +11740,9 @@ footer {
   border-color: #2D2D2B !important;
   color: #2D2D2B !important; }
   .nf-form-cont .nf-field-element .btn:hover {
-    background-color: transparent !important; }
+    background-color: #A6B4B3 !important;
+    color: #fff !important;
+    border-color: #A6B4B3 !important; }
 
 /*------------------------------------------------*/
 /*------------------[MAILCHIMP]-----------------*/
@@ -11694,10 +11766,28 @@ footer {
       margin-right: 25px;
       height: 100%;
       border-radius: 0; }
-  #mc_embed_signup_scroll .btn {
-    border-color: #2D2D2B !important;
-    color: #2D2D2B !important; }
-    #mc_embed_signup_scroll .btn:hover {
-      background-color: transparent !important; }
+
+/*------------------------------------------------*/
+/*------------------[MODAL]-----------------*/
+/*------------------------------------------------*/
+.modal-close {
+  position: absolute;
+  right: 0;
+  cursor: pointer; }
+  .modal-close .fa-times-thin:before {
+    content: '\00d7';
+    color: #6D1919;
+    font-size: 24px; }
+
+.modal-content {
+  background-color: #EFEDE7;
+  border-radius: 0;
+  padding: 50px; }
+  .modal-content .modal-body {
+    padding: 0; }
+  .modal-content .btn:hover {
+    background-color: #A6B4B3 !important;
+    color: #fff !important;
+    border-color: #A6B4B3 !important; }
 
 /*# sourceMappingURL=child-theme.css.map */
