@@ -22,32 +22,15 @@ function replace_howdy( $wp_admin_bar ) {
 }
 add_filter( 'admin_bar_menu', 'replace_howdy',25 );
 
-// REPLACE LOGIN LOGO
-function psc_logo() { ?>
-    <style type="text/css">
-        body.login div#login h1 a {
-            background-image: url(<?php echo get_bloginfo( 'template_directory' ) ?>/images/logo.svg);
-            padding-bottom: 30px;
-        }
-    </style>
-<?php }
-add_action( 'login_enqueue_scripts', 'psc_logo' );
-
 // REPLACE LOGIN LINK
 function my_login_logo_url() {
     return get_bloginfo( 'url' );
 }
 add_filter( 'login_headerurl', 'my_login_logo_url' );
 
-// UPDATE TITLE OF LINK
-function my_login_logo_url_title() {
-    return 'Powered by LISI Press 3.0';
-}
-add_filter( 'login_headertitle', 'my_login_logo_url_title' );
-
 // LOGIN STYLESHEET
 function my_login_stylesheet() { ?>
-    <link rel="stylesheet" id="custom_wp_admin_css"  href="<?php echo get_bloginfo( 'stylesheet_directory' ) . '/css/style-login.css'; ?>" type="text/css" media="all" />
+    <link rel="stylesheet" id="custom_wp_admin_css"  href="<?php echo get_bloginfo( 'stylesheet_directory' ) . '/login/login_styles.css'; ?>" type="text/css" media="all" />
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
 

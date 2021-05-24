@@ -40,14 +40,14 @@ defined( 'ABSPATH' ) || exit;
 			</section><!-- #sectionTwo -->
 
 			<?php $three = get_field('section_three'); ?>
-			<section id="sectionOne">
+			<section id="sectionThree">
 				<div class="container-fluid">
 					<div class="row">
 						<?php $img = $three['left_image']; ?>
 						<div class="col-lg-3 pl-lg-0">
 							<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 						</div><!-- .col-lg-3 -->
-						<div class="col-lg-6">
+						<div class="col-lg-6 mb-5 mb-lg-0">
 							<div class="inner-container p-3">
 							<h1 class="h5 subheader"><?php echo $three['subheader']; ?></h1>
 							<h2 class = "section-title"><?php echo $three['header']; ?></h2>
@@ -61,7 +61,7 @@ defined( 'ABSPATH' ) || exit;
 						</div><!-- .col-lg-3 -->
 					</div><!-- .row -->
 				</div><!-- .container-fluid -->
-			</section><!-- #sectionOne -->
+			</section><!-- #sectionThree -->
 
 			<?php $four = get_field('section_four'); ?>
 			<section id="sectionFour">

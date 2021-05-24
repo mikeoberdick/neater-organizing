@@ -3,8 +3,8 @@
 }
 
 .login h1 a {
-	background-image: url(/wp-content/themes/neater-organizing/login/login_logo.png) !important;
-	height: 206px !important;
+	background-image: url(/wp-content/themes/neater-organizing/login/som_logo.png) !important;
+	height: 59px !important;
 	width: 320px !important;
 	-webkit-background-size: contain !important; }
 
@@ -22,7 +22,7 @@
 }
 
 body.login {
-background: #ef522a;
+background: #6f1b2c;
 }
 
 .login .button {

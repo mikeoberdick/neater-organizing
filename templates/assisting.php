@@ -45,7 +45,7 @@ defined( 'ABSPATH' ) || exit;
 							<h1 class="h5 subheader"><?php echo $three['subheader']; ?></h1>
 							<h2 class = "section-title"><?php echo $three['header']; ?></h2>
 							<p><?php echo $three['content']; ?></p>
-							<a href = "<?php echo $three['button_url']; ?>"><button role = "button" class = "btn outline-button"><?php echo $three["button_text"]; ?></button></a>
+							<a href = "<?php echo $three['button_url']; ?>"><button role = "button" class = "btn outline-button mb-5 mb-lg-0"><?php echo $three["button_text"]; ?></button></a>
 						</div><!-- .col-lg-4 offset-lg-2 -->
 						<div class="col-lg-5 offset-lg-1 pr-lg-0 d-flex justify-content-center">
 							<?php $img = $three['image']; ?>

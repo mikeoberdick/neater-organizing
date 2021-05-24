@@ -53,7 +53,7 @@ defined( 'ABSPATH' ) || exit;
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav class="navbar navbar-expand-md">
+		<nav class="navbar navbar-expand-lg">
 			<div class="container">
 				<a id = "logoLink" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
 				<?php $logo = get_field('logo', 'options'); ?>
