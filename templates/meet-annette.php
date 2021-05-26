@@ -26,7 +26,7 @@ defined( 'ABSPATH' ) || exit;
 			<section id="sectionTwo">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-lg-5 offset-lg-1">
+						<div class="col-lg-5 offset-lg-2">
 							<?php $img = $two['image']; ?>
 							<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 						</div><!-- .col-lg-5 -->
@@ -66,12 +66,12 @@ defined( 'ABSPATH' ) || exit;
 			<?php $four = get_field('section_four'); ?>
 			<section id="sectionFour">
 				<?php $img = $four['hero_image']; ?>
-				<img class = "full-width-image" src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+				<div class="parallax full-width-image" style = "background-image: url('<?php echo $img['url']; ?>');"></div>
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12 text-center">
 							<h1 class="h5 subheader"><?php echo $four['subheader']; ?></h1>
-							<h2 class = "section-title"><?php echo $four['header']; ?></h2>
+							<h2 class = "section-title mt-4"><?php echo $four['header']; ?></h2>
 						</div><!-- .col-sm-12 -->
 						<div class="col-sm-12 text-center">
 							<a href = "<?php echo $four['button_link']; ?>"><button role = "button" class = "btn outline-button"><?php echo $four["button_text"]; ?></button></a>

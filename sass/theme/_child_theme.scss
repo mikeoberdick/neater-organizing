@@ -9,6 +9,12 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'Freight Big Pro Semibold';
+    src: url('../fonts/freight_big_pro_semibold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: 'Freight Big Pro Book';
     src: url('../fonts/freight_big_pro_book.woff') format('woff');
     font-weight: normal;
@@ -77,13 +83,14 @@ a {
 .subheader {
   text-transform: uppercase;
   color: $black;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
   font-family: $freightNeoBold;
   letter-spacing: .15rem;
 }
 
 .section-title {
-  margin-bottom: 35px;
+  margin-bottom: 50px;
+  font-family: $freightBigProBook;
 }
 
 p {
@@ -145,7 +152,7 @@ p + a {
 /*-------------------[HEADER]---------------------*/
 /*------------------------------------------------*/
 #notificationBar {
-  background-color: $blue;
+  background-color: rgba(166,180,179,.59);
   padding: 15px 0;
   font-family: $freightBig; 
   font-weight: bold;
@@ -153,6 +160,9 @@ p + a {
     margin-bottom: 0;
     font-family: 'Freight Big Pro';
     letter-spacing: .3rem;
+    &:hover {
+        color: $red;  
+    }
   }
   a {
     display: flex;
@@ -174,7 +184,7 @@ p + a {
       margin-right: 10px;  
     }
     a {
-      font-family: $freightNeo;
+      font-family: $freightNeoBold;
       text-transform: uppercase;
       font-weight: bold;
       letter-spacing: .15rem;
@@ -185,6 +195,14 @@ p + a {
     }
     &:last-of-type {
       margin-right: 0;
+    }
+    &.current-menu-item {
+      a {
+        color: $red;
+      }
+    }
+    &.current-page-parent > a {
+      color: $red;
     }
   }
 }
@@ -199,7 +217,7 @@ p + a {
     width: 66%;
     max-width: 300px;
     @include media-breakpoint-up(lg) {
-      width: 300px;   
+      width: 200px;   
     }
   }
 }
@@ -290,7 +308,7 @@ p + a {
 /*------------------------------------------------*/
 .hero {
   padding-top: 24.53%;
-  box-shadow: rgba(255,255,255,.75) 0 0 0 1000px inset;
+  box-shadow: rgba(255,255,255,.60) 0 0 0 1000px inset;
   position: relative;
   background-size: contain !important;
   background-position: center center !important;
@@ -299,12 +317,16 @@ p + a {
     padding-top: 0;
     min-height: 400px;
   }
-  .container {
+  .container, .container-fluid {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
+  }
+  h1 {
+    font-family: $freightBigProSemibold;
+    font-weight: 600;
   }
 }
 
@@ -313,7 +335,15 @@ p + a {
 }
 
 .full-width-image {
-  margin-bottom: 75px;
+  margin-bottom: 100px;
+}
+
+.parallax {
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*------------------------------------------------*/
@@ -332,14 +362,15 @@ p + a {
       padding-top: 0;
       min-height: 650px;
     }
-    .container {
+    .container-fluid {
       text-align: left;
       @include media-breakpoint-up(lg) {
         text-align: center;
       }
       .inner-container {
         @include media-breakpoint-up(lg) {
-          width: 50%;
+          width: 40%;
+          padding-left: 5%;
           text-align: left;
         }
         h1 {
@@ -383,7 +414,7 @@ p + a {
           max-width: 600px;  
         }
         .section-title {
-          font-family: $freightNeoBook;
+          font-family: $freightBigProBook;
         }
       }
     .content-container {
@@ -442,7 +473,7 @@ p + a {
     h1 {
       margin-bottom: 35px;
       letter-spacing: .025rem;
-      font-family: 'Freight Neo Book';
+      font-family: $freightBigProBook;
     }
   }
   #sectionTwo {
@@ -488,6 +519,9 @@ p + a {
         margin-bottom: 25px;
       }
     }
+  }
+  #sectionFour, #sectionSix {
+    background-color: #EFEFEF;
   }
 }
 /*------------------------------------------------*/
@@ -1212,8 +1246,9 @@ p + a {
 /*--------------------[FOOTER]--------------------*/
 /*------------------------------------------------*/
 #mailchimp {
-  padding-top: 41.51%;
+  padding-top: 41.51% !important;
   position: relative;
+  margin-bottom: 150px;
   @include media-breakpoint-down(md) {
     background-size: contain !important;
   }
@@ -1230,7 +1265,7 @@ p + a {
     transform: translate(-50%,-50%);
     text-align: center; 
     h1 {
-      font-family: 'Freight Big Pro';
+      font-family: $freightBigProBook;
       color: $black;
     }
     .inner-container {
@@ -1241,8 +1276,11 @@ p + a {
     }
   }
   .btn {
+    border-color: #2d2d2b!important;
+    color: #2d2d2b!important;
     &:hover {
       border-color: $blue !important;
+      background-color: $blue;
       color: #fff !important;
     }
   }
@@ -1255,7 +1293,7 @@ footer {
   padding-right: 10%;
   a {
     &:hover {
-      color: $black;
+      color: $red;
     }
   }
   .inner-wrapper {
@@ -1277,7 +1315,7 @@ footer {
         margin-right: 10%;  
       }
       img {
-        max-width: 300px;
+        max-width: 200px;
       }
     }
     #footerLinks {
@@ -1442,7 +1480,7 @@ footer {
       margin-bottom: 0; 
     }
     input {
-      border: solid 2px;
+      border: solid 1px;
       padding: 5px 5px 5px 10px;
       width: 100%;
       margin-right: 25px;

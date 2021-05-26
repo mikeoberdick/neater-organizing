@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="inner-container">
-					<h1><?php echo $mc['header']; ?></h1>
+					<h1 class = "mb-3"><?php echo $mc['header']; ?></h1>
 					<div class = "wysiwyg"><?php echo $mc['content']; ?></div><!-- .wysiwyg -->
 					<!-- Begin Mailchimp Signup Form -->
 						<div id="mc_embed_signup">
@@ -50,8 +50,8 @@ defined( 'ABSPATH' ) || exit;
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 text-center">
-				<h1 class="h5 subheader mb-2">Follow Us On Instagram</h1>
-				<a href="<?php the_field('instagram_url', 'options'); ?>"><h2 class = "h2 mb-3">@NeaterOrganizing</h2></a>
+				<h1 class="h6 small subheader mb-2">Follow Us On Instagram</h1>
+				<a href="<?php the_field('instagram_url', 'options'); ?>"><h2 class = "h1 mb-3">@NeaterOrganizing</h2></a>
 			</div><!-- .col-sm-12 -->
 		</div><!-- .row -->
 	</div><!-- .container -->
@@ -110,7 +110,7 @@ defined( 'ABSPATH' ) || exit;
 					<a href="/privacy-policy">Privacy Policy.</a>
 					<a href="/terms-and-conditions">Terms & Conditions.</a>
 				</p>
-				<p class = "mb-0 small">Website by <a rel="noreferrer" target = "_blank" href = "https://www.saraholiviamarketing.com/" alt = "Sarah Olivia Marketing">Sarah Olivia Marketing</a></p>	
+				<p class = "mb-0 small">Website by <a rel="noreferrer" target = "_blank" href = "https://www.saraholiviamarketing.com/" alt = "Sarah Olivia Marketing">Sarah Olivia Marketing.</a></p>	
 			</div><!-- .col-sm-12 -->
 		</div><!-- .row -->
 	</div><!-- .container -->			

@@ -3,15 +3,25 @@
 } else {
 	$hero = get_field('hero');
 }
+
 $img = $hero['background_image']; 
+
 if ( $hero['header'] ) {
 	$title = $hero['header'];
 } else {
 	$title = get_the_title();
-} ?>
+} 
+
+if (is_page_template('templates/homepage.php') ){
+	$container = 'container-fluid';
+} else {
+	$container = 'container';
+}
+
+?>
 
 <section class = "hero" style = "background: url(<?php echo $img['url']; ?>)">
-	<div class="container">
+	<div class="<?php echo $container; ?>">
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="inner-container">

@@ -41,20 +41,21 @@ jQuery(function($) {
 		$('#ajaxCategoryFilter .close-icon, #ajaxCategoryFilter li').on('click', function() {
 			$('#ajaxCategoryFilter').slideUp();
 		});
-//Open gift card modal if the pricing page is hit with the hash #giftcerticate
-if( window.location.hash && window.location.hash == '#giftCertificate') {
-  $('#giftCardModal').modal('show');
-};
 
-//Large viewport and up
-///Switch to hover displaying dropdown versus default bootstrap behavior of click to show
-if ($(window).width() > 991) {
-	$('.navbar .dropdown').hover(function() {
-	$(this).find('.dropdown-menu').addClass('d-block').first().stop(true, true).delay(0).slideDown();
-	}, function() {
-	$(this).find('.dropdown-menu').removeClass('d-block').first().stop(true, true).delay(100).slideUp().removeClass('tst');
-	});
-}
+		//Open gift card modal if the pricing page is hit with the hash #giftcerticate
+		if( window.location.hash && window.location.hash == '#giftCertificate') {
+		  $('#giftCardModal').modal('show');
+		};
+
+		//Large viewport and up
+		///Switch to hover displaying dropdown versus default bootstrap behavior of click to show
+		if ($(window).width() > 991) {
+			$('.navbar .dropdown').hover(function() {
+			$(this).find('.dropdown-menu').addClass('d-block').first().stop(true, true).delay(0).slideDown();
+			}, function() {
+			$(this).find('.dropdown-menu').removeClass('d-block').first().stop(true, true).delay(100).slideUp().removeClass('tst');
+			});
+		}
 		
 		//if ($(window).width() < 992) {
 		   //do some mobile stuff

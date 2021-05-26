@@ -37,11 +37,12 @@ defined( 'ABSPATH' ) || exit;
 			<?php $two = get_field('section_two'); ?>
 			<section id="sectionTwo">
 				<?php $img = $two['hero_image']; ?>
-				<img class = "full-width-image" src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+				<div class="parallax full-width-image" style = "background-image: url('<?php echo $img['url']; ?>');">
+				</div><!-- .parrallax -->
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">
-							<h1 class="h6 subheader text-center"><?php echo $two['subheader']; ?></h1>
+							<h1 class="h5 subheader text-center"><?php echo $two['subheader']; ?></h1>
 						</div><!-- .col-sm-12 -->
 						<?php while(have_rows('section_two')) : the_row(); ?>
 							<?php while(have_rows('buckets')) : the_row(); ?>
@@ -81,14 +82,14 @@ defined( 'ABSPATH' ) || exit;
 										<?php foreach( $testimonials as $post ): setup_postdata($post); ?>
 								            <div class="testimonial-slide">
 								            	<div class="wysiwyg"><?php the_field('testimonial'); ?></div><!-- .wysiwyg -->
-								            	<span class = "mb-3 d-inline-block"><?php the_field('author'); ?></span>
+								            	<span class = "mb-3 d-inline-block">~ <?php the_field('author'); ?></span>
 								            </div><!-- .testimonial-slide -->
 								    	<?php endforeach; wp_reset_postdata(); ?>
 									</div><!-- #testimonialSlider -->
 									<div id="counter" class = "d-inline">
-										<a class="prev-arrow"><img id = "prev" src = "/wp-content/themes/neater-organizing/img/chevron_left.png" alt = "Previous" /></a>
+										<a class="prev-arrow"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
 										<span class = "font-weight-bold"></span>
-										<a class="next-arrow"><img id = "next" src = "/wp-content/themes/neater-organizing/img/chevron_right.png" alt = "Next" /></a>
+										<a class="next-arrow"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
 									</div>
 								</div><!-- .testimonialSliderOuterWrapper -->
 							</div><!-- .content-container -->
