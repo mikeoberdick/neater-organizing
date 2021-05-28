@@ -10523,6 +10523,14 @@ figure.woocommerce-product-gallery__wrapper {
 /*-------------------[FONTS]----------------------*/
 /*------------------------------------------------*/
 @font-face {
+  font-family: 'URW Classico Bold';
+  src: url("../fonts/urw_classico_bold.woff2") format("woff2"), url("../fonts/urw_classico_bold.woff") format("woff"); }
+
+@font-face {
+  font-family: 'URW Classico Regular';
+  src: url("../fonts/urw_classico_regular.woff2") format("woff2"), url("../fonts/urw_classico_regular.woff") format("woff"); }
+
+@font-face {
   font-family: 'Freight Big Pro';
   src: url("../fonts/freight_big_pro-webfont.woff2") format("woff2"), url("../fonts/freight_big_pro-webfont.woff") format("woff");
   font-weight: normal;
@@ -10610,7 +10618,7 @@ h3 {
 
 body {
   color: #2D2D2B;
-  font-family: "Freight Neo Pro";
+  font-family: "URW Classico Regular";
   background-color: rgba(246, 245, 244, 0.52);
   line-height: 2; }
 
@@ -10709,7 +10717,7 @@ p + a {
     margin-right: 10px; } }
 
 #main-menu li a {
-  font-family: "Freight Neo Bold";
+  font-family: "URW Classico Bold";
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: .15rem;
