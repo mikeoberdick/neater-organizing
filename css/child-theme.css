@@ -10542,7 +10542,7 @@ figure.woocommerce-product-gallery__wrapper {
 
 @font-face {
   font-family: 'Freight Neo Pro';
-  src: url("../fonts/freight_neo-webfont.woff2") format("woff2"), url("../fonts/freight_neo-webfont.woff") format("woff");
+  src: url("../fonts/freight_neo.ttf") format("ttf"), url("../fonts/freight_neo-webfont.woff2") format("woff2"), url("../fonts/freight_neo-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -10648,7 +10648,7 @@ p + a {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    content: "\f111";
+    content: "\f10c";
     margin-right: 10px;
     font-size: 8px; }
 
@@ -10822,7 +10822,7 @@ p + a {
             transform: translate(-50%, -50%);
     text-align: center; }
   .hero h1 {
-    font-family: "Freight Big Pro Semibold";
+    font-family: "Freight Big Pro Book";
     font-weight: 600; }
 
 .hero, section {
@@ -10875,7 +10875,7 @@ p + a {
   background-color: rgba(166, 180, 179, 0.3); }
   #homepage #sectionThree #testimonialImage {
     background-position: center center !important;
-    background-size: contain !important;
+    background-size: cover !important;
     background-repeat: no-repeat !important; }
     @media (max-width: 991.98px) {
       #homepage #sectionThree #testimonialImage {
@@ -10974,8 +10974,8 @@ p + a {
   #meetAnnette #sectionFour .full-width-image {
     margin-bottom: 150px; }
 
-/*-----------------------------------------------*/
-/*---------------[TESTIMONIALS]------------------*/
+/*------------------------------------------------*/
+/*---------------[TESTIMONIALS]-------------------*/
 /*------------------------------------------------*/
 #testimonials .hero {
   -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 0 0 1000px inset;
@@ -10990,7 +10990,7 @@ p + a {
     margin-bottom: 25px; }
 
 #testimonials #sectionFour, #testimonials #sectionSix {
-  background-color: #EFEFEF; }
+  background-color: rgba(231, 223, 215, 0.48); }
 
 /*------------------------------------------------*/
 /*-----------[FAQs]-------------*/
@@ -11015,13 +11015,17 @@ p + a {
       font-family: "Freight Neo Bold";
       text-transform: uppercase; }
     #faqs #questionContainer .question-container .card-body {
-      padding: 25px 0 0 25px; }
+      padding: 5px 25px 5px 25px;
+      margin-top: 25px; }
       #faqs #questionContainer .question-container .card-body p:last-of-type {
         margin-bottom: 0; }
 
 /*------------------------------------------------*/
 /*-----------[HOME OFFICE ORGANIZING]-------------*/
 /*------------------------------------------------*/
+#homeOfficeOrganizing #sectionOne {
+  margin-bottom: 125px; }
+
 #homeOfficeOrganizing #sectionTwo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11040,8 +11044,8 @@ p + a {
 
 #homeOfficeOrganizing #sectionThree {
   background-color: rgba(166, 180, 179, 0.4);
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   margin-bottom: 0; }
   @media (max-width: 991.98px) {
     #homeOfficeOrganizing #sectionThree .row {
@@ -11099,7 +11103,7 @@ p + a {
               transform: translate(-50%, -50%); } }
   #homeOfficeOrganizing #sectionFour .container-fluid .inner-container {
     padding: 50px;
-    background: #ffffffb8;
+    background: rgba(255, 255, 255, 0.95);
     text-align: center; }
 
 /*------------------------------------------------*/

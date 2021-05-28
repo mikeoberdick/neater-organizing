@@ -54,8 +54,8 @@ defined( 'ABSPATH' ) || exit;
 					<div class="row">
 						<div class="col-md-8 offset-md-2">
 							<div class="inner-container">
-								<h1 class="h5 subheader"><?php echo $four['subheader']; ?></h1>
-								<h2 class = "section-title"><?php echo $four['header']; ?></h2>
+								<h1 class="h6 subheader"><?php echo $four['subheader']; ?></h1>
+								<h2 class = "h2 section-title"><?php echo $four['header']; ?></h2>
 								<div class = "wysiwyg"><?php echo $four['content']; ?></div><!-- .wysiwyg -->
 							</div><!-- .inner-container -->
 						</div><!-- .col-md-8 offset-md-2 -->

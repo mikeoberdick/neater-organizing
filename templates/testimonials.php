@@ -99,7 +99,6 @@ defined( 'ABSPATH' ) || exit;
         						<?php if (get_field('featured_line')) : ?>
         						<h1 class="h3 pull-quote"><?php the_field('featured_line'); ?></h1>
         						<?php endif; ?>
-        						<?php if (get_field('testimonial')) : ?><div class="wysiwyg"><?php the_field('testimonial'); ?></div><!-- .wysiwyg --><?php endif; ?>
         						<span class="author">~ <?php the_field('author'); ?></span>
         					</div><!-- .inner-container -->
         					</div><!-- .testimonial -->

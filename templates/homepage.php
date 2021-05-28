@@ -10,12 +10,16 @@ defined( 'ABSPATH' ) || exit;
 		<div id="homepage">
 			<?php get_template_part('snippets/hero'); ?>
 
+			<?php if (extension_loaded('imagick'))
+    echo 'imagick installed';
+?>
+
 			<?php $one = get_field('section_one'); ?>
 			<section id="sectionOne">
 				<div class="container-fluid">
 					<div class="row">
 						<?php $img = $one['left_image']; ?>
-						<div class="col-lg-3 pl-lg-0 text-center mb-2 mb-lg-0">
+						<div class="col-lg-3 pl-lg-0 mb-2 mb-lg-0">
 							<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 						</div><!-- .col-lg-3 -->
 						<div class="col-lg-6 text-center justify-content-center d-flex flex-column">
@@ -27,7 +31,7 @@ defined( 'ABSPATH' ) || exit;
 							</div><!-- .inner-container -->
 						</div><!-- .col-lg-6 -->
 						<?php $img = $one['right_image']; ?>
-						<div class="col-lg-3 pr-lg-0 text-center">
+						<div class="col-lg-3 text-right pr-lg-0">
 							<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 						</div><!-- .col-lg-3 -->
 					</div><!-- .row -->
