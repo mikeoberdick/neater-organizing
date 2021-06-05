@@ -10,10 +10,6 @@ defined( 'ABSPATH' ) || exit;
 		<div id="homepage">
 			<?php get_template_part('snippets/hero'); ?>
 
-			<?php if (extension_loaded('imagick'))
-    echo 'imagick installed';
-?>
-
 			<?php $one = get_field('section_one'); ?>
 			<section id="sectionOne">
 				<div class="container-fluid">
@@ -51,7 +47,7 @@ defined( 'ABSPATH' ) || exit;
 						<?php while(have_rows('section_two')) : the_row(); ?>
 							<?php while(have_rows('buckets')) : the_row(); ?>
 								<div class="col-md-6 text-center text-md-left">
-									<div class="icon-and-title d-flex align-items-center justify-content-center justify-content-md-start mb-3">
+									<div class="icon-and-title d-flex align-items-center mb-3">
 										<?php $img = get_sub_field('icon'); ?>
 										<img class = "mr-3" src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 										<h2 class="h6 subheader mb-0"><?php the_sub_field('header'); ?></h2>
@@ -76,7 +72,7 @@ defined( 'ABSPATH' ) || exit;
 						<?php $img = $three['left_image']; ?>
 						<div id = "testimonialImage" class="col-lg-6 pl-lg-0" style = "background-image: url('<?php echo $img['url']; ?>'); ">	
 						</div><!-- .col-lg-6 -->
-						<div id = "testimonials" class="col-lg-6 d-flex flex-column justify-content-center">
+						<div id = "testimonials" class="col-lg-6 d-flex flex-column justify-content-center py-lg-5">
 							<div class="content-container">
 								<h1 class="h6 subheader"><?php echo $three['subheader']; ?></h1>
 								<h2 class = "section-title"><?php echo $three['header']; ?></h2>
@@ -86,7 +82,7 @@ defined( 'ABSPATH' ) || exit;
 										<?php foreach( $testimonials as $post ): setup_postdata($post); ?>
 								            <div class="testimonial-slide">
 								            	<div class="wysiwyg"><?php the_field('testimonial'); ?></div><!-- .wysiwyg -->
-								            	<span class = "mb-3 d-inline-block">~ <?php the_field('author'); ?></span>
+								            	<span class = "mb-3 d-inline-block">- <?php the_field('author'); ?></span>
 								            </div><!-- .testimonial-slide -->
 								    	<?php endforeach; wp_reset_postdata(); ?>
 									</div><!-- #testimonialSlider -->

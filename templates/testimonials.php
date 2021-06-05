@@ -32,12 +32,12 @@ defined( 'ABSPATH' ) || exit;
 						<div class="col-lg-6 pr-lg-0 d-flex flex-column justify-content-center"> 
 							<?php $testimonials = $two['testimonials']; ?>
 							<?php foreach( $testimonials as $post ) : setup_postdata($post); ?>
-            					<div class="testimonial p-5">
+            					<div class="testimonial text-center text-lg-left p-4 p-lg-5">
             						<?php if (get_field('featured_line')) : ?>
             						<h1 class="h3 pull-quote"><?php the_field('featured_line'); ?></h1>
             						<?php endif; ?>
             						<?php if (get_field('testimonial')) : ?><div class="wysiwyg"><?php the_field('testimonial'); ?></div><!-- .wysiwyg --><?php endif; ?>
-            						<span class="author">~ <?php the_field('author'); ?></span>
+            						<span class="author">- <?php the_field('author'); ?></span>
             					</div><!-- .testimonial -->
     						<?php endforeach; wp_reset_postdata(); ?>
 						</div><!-- .col-lg-6 -->
@@ -56,7 +56,7 @@ defined( 'ABSPATH' ) || exit;
         						<?php if (get_field('featured_line')) : ?>
         						<h1 class="h3 pull-quote"><?php the_field('featured_line'); ?></h1>
         						<?php endif; ?>
-        						<span class="author">~ <?php the_field('author'); ?></span>	
+        						<span class="author">- <?php the_field('author'); ?></span>	
         						</div><!-- .inner-container p-4 -->
         					</div><!-- .testimonial -->
 						<?php endforeach; wp_reset_postdata(); ?>
@@ -76,11 +76,11 @@ defined( 'ABSPATH' ) || exit;
 	        						<h1 class="h3 pull-quote"><?php the_field('featured_line'); ?></h1>
 	        						<?php endif; ?>
 	        						<?php if (get_field('testimonial')) : ?><div class="wysiwyg"><?php the_field('testimonial'); ?></div><!-- .wysiwyg --><?php endif; ?>
-	        						<span class="author">~ <?php the_field('author'); ?></span>
+	        						<span class="author">- <?php the_field('author'); ?></span>
 	        					</div><!-- .testimonial -->
 							<?php endforeach; wp_reset_postdata(); ?>
 						</div><!-- .col-lg-8 -->
-						<div class="col-lg-4 offset-lg-1 pr-lg-0 d-flex justify-content-center">
+						<div class="image col-lg-4 offset-lg-1 pr-lg-0 d-flex justify-content-center">
 							<?php $img = $four['right_image']; ?>
 							<img class = "mt-3 mt-lg-0" src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 						</div><!-- .col-lg-4 -->
@@ -99,7 +99,7 @@ defined( 'ABSPATH' ) || exit;
         						<?php if (get_field('featured_line')) : ?>
         						<h1 class="h3 pull-quote"><?php the_field('featured_line'); ?></h1>
         						<?php endif; ?>
-        						<span class="author">~ <?php the_field('author'); ?></span>
+        						<span class="author">- <?php the_field('author'); ?></span>
         					</div><!-- .inner-container -->
         					</div><!-- .testimonial -->
 						<?php endforeach; wp_reset_postdata(); ?>
@@ -111,7 +111,7 @@ defined( 'ABSPATH' ) || exit;
 			<section id="sectionSix">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-lg-4 pl-lg-0 d-flex justify-content-center">
+						<div class="image col-lg-4 pl-lg-0 d-flex justify-content-center">
 							<?php $img = $six['image']; ?>
 							<img class = "mb-3 mb-lg-0" src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 						</div><!-- .col-lg-4 -->
@@ -123,7 +123,7 @@ defined( 'ABSPATH' ) || exit;
 	        						<h1 class="h3 pull-quote"><?php the_field('featured_line'); ?></h1>
 	        						<?php endif; ?>
 	        						<?php if (get_field('testimonial')) : ?><div class="wysiwyg"><?php the_field('testimonial'); ?></div><!-- .wysiwyg --><?php endif; ?>
-	        						<span class="author">~ <?php the_field('author'); ?></span>
+	        						<span class="author">- <?php the_field('author'); ?></span>
 	        					</div><!-- .testimonial -->
 							<?php endforeach; wp_reset_postdata(); ?>
 						</div><!-- .col-lg-8 -->
@@ -142,7 +142,7 @@ defined( 'ABSPATH' ) || exit;
 	        						<h1 class="h3 pull-quote"><?php the_field('featured_line'); ?></h1>
 	        						<?php endif; ?>
 	        						<?php if (get_field('testimonial')) : ?><div class="wysiwyg"><?php the_field('testimonial'); ?></div><!-- .wysiwyg --><?php endif; ?>
-	        						<span class="author">~ <?php the_field('author'); ?></span>
+	        						<span class="author">- <?php the_field('author'); ?></span>
 	        					</div><!-- .testimonial -->
 							<?php endforeach; wp_reset_postdata(); ?>
 						</div><!-- .col-sm-12 -->

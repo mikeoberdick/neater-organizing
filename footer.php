@@ -39,6 +39,7 @@ defined( 'ABSPATH' ) || exit;
 						    </div>
 						</form>
 						</div>
+						<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 						<!--End mc_embed_signup-->
 				</div><!-- .inner-container -->
 			</div><!-- .col-sm-12 -->
@@ -93,7 +94,7 @@ defined( 'ABSPATH' ) || exit;
 		</div><!-- #footerLinks -->
 		<div id="contact">
 			<?php $phone = preg_replace('/[^0-9]/', '', get_field('phone_number', 'option')); ?>
-			<a href="tel:<?php echo $phone ?>"><h5 class = "h6 subheader">Call Us At <?php the_field('phone_number', 'option'); ?></h5></a>
+			<h5 class = "h6 subheader">Call Us At <a href="tel:<?php echo $phone ?>"><?php the_field('phone_number', 'option'); ?></a></h5>
 			<h5 class = "h6 subheader" >Or Find Us Online</h5>
 			<div class="social-links">
 				<a class = "social-link instagram mr-2" rel="noreferrer" target = "_blank" href="<?php the_field('instagram_url', 'options') ?>"><img class = "mr-2" src = "<?php echo get_stylesheet_directory_uri() . '/img/instagram.png'; ?>"><span class = "sr-only sr-only-focusable">Instagram</span></a>

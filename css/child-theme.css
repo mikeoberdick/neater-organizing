@@ -10584,34 +10584,34 @@ h1, h2, h3, h4, h5, h6,
   margin-bottom: 0; }
 
 h1 {
-  font-size: 2.0736rem; }
+  font-size: 3.32151rem; }
   h1 {
-    font-size: 24.192px; }
+    font-size: 34.44525px; }
     @media screen and (min-width: 320px) {
       h1 {
-        font-size: calc(24.192px + 23.058 * ((100vw - 320px) / 880)); } }
+        font-size: calc(34.44525px + 12.80475 * ((100vw - 320px) / 880)); } }
     @media screen and (min-width: 1200px) {
       h1 {
         font-size: 47.25px; } }
 
 h2 {
-  font-size: 1.728rem; }
+  font-size: 2.46038rem; }
   h2 {
-    font-size: 24.192px; }
+    font-size: 34.44525px; }
     @media screen and (min-width: 320px) {
       h2 {
-        font-size: calc(24.192px + 23.058 * ((100vw - 320px) / 880)); } }
+        font-size: calc(34.44525px + 12.80475 * ((100vw - 320px) / 880)); } }
     @media screen and (min-width: 1200px) {
       h2 {
         font-size: 47.25px; } }
 
 h3 {
-  font-size: 1.44rem; }
+  font-size: 1.8225rem; }
   h3 {
-    font-size: 20.16px; }
+    font-size: 25.515px; }
     @media screen and (min-width: 320px) {
       h3 {
-        font-size: calc(20.16px + 11.34 * ((100vw - 320px) / 880)); } }
+        font-size: calc(25.515px + 5.985 * ((100vw - 320px) / 880)); } }
     @media screen and (min-width: 1200px) {
       h3 {
         font-size: 31.5px; } }
@@ -10631,9 +10631,12 @@ a {
 .subheader {
   text-transform: uppercase;
   color: #2D2D2B;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
   font-family: "Freight Neo Bold";
   letter-spacing: .15rem; }
+  @media (min-width: 992px) {
+    .subheader {
+      margin-bottom: 35px; } }
 
 .section-title {
   margin-bottom: 50px;
@@ -10751,9 +10754,6 @@ p + a {
   border: 0;
   border-radius: 0;
   background-color: #F6F5F4; }
-  @media (max-width: 991.98px) {
-    .dropdown-menu {
-      display: block; } }
   .dropdown-menu .dropdown-item:active {
     color: #6D1919;
     text-decoration: none;
@@ -10811,16 +10811,18 @@ p + a {
 /*-------------------[GENERAL]--------------------*/
 /*------------------------------------------------*/
 .hero {
-  padding-top: 24.53%;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.6) 0 0 0 1000px inset;
-          box-shadow: rgba(255, 255, 255, 0.6) 0 0 0 1000px inset;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.45) 0 0 0 1000px inset;
+          box-shadow: rgba(255, 255, 255, 0.45) 0 0 0 1000px inset;
   position: relative;
-  background-size: contain !important;
-  background-position: center center !important; }
+  background-size: cover !important;
+  background-position: center center !important;
+  min-height: 250px; }
   @media (min-width: 992px) {
     .hero {
-      background-size: cover !important;
-      padding-top: 0;
+      -webkit-box-shadow: rgba(255, 255, 255, 0.6) 0 0 0 1000px inset;
+              box-shadow: rgba(255, 255, 255, 0.6) 0 0 0 1000px inset;
+      padding-top: 24.53%;
+      background-size: contain !important;
       min-height: 400px; } }
   .hero .container, .hero .container-fluid {
     position: absolute;
@@ -10858,7 +10860,8 @@ p + a {
       background-size: cover !important;
       -webkit-box-shadow: rgba(255, 255, 255, 0.5) 0 0 0 500px inset;
               box-shadow: rgba(255, 255, 255, 0.5) 0 0 0 500px inset;
-      min-height: 400px; } }
+      min-height: 400px;
+      margin-bottom: 50px; } }
   @media (min-width: 992px) {
     #homepage .hero {
       padding-top: 0;
@@ -10876,8 +10879,16 @@ p + a {
     #homepage .hero .container-fluid .inner-container h1 {
       margin-bottom: 35px; }
 
+@media (max-width: 991.98px) {
+  #homepage #sectionOne {
+    margin-bottom: 50px; } }
+
 #homepage #sectionTwo h1 {
   margin-bottom: 75px; }
+
+@media (max-width: 991.98px) {
+  #homepage #sectionTwo .wysiwyg p {
+    text-align: left; } }
 
 #homepage #sectionThree {
   background-color: rgba(166, 180, 179, 0.3); }
@@ -10889,19 +10900,6 @@ p + a {
       #homepage #sectionThree #testimonialImage {
         background-color: #faf9f9;
         padding-top: 88.37%; } }
-  @media (max-width: 991.98px) {
-    #homepage #sectionThree #testimonials {
-      position: relative;
-      padding-top: 100px; }
-      #homepage #sectionThree #testimonials:before {
-        height: 100px;
-        content: '';
-        display: block;
-        background-color: #fff;
-        width: 100%;
-        left: 0;
-        position: absolute;
-        top: 0; } }
   @media (min-width: 992px) {
     #homepage #sectionThree #testimonials {
       max-width: 600px; } }
@@ -10972,15 +10970,22 @@ p + a {
       display: block;
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: 25px; } }
+      margin-bottom: 50px; } }
 
 #meetAnnette #sectionThree {
   text-align: center; }
+  @media (max-width: 991.98px) {
+    #meetAnnette #sectionThree img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 50px; } }
 
 #meetAnnette #sectionFour {
   margin-bottom: 150px; }
-  #meetAnnette #sectionFour .full-width-image {
-    margin-bottom: 150px; }
+  @media (min-width: 992px) {
+    #meetAnnette #sectionFour .full-width-image {
+      margin-bottom: 150px; } }
 
 /*------------------------------------------------*/
 /*---------------[TESTIMONIALS]-------------------*/
@@ -10992,10 +10997,42 @@ p + a {
 #testimonials .testimonial .pull-quote {
   margin-bottom: 25px; }
 
-#testimonials #sectionTwo .testimonial {
-  background-color: #DFE2E2; }
-  #testimonials #sectionTwo .testimonial:first-of-type {
-    margin-bottom: 25px; }
+@media (max-width: 991.98px) {
+  #testimonials #sectionTwo {
+    margin-bottom: 0; } }
+
+@media (min-width: 992px) {
+  #testimonials #sectionTwo .testimonial {
+    background-color: #DFE2E2; } }
+
+#testimonials #sectionTwo .testimonial:first-of-type {
+  margin-bottom: 25px; }
+
+#testimonials #sectionFour .testimonial {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+#testimonials #sectionFour .image {
+  padding-right: 0; }
+  @media (max-width: 991.98px) {
+    #testimonials #sectionFour .image {
+      padding-left: 0; } }
+  @media (min-width: 992px) {
+    #testimonials #sectionFour .image {
+      padding-left: 15px; } }
+
+#testimonials #sectionSix .image {
+  padding-left: 0; }
+  @media (max-width: 991.98px) {
+    #testimonials #sectionSix .image {
+      padding-right: 0; } }
+  @media (min-width: 992px) {
+    #testimonials #sectionSix .image {
+      padding-right: 15px; } }
+
+#testimonials #sectionSix .testimonial {
+  padding-top: 50px;
+  padding-bottom: 50px; }
 
 #testimonials #sectionFour, #testimonials #sectionSix {
   background-color: rgba(231, 223, 215, 0.48); }
@@ -11677,7 +11714,8 @@ p + a {
   margin-bottom: 150px; }
   @media (max-width: 991.98px) {
     #mailchimp {
-      background-size: contain !important; } }
+      background-size: contain !important;
+      min-height: 450px; } }
   @media (min-width: 992px) {
     #mailchimp {
       padding-top: 0;
@@ -11706,12 +11744,19 @@ p + a {
       background-color: #A6B4B3;
       color: #fff !important; }
 
+@media (max-width: 991.98px) {
+  #instagram .sbi_item {
+    width: 50% !important; } }
+
 footer {
   background-color: rgba(166, 180, 179, 0.59);
   padding-top: 100px;
   padding-bottom: 25px;
   padding-left: 10%;
   padding-right: 10%; }
+  @media (max-width: 991.98px) {
+    footer {
+      padding-top: 50px; } }
   footer a:hover {
     color: #6D1919; }
   footer .inner-wrapper {
@@ -11890,7 +11935,8 @@ footer {
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  position: relative; }
   @media (max-width: 767.98px) {
     #mc_embed_signup_scroll {
       -webkit-box-orient: vertical;
@@ -11915,6 +11961,9 @@ footer {
       @media (max-width: 767.98px) {
         #mc_embed_signup_scroll .mc-field-group input {
           width: 100%; } }
+  #mc_embed_signup_scroll #mce-responses {
+    position: absolute;
+    bottom: -50px; }
 
 /*------------------------------------------------*/
 /*------------------[MODAL]-----------------*/

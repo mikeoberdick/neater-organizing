@@ -47,6 +47,9 @@ jQuery(function($) {
 		  $('#giftCardModal').modal('show');
 		};
 
+		//Swap out the href attribute for the About link in the footer to go to the Meet Annette page
+		$('#footerLinks .left ul li:nth-of-type(2) a').attr("href", "/meet-annette")
+
 		//Large viewport and up
 		///Switch to hover displaying dropdown versus default bootstrap behavior of click to show
 		if ($(window).width() > 991) {
