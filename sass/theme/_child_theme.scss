@@ -113,7 +113,9 @@ p {
 
 p + a {
   display: inline-block;
-  margin-top: 25px;
+  @include media-breakpoint-up(lg) {
+    margin-top: 25px;  
+  }
 }
 
 .wysiwyg {
@@ -318,7 +320,7 @@ p + a {
 /*-------------------[GENERAL]--------------------*/
 /*------------------------------------------------*/
 .hero {
-  box-shadow: rgba(255,255,255,.45) 0 0 0 1000px inset;
+  box-shadow: rgba(255,255,255,.52) 0 0 0 1000px inset;
   position: relative;
   background-size: cover !important;
   background-position: center center !important;
@@ -365,10 +367,10 @@ p + a {
   .hero {
     padding-top: 42.81%;
     box-shadow: none;
+    background-size: cover !important;
     @include media-breakpoint-down(md) {
-      background-size: cover !important;
       box-shadow: rgba(256,256,256,.5) 0 0 0 500px inset;
-      min-height: 400px;
+      min-height: 500px;
       margin-bottom: 50px;
     }
     @include media-breakpoint-up(lg) {
@@ -1309,8 +1311,10 @@ p + a {
   padding-top: 41.51% !important;
   position: relative;
   margin-bottom: 150px;
+  background-position: center center !important;
   @include media-breakpoint-down(md) {
-    background-size: contain !important;
+    box-shadow: rgba(255,255,255, .5) 0 0 0 500px inset;
+    background-size: cover !important;
     min-height: 450px;
   }
   @include media-breakpoint-up(lg) {
@@ -1319,12 +1323,14 @@ p + a {
   }
   .container {
     padding: 5%;
-    background: #ffffffb8;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    text-align: center; 
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+       background: #ffffffb8;
+     } 
     h1 {
       font-family: $freightBigProBook;
       color: $black;
@@ -1372,9 +1378,12 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     align-content: flex-start;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     @include media-breakpoint-down(md) {
       text-align: center;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 100px;
     }
     #footerLogo {
       flex-basis: 100%;

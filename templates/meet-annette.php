@@ -48,7 +48,7 @@ defined( 'ABSPATH' ) || exit;
 							<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 						</div><!-- .col-lg-3 -->
 						<div class="col-lg-6 mb-5 mb-lg-0">
-							<div class="inner-container p-3">
+							<div class="inner-container py-3 px-lg-3">
 							<h1 class="h5 subheader"><?php echo $three['subheader']; ?></h1>
 							<h2 class = "section-title"><?php echo $three['header']; ?></h2>
 							<p><?php echo $three['content']; ?></p>
@@ -66,7 +66,9 @@ defined( 'ABSPATH' ) || exit;
 			<?php $four = get_field('section_four'); ?>
 			<section id="sectionFour">
 				<?php $img = $four['hero_image']; ?>
-				<div class="parallax full-width-image" style = "background-image: url('<?php echo $img['url']; ?>');"></div>
+				<div class="parallax full-width-image d-none d-lg-block" style = "background-image: url('<?php echo $img['url']; ?>');"></div>
+				<?php $img = $four['mobile_hero_image']; ?>
+				<div class="parallax full-width-image d-lg-none" style = "background-image: url('<?php echo $img['url']; ?>');"></div>
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12 text-center">

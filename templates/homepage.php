@@ -47,7 +47,7 @@ defined( 'ABSPATH' ) || exit;
 						<?php while(have_rows('section_two')) : the_row(); ?>
 							<?php while(have_rows('buckets')) : the_row(); ?>
 								<div class="col-md-6 text-center text-md-left">
-									<div class="icon-and-title d-flex align-items-center mb-3">
+									<div class="icon-and-title d-flex align-items-center justify-content-center justify-content-lg-start mb-3">
 										<?php $img = get_sub_field('icon'); ?>
 										<img class = "mr-3" src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 										<h2 class="h6 subheader mb-0"><?php the_sub_field('header'); ?></h2>

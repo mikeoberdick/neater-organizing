@@ -10646,8 +10646,10 @@ p {
   margin-bottom: 25px; }
 
 p + a {
-  display: inline-block;
-  margin-top: 25px; }
+  display: inline-block; }
+  @media (min-width: 992px) {
+    p + a {
+      margin-top: 25px; } }
 
 .wysiwyg ul {
   list-style: none;
@@ -10811,8 +10813,8 @@ p + a {
 /*-------------------[GENERAL]--------------------*/
 /*------------------------------------------------*/
 .hero {
-  -webkit-box-shadow: rgba(255, 255, 255, 0.45) 0 0 0 1000px inset;
-          box-shadow: rgba(255, 255, 255, 0.45) 0 0 0 1000px inset;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.52) 0 0 0 1000px inset;
+          box-shadow: rgba(255, 255, 255, 0.52) 0 0 0 1000px inset;
   position: relative;
   background-size: cover !important;
   background-position: center center !important;
@@ -10854,13 +10856,13 @@ p + a {
 #homepage .hero {
   padding-top: 42.81%;
   -webkit-box-shadow: none;
-          box-shadow: none; }
+          box-shadow: none;
+  background-size: cover !important; }
   @media (max-width: 991.98px) {
     #homepage .hero {
-      background-size: cover !important;
       -webkit-box-shadow: rgba(255, 255, 255, 0.5) 0 0 0 500px inset;
               box-shadow: rgba(255, 255, 255, 0.5) 0 0 0 500px inset;
-      min-height: 400px;
+      min-height: 500px;
       margin-bottom: 50px; } }
   @media (min-width: 992px) {
     #homepage .hero {
@@ -11711,10 +11713,13 @@ p + a {
 #mailchimp {
   padding-top: 41.51% !important;
   position: relative;
-  margin-bottom: 150px; }
+  margin-bottom: 150px;
+  background-position: center center !important; }
   @media (max-width: 991.98px) {
     #mailchimp {
-      background-size: contain !important;
+      -webkit-box-shadow: rgba(255, 255, 255, 0.5) 0 0 0 500px inset;
+              box-shadow: rgba(255, 255, 255, 0.5) 0 0 0 500px inset;
+      background-size: cover !important;
       min-height: 450px; } }
   @media (min-width: 992px) {
     #mailchimp {
@@ -11722,13 +11727,15 @@ p + a {
       min-height: 600px; } }
   #mailchimp .container {
     padding: 5%;
-    background: #ffffffb8;
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     text-align: center; }
+    @media (min-width: 992px) {
+      #mailchimp .container {
+        background: #ffffffb8; } }
     #mailchimp .container h1 {
       font-family: "Freight Big Pro Book";
       color: #2D2D2B; }
@@ -11770,10 +11777,13 @@ footer {
             justify-content: center;
     -ms-flex-line-pack: start;
         align-content: flex-start;
-    margin-bottom: 100px; }
+    margin-bottom: 50px; }
     @media (max-width: 991.98px) {
       footer .inner-wrapper {
         text-align: center; } }
+    @media (min-width: 992px) {
+      footer .inner-wrapper {
+        margin-bottom: 100px; } }
     footer .inner-wrapper #footerLogo {
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%; }

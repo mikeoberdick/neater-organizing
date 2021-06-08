@@ -60,9 +60,10 @@ jQuery(function($) {
 			});
 		}
 		
-		//if ($(window).width() < 992) {
-		   //do some mobile stuff
-		//}
+		if ($(window).width() < 572) {
+		  //Change the homepage review slider header to include a <br> on mobile
+		  $('#homepage .hero .header').html('We\'re here to create<br>space & simplicity');
+};
 
 
 
