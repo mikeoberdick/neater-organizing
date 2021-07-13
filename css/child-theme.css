@@ -10555,6 +10555,12 @@ figure.woocommerce-product-gallery__wrapper {
   font-style: normal; }
 
 @font-face {
+  font-family: 'Freight Neo Pro Bold';
+  src: url("../fonts/freight_neo_pro_bold.ttf") format("ttf"), url("../fonts/freight_neo_pro_bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
   font-family: 'Freight Neo Bold';
   src: url("../fonts/freight_neo_bold-webfont.woff2") format("woff2"), url("../fonts/freight_neo_bold-webfont.woff") format("woff");
   font-weight: normal;
@@ -10823,7 +10829,7 @@ p + a {
     .hero {
       -webkit-box-shadow: rgba(255, 255, 255, 0.6) 0 0 0 1000px inset;
               box-shadow: rgba(255, 255, 255, 0.6) 0 0 0 1000px inset;
-      padding-top: 24.53%;
+      padding-top: 33.13%;
       background-size: contain !important;
       min-height: 400px; } }
   .hero .container, .hero .container-fluid {
@@ -10834,7 +10840,7 @@ p + a {
             transform: translate(-50%, -50%);
     text-align: center; }
   .hero h1 {
-    font-family: "Freight Big Pro Book";
+    font-family: "Freight Neo Pro Bold";
     font-weight: 600; }
 
 .hero, section {
@@ -10879,6 +10885,7 @@ p + a {
         padding-left: 5%;
         text-align: left; } }
     #homepage .hero .container-fluid .inner-container h1 {
+      font-family: "Freight Big Pro Book";
       margin-bottom: 35px; }
 
 @media (max-width: 991.98px) {
@@ -10964,15 +10971,15 @@ p + a {
     font-family: "Freight Big Pro Book"; }
 
 #meetAnnette #sectionTwo {
-  background-color: rgba(166, 180, 179, 0.3);
-  padding-top: 75px;
-  padding-bottom: 75px; }
-  @media (max-width: 991.98px) {
-    #meetAnnette #sectionTwo img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 50px; } }
+  position: relative;
+  padding-top: 33.13%;
+  background-size: contain !important;
+  background-repeat: no-repeat !important; }
+  #meetAnnette #sectionTwo .container-fluid {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
 
 #meetAnnette #sectionThree {
   text-align: center; }
@@ -11132,7 +11139,7 @@ p + a {
       padding-bottom: 50px; } }
   @media (min-width: 992px) {
     #homeOfficeOrganizing #sectionFour {
-      padding-top: 48.07%; } }
+      padding-top: 55.44%; } }
   @media (min-width: 992px) {
     #homeOfficeOrganizing #sectionFour {
       padding-top: 0;
@@ -11708,13 +11715,19 @@ p + a {
   padding-bottom: 100px; }
 
 /*------------------------------------------------*/
+/*-----------[404]]-------------*/
+/*------------------------------------------------*/
+#four-oh-four .links a {
+  text-decoration: underline; }
+
+/*------------------------------------------------*/
 /*--------------------[FOOTER]--------------------*/
 /*------------------------------------------------*/
 #mailchimp {
-  padding-top: 41.51% !important;
+  padding-top: 44.61% !important;
+  background-repeat: no-repeat !important;
   position: relative;
-  margin-bottom: 150px;
-  background-position: center center !important; }
+  margin-bottom: 150px; }
   @media (max-width: 991.98px) {
     #mailchimp {
       -webkit-box-shadow: rgba(255, 255, 255, 0.5) 0 0 0 500px inset;

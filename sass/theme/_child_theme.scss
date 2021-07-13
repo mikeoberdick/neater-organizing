@@ -39,6 +39,13 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'Freight Neo Pro Bold';
+    src: url('../fonts/freight_neo_pro_bold.ttf') format('ttf'),
+         url('../fonts/freight_neo_pro_bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: 'Freight Neo Bold';
     src: url('../fonts/freight_neo_bold-webfont.woff2') format('woff2'),
          url('../fonts/freight_neo_bold-webfont.woff') format('woff');
@@ -327,7 +334,7 @@ p + a {
   min-height: 250px;
   @include media-breakpoint-up(lg) {
     box-shadow: rgba(255,255,255,.60) 0 0 0 1000px inset;
-    padding-top: 24.53%;
+    padding-top: 33.13%;
     background-size: contain !important;
     min-height: 400px;
   }
@@ -339,7 +346,7 @@ p + a {
     text-align: center;
   }
   h1 {
-    font-family: $freightBigProBook;
+    font-family: $freightNeoProBold;
     font-weight: 600;
   }
 }
@@ -389,6 +396,7 @@ p + a {
           text-align: left;
         }
         h1 {
+          font-family: $freightBigProBook;
           margin-bottom: 35px;
         }
       }
@@ -490,16 +498,14 @@ p + a {
     }
   }
   #sectionTwo {
-    background-color: rgba(166,180,179,.30);
-    padding-top: 75px;
-    padding-bottom: 75px;
-    img {
-      @include media-breakpoint-down(md) {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 50px;
-      }
+    position: relative;
+    padding-top: 33.13%;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    .container-fluid {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
   #sectionThree {
@@ -687,7 +693,7 @@ p + a {
       padding-bottom: 50px;
     }
     @include media-breakpoint-up(lg) {
-      padding-top: 48.07%;
+      padding-top: 55.44%;
     }
     @include media-breakpoint-up(lg) {
       padding-top: 0;
@@ -1305,13 +1311,23 @@ p + a {
   }
 }
 /*------------------------------------------------*/
+/*-----------[404]]-------------*/
+/*------------------------------------------------*/
+#four-oh-four {
+  .links {
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+/*------------------------------------------------*/
 /*--------------------[FOOTER]--------------------*/
 /*------------------------------------------------*/
 #mailchimp {
-  padding-top: 41.51% !important;
+  padding-top: 44.61% !important;
+  background-repeat: no-repeat !important;
   position: relative;
   margin-bottom: 150px;
-  background-position: center center !important;
   @include media-breakpoint-down(md) {
     box-shadow: rgba(255,255,255, .5) 0 0 0 500px inset;
     background-size: cover !important;

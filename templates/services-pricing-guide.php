@@ -97,7 +97,7 @@ defined( 'ABSPATH' ) || exit;
 							</div><!-- .inner-wrapper -->
 						</div><!-- .col-lg-6 -->
 						<div class="col-lg-4 pr-lg-0 d-flex align-items-center justify-content-center mb-3 mb-lg-0">
-							<?php $img = $one['image']; ?>
+							<?php $img = $two['image']; ?>
 							<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 						</div><!-- .col-lg-4 -->
 					</div><!-- .row -->
