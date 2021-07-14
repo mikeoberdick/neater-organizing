@@ -11697,6 +11697,8 @@ p + a {
 
 #servicesPricingGuide #sectionOne {
   margin-bottom: 0; }
+  #servicesPricingGuide #sectionOne .section-title {
+    margin-bottom: 25px; }
   #servicesPricingGuide #sectionOne .right {
     padding-top: 50px;
     padding-bottom: 50px; }
@@ -11704,9 +11706,15 @@ p + a {
 #servicesPricingGuide #sectionTwo {
   margin-bottom: 0;
   background-color: rgba(231, 223, 215, 0.4); }
+  #servicesPricingGuide #sectionTwo tr:nth-of-type(odd) {
+    background-color: #fff; }
+  #servicesPricingGuide #sectionTwo .section-title {
+    margin-bottom: 25px; }
 
 #servicesPricingGuide #sectionThree {
   margin-bottom: 0; }
+  #servicesPricingGuide #sectionThree .section-title {
+    margin-bottom: 25px; }
 
 #servicesPricingGuide #sectionFour {
   background-color: rgba(231, 223, 215, 0.4);
@@ -11726,8 +11734,7 @@ p + a {
 #mailchimp {
   padding-top: 44.61% !important;
   background-repeat: no-repeat !important;
-  position: relative;
-  margin-bottom: 150px; }
+  position: relative; }
   @media (max-width: 991.98px) {
     #mailchimp {
       -webkit-box-shadow: rgba(255, 255, 255, 0.5) 0 0 0 500px inset;

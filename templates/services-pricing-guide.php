@@ -25,7 +25,7 @@ defined( 'ABSPATH' ) || exit;
 							<h1 class="text-center text-lg-left h2 section-title"><?php echo $one['header']; ?></h1>
 							</div>
 							<div class="inner-container pl-3">
-								<p class = "text-center text-lg-left"><?php echo $one['copy']; ?></p>
+								<div class = " wysiwyg text-center text-lg-left"><?php echo $one['copy']; ?></div>
 								<table class="table">
 								  <thead>
 								    <tr>
@@ -68,7 +68,7 @@ defined( 'ABSPATH' ) || exit;
 								<h1 class="h2 section-title"><?php echo $two['header']; ?></h1>
 								</div>
 								<div class="inner-container pl-3">
-									<p class = "text-center text-lg-left"><?php echo $two['copy']; ?></p>
+									<div class = "wysiwyg text-center text-lg-left"><?php echo $two['copy']; ?></div>
 									<table class="table">
 									  <thead>
 									    <tr>
@@ -119,7 +119,7 @@ defined( 'ABSPATH' ) || exit;
 							<h1 class="h2 section-title"><?php echo $three['header']; ?></h1>
 							</div>
 							<div class="inner-container pl-3">
-								<p class = "text-center text-lg-left"><?php echo $three['copy']; ?></p>
+								<div class = "wysiwyg text-center text-lg-left"><?php echo $three['copy']; ?></div>
 								<table class="table">
 								  <thead>
 								    <tr>

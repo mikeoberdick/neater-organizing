@@ -1291,6 +1291,9 @@ p + a {
   }
   #sectionOne {
     margin-bottom: 0;
+    .section-title {
+      margin-bottom: 25px;
+    }
     .right {
       padding-top: 50px;
       padding-bottom: 50px;
@@ -1299,9 +1302,18 @@ p + a {
   #sectionTwo {
     margin-bottom: 0;
     background-color: rgba(231,223,215,.4);
+    tr:nth-of-type(odd) {
+      background-color: #fff;
+    }
+    .section-title {
+      margin-bottom: 25px;
+    }
   }
   #sectionThree {
     margin-bottom: 0;
+    .section-title {
+      margin-bottom: 25px;
+    }
   }
   #sectionFour {
     background-color: rgba(231,223,215,.4);
@@ -1327,7 +1339,6 @@ p + a {
   padding-top: 44.61% !important;
   background-repeat: no-repeat !important;
   position: relative;
-  margin-bottom: 150px;
   @include media-breakpoint-down(md) {
     box-shadow: rgba(255,255,255, .5) 0 0 0 500px inset;
     background-size: cover !important;
