@@ -146,7 +146,7 @@ defined( 'ABSPATH' ) || exit;
 			$slider.slick({
 			    slidesToShow: 1,
 			    slidesToScroll: 1,
-			    adaptiveHeight: true,
+			    //adaptiveHeight: true,
 			    prevArrow: $('.testimonialSliderOuterWrapper').find('.prev-arrow'),
         		nextArrow: $('.testimonialSliderOuterWrapper').find('.next-arrow')
 	  		});

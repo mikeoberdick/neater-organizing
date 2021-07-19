@@ -20,7 +20,7 @@ get_header(); ?>
 						<p class = "font-italic">Let’s get ourselves organized.</p>
 						<div class="links d-flex flex-column align-items-center">
 							<a href="/">Head Home</a>
-							<a href="/services">View Services</a>
+							<a href="/services/home-office-organizing/">View Services</a>
 							<a href="/contact">Contact Neater</a>
 						</div><!-- .links -->
 					</div><!-- .col-sm-12 -->

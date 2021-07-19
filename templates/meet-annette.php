@@ -49,7 +49,7 @@ defined( 'ABSPATH' ) || exit;
 							<h1 class="h5 subheader"><?php echo $three['subheader']; ?></h1>
 							<h2 class = "section-title"><?php echo $three['header']; ?></h2>
 							<p><?php echo $three['content']; ?></p>
-							<a href = "<?php echo $three['button_url']; ?>"><button role = "button" class = "btn outline-button"><?php echo $three["button_text"]; ?></button></a>	
+							<a href = "<?php echo $three['button_link']; ?>"><button role = "button" class = "btn outline-button"><?php echo $three["button_text"]; ?></button></a>	
 							</div><!-- .inner-container -->
 						</div><!-- .col-lg-6 -->
 						<?php $img = $three['right_image']; ?>

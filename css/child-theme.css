@@ -11240,7 +11240,7 @@ p + a {
 /*-----------[ASSISTING]-------------*/
 /*------------------------------------------------*/
 #assisting #sectionTwo {
-  background-color: #a6b4b3;
+  background-color: #dfe2e2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11705,7 +11705,7 @@ p + a {
   border: 0; }
 
 #servicesPricingGuide .table tr:nth-of-type(odd) {
-  background-color: #EFEDE7; }
+  background-color: #f2efec; }
 
 #servicesPricingGuide .hero {
   margin-bottom: 0; }
@@ -11755,7 +11755,8 @@ p + a {
       -webkit-box-shadow: rgba(255, 255, 255, 0.75) 0 0 0 500px inset;
               box-shadow: rgba(255, 255, 255, 0.75) 0 0 0 500px inset;
       background-size: cover !important;
-      min-height: 450px; } }
+      min-height: 450px;
+      background-position: center center !important; } }
   @media (min-width: 992px) {
     #mailchimp {
       padding-top: 0;

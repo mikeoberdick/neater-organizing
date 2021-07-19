@@ -798,7 +798,7 @@ p + a {
 /*------------------------------------------------*/
 #assisting {
   #sectionTwo {
-    background-color: rgba(166,180,179,04);
+    background-color: #dfe2e2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1299,7 +1299,7 @@ p + a {
       border: 0;
     }
     tr:nth-of-type(odd) {
-      background-color: #EFEDE7;
+      background-color: #f2efec;
     }
   }
   .hero {
@@ -1359,6 +1359,7 @@ p + a {
     box-shadow: rgba(255,255,255, .75) 0 0 0 500px inset;
     background-size: cover !important;
     min-height: 450px;
+    background-position: center center !important;
   }
   @include media-breakpoint-up(lg) {
     padding-top: 0;

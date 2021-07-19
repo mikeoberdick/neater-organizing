@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) || exit;
 								<h1 class="h6 subheader"><?php echo $one['subheader']; ?></h1>
 								<h2 class = "section-title"><?php echo $one['header']; ?></h2>
 								<p><?php echo $one['content']; ?></p>
-								<a href = "<?php echo $one['button_url']; ?>"><button role = "button" class = "btn outline-button"><?php echo $one["button_text"]; ?></button></a>	
+								<a href = "<?php echo $one['button_link']; ?>"><button role = "button" class = "btn outline-button"><?php echo $one["button_text"]; ?></button></a>	
 							</div><!-- .inner-container -->
 						</div><!-- .col-lg-6 -->
 						<?php $img = $one['right_image']; ?>
