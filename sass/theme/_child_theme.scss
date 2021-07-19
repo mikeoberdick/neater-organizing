@@ -110,7 +110,10 @@ a {
 }
 
 .section-title {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 50px;
+  }
   font-family: $freightBigProBook;
 }
 
@@ -352,7 +355,10 @@ p + a {
 }
 
 .hero, section {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 100px;
+  }
 }
 
 .full-width-image {
@@ -409,7 +415,10 @@ p + a {
   }
   #sectionTwo {
     h1 {
-      margin-bottom: 75px;
+      margin-bottom: 25px;
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 75px;
+      }
     } 
     @include media-breakpoint-down(md) {
       .wysiwyg {
@@ -453,7 +462,9 @@ p + a {
   }
   #sectionFour {
     margin-top: 50px;
-    margin-bottom: 150px;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 150px;
+    }
     #cards {
       @include media-breakpoint-down(lg) {
         flex-direction: column;
@@ -503,9 +514,14 @@ p + a {
     background-size: contain !important;
     background-repeat: no-repeat !important;
     .container-fluid {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+      @include media-breakpoint-down(md) {
+        margin-top: 25px;
+      }
+      @include media-breakpoint-up(lg) {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
   }
   #sectionThree {
@@ -520,7 +536,7 @@ p + a {
     }
   }
   #sectionFour {
-    margin-bottom: 150px;
+    margin-bottom: 75px;
     .full-width-image {
       @include media-breakpoint-up(lg) {
         margin-bottom: 150px;  
@@ -1340,7 +1356,7 @@ p + a {
   background-repeat: no-repeat !important;
   position: relative;
   @include media-breakpoint-down(md) {
-    box-shadow: rgba(255,255,255, .5) 0 0 0 500px inset;
+    box-shadow: rgba(255,255,255, .75) 0 0 0 500px inset;
     background-size: cover !important;
     min-height: 450px;
   }

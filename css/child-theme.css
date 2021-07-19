@@ -10645,8 +10645,11 @@ a {
       margin-bottom: 35px; } }
 
 .section-title {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   font-family: "Freight Big Pro Book"; }
+  @media (min-width: 992px) {
+    .section-title {
+      margin-bottom: 50px; } }
 
 p {
   margin-bottom: 25px; }
@@ -10844,7 +10847,10 @@ p + a {
     font-weight: 600; }
 
 .hero, section {
-  margin-bottom: 100px; }
+  margin-bottom: 50px; }
+  @media (min-width: 992px) {
+    .hero, section {
+      margin-bottom: 100px; } }
 
 .full-width-image {
   margin-bottom: 100px; }
@@ -10893,7 +10899,10 @@ p + a {
     margin-bottom: 50px; } }
 
 #homepage #sectionTwo h1 {
-  margin-bottom: 75px; }
+  margin-bottom: 25px; }
+  @media (min-width: 992px) {
+    #homepage #sectionTwo h1 {
+      margin-bottom: 75px; } }
 
 @media (max-width: 991.98px) {
   #homepage #sectionTwo .wysiwyg p {
@@ -10924,8 +10933,10 @@ p + a {
     margin-left: 5px; }
 
 #homepage #sectionFour {
-  margin-top: 50px;
-  margin-bottom: 150px; }
+  margin-top: 50px; }
+  @media (min-width: 992px) {
+    #homepage #sectionFour {
+      margin-bottom: 150px; } }
   @media (max-width: 1199.98px) {
     #homepage #sectionFour #cards {
       -webkit-box-orient: vertical;
@@ -10975,11 +10986,15 @@ p + a {
   padding-top: 33.13%;
   background-size: contain !important;
   background-repeat: no-repeat !important; }
-  #meetAnnette #sectionTwo .container-fluid {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%); }
+  @media (max-width: 991.98px) {
+    #meetAnnette #sectionTwo .container-fluid {
+      margin-top: 25px; } }
+  @media (min-width: 992px) {
+    #meetAnnette #sectionTwo .container-fluid {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); } }
 
 #meetAnnette #sectionThree {
   text-align: center; }
@@ -10991,7 +11006,7 @@ p + a {
       margin-bottom: 50px; } }
 
 #meetAnnette #sectionFour {
-  margin-bottom: 150px; }
+  margin-bottom: 75px; }
   @media (min-width: 992px) {
     #meetAnnette #sectionFour .full-width-image {
       margin-bottom: 150px; } }
@@ -11737,8 +11752,8 @@ p + a {
   position: relative; }
   @media (max-width: 991.98px) {
     #mailchimp {
-      -webkit-box-shadow: rgba(255, 255, 255, 0.5) 0 0 0 500px inset;
-              box-shadow: rgba(255, 255, 255, 0.5) 0 0 0 500px inset;
+      -webkit-box-shadow: rgba(255, 255, 255, 0.75) 0 0 0 500px inset;
+              box-shadow: rgba(255, 255, 255, 0.75) 0 0 0 500px inset;
       background-size: cover !important;
       min-height: 450px; } }
   @media (min-width: 992px) {
