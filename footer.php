@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 
 <?php $mc = get_field('mailchimp_subscribe', 'options'); $bg = $mc['background']; ?>
 <section id="mailchimp" style = "background: url('<?php echo $bg['url']; ?>');">
-	<div class="container">
+	<div class="container" data-aos = "fade-down" data-aos-duration="2000">
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="inner-container">
@@ -170,6 +170,14 @@ defined( 'ABSPATH' ) || exit;
 	});
 </script>
 <?php endif; ?>
+
+<script>
+	AOS.init({
+		duration: 1000,
+  		easing: 'ease',
+  		once: true
+	});
+</script>
 
 </body>
 

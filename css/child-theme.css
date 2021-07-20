@@ -10728,7 +10728,7 @@ p + a {
 
 @media (min-width: 992px) {
   #main-menu li {
-    margin-right: 10px; } }
+    margin-right: 20px; } }
 
 #main-menu li a {
   font-family: "URW Classico Bold";
@@ -10865,111 +10865,108 @@ p + a {
 /*------------------------------------------------*/
 /*--------------------[HOME]----------------------*/
 /*------------------------------------------------*/
-#homepage .hero {
-  padding-top: 42.81%;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background-size: cover !important; }
+#homepage {
+  overflow-x: hidden; }
+  #homepage .hero {
+    padding-top: 42.81%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-size: cover !important; }
+    @media (max-width: 991.98px) {
+      #homepage .hero {
+        -webkit-box-shadow: rgba(255, 255, 255, 0.5) 0 0 0 500px inset;
+                box-shadow: rgba(255, 255, 255, 0.5) 0 0 0 500px inset;
+        min-height: 500px;
+        margin-bottom: 50px; } }
+    @media (min-width: 992px) {
+      #homepage .hero {
+        padding-top: 0;
+        min-height: 650px; } }
+    #homepage .hero .container-fluid {
+      text-align: left; }
+      @media (min-width: 992px) {
+        #homepage .hero .container-fluid {
+          text-align: center; } }
+      @media (min-width: 992px) {
+        #homepage .hero .container-fluid .inner-container {
+          width: 40%;
+          padding-left: 5%;
+          text-align: left; } }
+      #homepage .hero .container-fluid .inner-container h1 {
+        font-family: "Freight Big Pro Book";
+        margin-bottom: 35px; }
   @media (max-width: 991.98px) {
-    #homepage .hero {
-      -webkit-box-shadow: rgba(255, 255, 255, 0.5) 0 0 0 500px inset;
-              box-shadow: rgba(255, 255, 255, 0.5) 0 0 0 500px inset;
-      min-height: 500px;
+    #homepage #sectionOne {
       margin-bottom: 50px; } }
-  @media (min-width: 992px) {
-    #homepage .hero {
-      padding-top: 0;
-      min-height: 650px; } }
-  #homepage .hero .container-fluid {
-    text-align: left; }
+  #homepage #sectionTwo h1 {
+    margin-bottom: 25px; }
     @media (min-width: 992px) {
-      #homepage .hero .container-fluid {
-        text-align: center; } }
+      #homepage #sectionTwo h1 {
+        margin-bottom: 75px; } }
+  @media (max-width: 991.98px) {
+    #homepage #sectionTwo .wysiwyg p {
+      text-align: left; } }
+  #homepage #sectionThree {
+    background-color: rgba(166, 180, 179, 0.3); }
+    #homepage #sectionThree #testimonialImage {
+      background-position: center center !important;
+      background-size: cover !important;
+      background-repeat: no-repeat !important; }
+      @media (max-width: 991.98px) {
+        #homepage #sectionThree #testimonialImage {
+          background-color: #faf9f9;
+          padding-top: 88.37%; } }
     @media (min-width: 992px) {
-      #homepage .hero .container-fluid .inner-container {
-        width: 40%;
-        padding-left: 5%;
-        text-align: left; } }
-    #homepage .hero .container-fluid .inner-container h1 {
-      font-family: "Freight Big Pro Book";
-      margin-bottom: 35px; }
-
-@media (max-width: 991.98px) {
-  #homepage #sectionOne {
-    margin-bottom: 50px; } }
-
-#homepage #sectionTwo h1 {
-  margin-bottom: 25px; }
-  @media (min-width: 992px) {
-    #homepage #sectionTwo h1 {
-      margin-bottom: 75px; } }
-
-@media (max-width: 991.98px) {
-  #homepage #sectionTwo .wysiwyg p {
-    text-align: left; } }
-
-#homepage #sectionThree {
-  background-color: rgba(166, 180, 179, 0.3); }
-  #homepage #sectionThree #testimonialImage {
-    background-position: center center !important;
-    background-size: cover !important;
-    background-repeat: no-repeat !important; }
-    @media (max-width: 991.98px) {
-      #homepage #sectionThree #testimonialImage {
-        background-color: #faf9f9;
-        padding-top: 88.37%; } }
-  @media (min-width: 992px) {
-    #homepage #sectionThree #testimonials {
-      max-width: 600px; } }
-  #homepage #sectionThree #testimonials .section-title {
-    font-family: "Freight Big Pro Book"; }
-  #homepage #sectionThree .content-container {
-    padding: 50px; }
-  #homepage #sectionThree .prev-arrow, #homepage #sectionThree .next-arrow {
-    cursor: pointer; }
-  #homepage #sectionThree .prev-arrow {
-    margin-right: 5px; }
-  #homepage #sectionThree .next-arrow {
-    margin-left: 5px; }
-
-#homepage #sectionFour {
-  margin-top: 50px; }
-  @media (min-width: 992px) {
-    #homepage #sectionFour {
-      margin-bottom: 150px; } }
-  @media (max-width: 1199.98px) {
-    #homepage #sectionFour #cards {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center; } }
-  #homepage #sectionFour .horizontal-card {
-    -ms-flex-preferred-size: 20%;
-        flex-basis: 20%;
-    background-color: #fff;
-    padding: 15px; }
-    @media (max-width: 991.98px) {
-      #homepage #sectionFour .horizontal-card {
+      #homepage #sectionThree #testimonials {
+        max-width: 600px; } }
+    #homepage #sectionThree #testimonials .section-title {
+      font-family: "Freight Big Pro Book"; }
+    #homepage #sectionThree .content-container {
+      padding: 50px; }
+    #homepage #sectionThree .prev-arrow, #homepage #sectionThree .next-arrow {
+      cursor: pointer; }
+    #homepage #sectionThree .prev-arrow {
+      margin-right: 5px; }
+    #homepage #sectionThree .next-arrow {
+      margin-left: 5px; }
+  #homepage #sectionFour {
+    margin-top: 50px; }
+    @media (min-width: 992px) {
+      #homepage #sectionFour {
+        margin-bottom: 150px; } }
+    @media (max-width: 1199.98px) {
+      #homepage #sectionFour #cards {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
-        width: 75%;
-        text-align: center; }
-        #homepage #sectionFour .horizontal-card img {
-          margin-right: 0;
-          margin-bottom: 15px; } }
-    @media (max-width: 1199.98px) {
-      #homepage #sectionFour .horizontal-card {
-        margin-bottom: 25px; }
-        #homepage #sectionFour .horizontal-card:last-of-type {
-          margin-bottom: 0; } }
-    @media (min-width: 992px) and (max-width: 1199.98px) {
-      #homepage #sectionFour .horizontal-card {
-        min-width: 431px; } }
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
+    #homepage #sectionFour .horizontal-card {
+      -ms-flex-preferred-size: 20%;
+          flex-basis: 20%;
+      background-color: #fff;
+      padding: 15px; }
+      @media (max-width: 991.98px) {
+        #homepage #sectionFour .horizontal-card {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          width: 75%;
+          text-align: center; }
+          #homepage #sectionFour .horizontal-card img {
+            margin-right: 0;
+            margin-bottom: 15px; } }
+      @media (max-width: 1199.98px) {
+        #homepage #sectionFour .horizontal-card {
+          margin-bottom: 25px; }
+          #homepage #sectionFour .horizontal-card:last-of-type {
+            margin-bottom: 0; } }
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        #homepage #sectionFour .horizontal-card {
+          min-width: 431px; } }
 
 /*------------------------------------------------*/
 /*----------------[MEET ANNETTE]-----------------*/
@@ -11310,9 +11307,17 @@ p + a {
   #ourWork #sectionThree .image-wrapper {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%; }
-  #ourWork #sectionThree #featuredImage {
+    #ourWork #sectionThree .image-wrapper:nth-of-type(2), #ourWork #sectionThree .image-wrapper:nth-of-type(5) {
+      padding-right: 12.5px; }
+    #ourWork #sectionThree .image-wrapper:nth-of-type(3), #ourWork #sectionThree .image-wrapper:nth-of-type(6) {
+      padding-left: 12.5px; }
+  #ourWork #sectionThree .featured-image {
     -ms-flex-preferred-size: 100%;
-        flex-basis: 100%; }
+        flex-basis: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px; }
+    #ourWork #sectionThree .featured-image:first-of-type {
+      margin-top: 0; }
 
 #ourWork #sectionFour img {
   height: 35px; }
@@ -11594,6 +11599,8 @@ p + a {
   margin-bottom: 100px; }
   #singlePost #thePost {
     margin-bottom: 0; }
+  #singlePost .post-title {
+    font-family: "Freight Big Pro Semibold"; }
   #singlePost .full-width-image {
     margin-bottom: 37.5px; }
   #singlePost .inner-container {
@@ -11654,8 +11661,40 @@ p + a {
     margin-left: 10px; }
     #singlePost #comments #cancel-comment-reply-link:hover {
       color: #2D2D2B; }
-  #singlePost #comments .comment-form-url {
-    display: none; }
+  #singlePost #comments .comment-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    #singlePost #comments .comment-form .comment-notes {
+      -webkit-box-ordinal-group: 1;
+          -ms-flex-order: 0;
+              order: 0; }
+    #singlePost #comments .comment-form .comment-form-author {
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1; }
+    #singlePost #comments .comment-form .comment-form-email {
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2; }
+    #singlePost #comments .comment-form .comment-form-comment {
+      -webkit-box-ordinal-group: 4;
+          -ms-flex-order: 3;
+              order: 3; }
+    #singlePost #comments .comment-form .comment-form-cookies-consent {
+      -webkit-box-ordinal-group: 5;
+          -ms-flex-order: 4;
+              order: 4; }
+    #singlePost #comments .comment-form .form-submit {
+      -webkit-box-ordinal-group: 6;
+          -ms-flex-order: 5;
+              order: 5; }
+    #singlePost #comments .comment-form .comment-form-url {
+      display: none; }
   #singlePost #comments .comment {
     border-bottom: solid 2px #E7DFD7; }
     #singlePost #comments .comment:first-of-type {
@@ -11740,8 +11779,8 @@ p + a {
 /*------------------------------------------------*/
 /*-----------[404]]-------------*/
 /*------------------------------------------------*/
-#four-oh-four .links a {
-  text-decoration: underline; }
+#four-oh-four {
+  maring-top: 50px; }
 
 /*------------------------------------------------*/
 /*--------------------[FOOTER]--------------------*/

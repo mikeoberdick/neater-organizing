@@ -80,11 +80,9 @@ function wpdocs_get_paginated_links( $query ) {
 
 //Shrink the excerpt
 function custom_excerpt_length( $length ) {
-        return 20;
-    }
-    add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-
-
+    return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
 

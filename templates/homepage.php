@@ -15,10 +15,10 @@ defined( 'ABSPATH' ) || exit;
 				<div class="container-fluid">
 					<div class="row">
 						<?php $img = $one['left_image']; ?>
-						<div class="col-lg-3 pl-lg-0 mb-2 mb-lg-0">
+						<div class="col-lg-3 pl-lg-0 mb-2 mb-lg-0" data-aos="fade-right" data-aos-duration="2000">
 							<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 						</div><!-- .col-lg-3 -->
-						<div class="col-lg-6 text-center justify-content-center d-flex flex-column">
+						<div class="col-lg-6 text-center justify-content-center d-flex flex-column" data-aos="fade-up" data-aos-duration="2000">
 							<div class="inner-container p-3">
 								<h1 class="h6 subheader"><?php echo $one['subheader']; ?></h1>
 								<h2 class = "section-title"><?php echo $one['header']; ?></h2>
@@ -27,7 +27,7 @@ defined( 'ABSPATH' ) || exit;
 							</div><!-- .inner-container -->
 						</div><!-- .col-lg-6 -->
 						<?php $img = $one['right_image']; ?>
-						<div class="col-lg-3 text-right pr-lg-0">
+						<div class="col-lg-3 text-right pr-lg-0" data-aos="fade-left" data-aos-duration="2000">
 							<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 						</div><!-- .col-lg-3 -->
 					</div><!-- .row -->
@@ -42,11 +42,11 @@ defined( 'ABSPATH' ) || exit;
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">
-							<h1 class="h5 subheader text-center"><?php echo $two['subheader']; ?></h1>
+							<h1 class="h5 subheader text-center" data-aos="flip-up"><?php echo $two['subheader']; ?></h1>
 						</div><!-- .col-sm-12 -->
 						<?php while(have_rows('section_two')) : the_row(); ?>
 							<?php while(have_rows('buckets')) : the_row(); ?>
-								<div class="col-md-6 text-center text-md-left">
+								<div class="col-md-6 text-center text-md-left" data-aos="zoom-in" data-aos-duration="2000">
 									<div class="icon-and-title d-flex align-items-center justify-content-center justify-content-lg-start mb-3">
 										<?php $img = get_sub_field('icon'); ?>
 										<img class = "mr-3" src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
@@ -70,9 +70,9 @@ defined( 'ABSPATH' ) || exit;
 				<div class="container-fluid">
 					<div class="row">
 						<?php $img = $three['left_image']; ?>
-						<div id = "testimonialImage" class="col-lg-6 pl-lg-0" style = "background-image: url('<?php echo $img['url']; ?>'); ">	
+						<div id = "testimonialImage" class="col-lg-6 pl-lg-0" style = "background-image: url('<?php echo $img['url']; ?>'); " data-aos="fade-right" data-aos-duration="2000">	
 						</div><!-- .col-lg-6 -->
-						<div id = "testimonials" class="col-lg-6 d-flex flex-column justify-content-center py-lg-5">
+						<div id = "testimonials" class="col-lg-6 d-flex flex-column justify-content-center py-lg-5" data-aos="fade-left" data-aos-duration="2000">
 							<div class="content-container">
 								<h1 class="h6 subheader"><?php echo $three['subheader']; ?></h1>
 								<h2 class = "section-title"><?php echo $three['header']; ?></h2>
@@ -99,7 +99,7 @@ defined( 'ABSPATH' ) || exit;
 			</section><!-- #sectionThree -->
 
 			<?php $four = get_field('section_four'); ?>
-			<section id="sectionFour">
+			<section id="sectionFour" data-aos="fade-up" data-aos-duration="2000">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12 text-center">

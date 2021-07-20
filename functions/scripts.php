@@ -17,6 +17,8 @@ function psc_enqueue_files () {
         wp_enqueue_style( 'Slick Theme CSS', get_stylesheet_directory_uri() . '/slick/slick-theme.css' );
         wp_enqueue_script( 'Slick JS', get_stylesheet_directory_uri() . '/slick/slick.min.js', array('jquery'), '1.0.0', true );
     }
+    wp_enqueue_script( 'AOS JS', 'https://unpkg.com/aos@next/dist/aos.js', array('jquery'), '1.0.0', true );
+    wp_enqueue_style( 'AOS CSS', 'https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css' );
 }
 
 add_action('wp_enqueue_scripts', 'psc_enqueue_files');

@@ -37,7 +37,7 @@ defined( 'ABSPATH' ) || exit;
 			<section id="sectionThree">
 				<?php $images = get_field('section_three'); ?>
 		        <?php $count = 1; foreach( $images as $image ): ?>
-		            <div <?php if ($count == 1 || $count == 4) {echo 'id = "featuredImage"';} ?>class = "image-wrapper">
+		            <div class = "image-wrapper<?php if ($count == 1 || $count == 4) {echo ' featured-image"';} ?>">
 		                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 		            </div><!-- .image-wrapper -->
 		        <?php $count++; endforeach; ?>

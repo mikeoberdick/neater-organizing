@@ -20,7 +20,7 @@ get_header();
 				<div class="row">
 					<section id = "thePost" class="col-sm-12">
 						<div class="inner-container">
-							<h1 class="h2 section-title"><?php the_title(); ?></h1>
+							<h1 class="h2 section-title post-title"><?php the_title(); ?></h1>
 							<div class = "h6 subheader"><?php $cats = '';
 								foreach((get_the_category()) as $category) {
 								    $cats .= $category->cat_name . ', ';

@@ -50,6 +50,11 @@ jQuery(function($) {
 		//Swap out the href attribute for the About link in the footer to go to the Meet Annette page
 		$('#footerLinks .left ul li:nth-of-type(2) a').attr("href", "/meet-annette")
 
+		//Add a period to the end of the Wordpress default comment cookie content checkbox label
+		var original = $('.comment-form-cookies-consent label').text();
+		$('.comment-form-cookies-consent label').text(original + '.');
+
+
 		//Large viewport and up
 		///Switch to hover displaying dropdown versus default bootstrap behavior of click to show
 		if ($(window).width() > 991) {
