@@ -211,7 +211,8 @@ ob_start();
 else :
     $response = [
         'status'  => 201,
-        'message' => 'No posts found'
+        'message' => '
+        <div class = "col-sm-12"><h1>Sorry, there were no results for that search.</h1></div>'
     ];
 endif;
 $response['content'] = ob_get_clean();

@@ -87,7 +87,7 @@ defined( 'ABSPATH' ) || exit;
 				        </li>
 		        	<?php endforeach; wp_reset_postdata(); ?>
 		        	<li>
-			            <a class = "h6 subheader" href="/services-pricing-guide#giftCertificate">Gift Certificates</a>
+			            <a class = "h6 subheader" href="/services-pricing-organize-your-space/#giftCertificates">Gift Certificates</a>
 			        </li>
 		        </ul>	
 			</div><!-- .right -->

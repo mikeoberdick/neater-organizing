@@ -24,7 +24,7 @@ defined( 'ABSPATH' ) || exit;
 							<img class = "pl-0 pl-lg-3 mb-3" src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 							<h1 class="text-center text-lg-left h2 section-title"><?php echo $one['header']; ?></h1>
 							</div>
-							<div class="inner-container pl-3">
+							<div class="inner-container pl-lg-3">
 								<div class = " wysiwyg text-center text-lg-left"><?php echo $one['copy']; ?></div>
 								<table class="table">
 								  <thead>
@@ -154,7 +154,7 @@ defined( 'ABSPATH' ) || exit;
 			<section id="sectionFour">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-12 text-center">
+						<div id = "giftCertificates" class="col-sm-12 text-center">
 							<h1 class = "h2 section-title"><?php echo $four['header']; ?></h2>
 							<p><?php echo $four['content']; ?></p>
 							<button role = "button" class = "btn outline-button" data-toggle="modal" data-target="#giftCardModal"><?php echo $four["button_text"]; ?></button>

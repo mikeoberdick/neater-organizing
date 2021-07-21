@@ -84,14 +84,16 @@ jQuery(function($) {
 	//Bind parameters to search query
 	$(document).on( 'submit', '#searchform', function() {
 	if(event.preventDefault) { event.preventDefault(); }
+
 	//hide the default pagination
+		$('#sectionTwo').hide();
 		$('#paginationWrapper').hide();
 		$('#sortContainer').empty();
 		$('#loader').show();
 
-		$('html, body').animate({
-		    scrollTop: $('#featuredPost').offset().top
-		  }, 0);
+		//$('html, body').animate({
+		    //scrollTop: $('#featuredPost').offset().top
+		  //}, 0);
 		
 		$form = $(this);
 	    $input = $form.find('input[name="s"]');

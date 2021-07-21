@@ -105,7 +105,7 @@ get_header(); ?>
 										 <div class="excerpt">
 										 	<?php $trimmed_text = wp_trim_excerpt_modified( get_field('the_content'), 40 );
 												$last_space = strrpos( $trimmed_text, ' ' );
-												$modified_trimmed_text = substr( $trimmed_text, 0, $last_space ); echo '<p class="excerpt mb-0">' . $modified_trimmed_text; ?></a></p>
+												$modified_trimmed_text = substr( $trimmed_text, 0, $last_space ); echo '<p class="excerpt mb-0">' . $modified_trimmed_text . '...'; ?></a></p>
 										 </div><!-- .the-excerpt -->
 										 <a href = "<?php the_permalink(); ?>"><button role = "button" class = "btn maroon-button">Read More</button></a>	
 									 </div><!-- .content-wrapper -->

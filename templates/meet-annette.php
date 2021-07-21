@@ -23,11 +23,12 @@ defined( 'ABSPATH' ) || exit;
 			</section><!-- #sectionOne -->
 	
 			<?php $two = get_field('section_two');
-			$img = $two['image']; ?>
+			$img = $two['image']; $mobile = $two['mobile_&_tablet_image']; ?>
+			<img class = "annette-mobile" src = "<?php echo $mobile['url']; ?>" alt="<?php echo $mobile['alt']; ?>">
 			<section id="sectionTwo" style = "background: url('<?php echo $img['url'] ?>');">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-lg-4 offset-lg-7 d-flex flex-column justify-content-center pl-lg-4">
+						<div class="inner-content-container d-flex flex-column justify-content-center">
 							<h1 class="h5 subheader"><?php echo $two['subheader']; ?></h1>
 							<h2 class = "section-title"><?php echo $two['header']; ?></h2>
 							<div class="wysiwyg"><?php echo $two['content']; ?></div><!-- .wysiwyg -->
