@@ -9,16 +9,6 @@ jQuery(function($) {
 		    return false;
 		});
 
-		//No follow on Captcha
-		if ( window.location.href.indexOf("captchaintherye.com") > -1 ) {
-			console.log('on captcha');
-	    } else if ( window.location.href.indexOf(".d4tw") > -1) {
-			console.log('on d4tw');
-	    	}
-		else {
-	    	alert('NEED TO REMOVE NOINDEX FROM HEADER & THIS LINE FROM JS');
-	    }
-
 		//Push down the footer on short pages
 		$('#js-heightControl').css('height', $(window).height() - $('html').height() +'px');
 
@@ -68,12 +58,47 @@ jQuery(function($) {
 		if ($(window).width() < 572) {
 		  //Change the homepage review slider header to include a <br> on mobile
 		  $('#homepage .hero .header').html('We\'re here to create<br>space & simplicity');
-};
+		};
 
+		//Setup a listener for scrolling event
+		var didScroll;
+		// on scroll, let the interval function know the user has scrolled
+		$(window).scroll(function(event){
+		  didScroll = true;
+		});
+		// run hasScrolled() and reset didScroll status
+		setInterval(function() {
+		  if (didScroll) {
+		    hasScrolled();
+		    didScroll = false;
+		  }
+		}, 250);
 
+		//vars for scroll functionality
+		var lastScrollTop = 0;
+		var delta = 5;
+		var navbarHeight = $('.header-outer-wrapper').outerHeight();
 
+		//Set the padding-top for body to allow for fixed header
+		$('body').css('padding-top', navbarHeight + 'px');
 
-
+		function hasScrolled() {
+		  var st = $(this).scrollTop();
+		  if (Math.abs(lastScrollTop-st) <= delta)
+  			return;
+	  		// If current position > last position AND scrolled past navbar...
+			if (st > lastScrollTop && st > navbarHeight){
+			  // Scroll Down
+			  $('.header-outer-wrapper').removeClass('nav-down').addClass('nav-up');
+			} else {
+			  // Scroll Up
+			  // If did not scroll past the document (possible on mac)...
+			  if(st + $(window).height() < $(document).height()) { 
+			    $('.header-outer-wrapper').removeClass('nav-up').addClass('nav-down');
+			  }
+			}
+			lastScrollTop = st;
+		}
 
 		//end of document ready call
 	});

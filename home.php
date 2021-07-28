@@ -60,7 +60,7 @@ get_header(); ?>
 						<div id="mc_embed_signup">
 						<form action="https://neaterorganizing.us4.list-manage.com/subscribe/post?u=bf0569b5291a889e6e574d996&amp;id=7c07f8e24b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 						    <div id="mc_embed_signup_scroll">
-						    	<p>Subscribe to our newsletter and stay up to date on new posts.</p>
+						    	<h5>Subscribe to our newsletter<br>and stay up to date on new posts.</h5>
 						<div class="mc-field-group">
 							<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder = "Email Address">
 						</div>
@@ -132,7 +132,7 @@ get_header(); ?>
 							<?php while(have_rows('products')) : the_row(); ?>
 								<div class="recommended-product text-center">
 									<?php $img = get_sub_field('image'); ?>
-									<a href="<?php the_sub_field('link'); ?>">
+									<a target = "_blank" href="<?php the_sub_field('link'); ?>">
 									<img class = "mb-3" src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 									<h5><?php the_sub_field('title'); ?></h5>
 									</a>

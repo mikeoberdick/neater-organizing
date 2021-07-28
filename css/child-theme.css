@@ -10628,6 +10628,9 @@ body {
   background-color: rgba(246, 245, 244, 0.52);
   line-height: 2; }
 
+.nav-up {
+  top: -250px !important; }
+
 a {
   color: #221F20;
   text-decoration: none; }
@@ -10698,6 +10701,15 @@ p + a {
 /*------------------------------------------------*/
 /*-------------------[HEADER]---------------------*/
 /*------------------------------------------------*/
+.header-outer-wrapper {
+  position: fixed;
+  top: 0;
+  -webkit-transition: top .5s ease-in-out;
+  transition: top .5s ease-in-out;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999; }
+
 #notificationBar {
   background-color: rgba(166, 180, 179, 0.59);
   padding: 15px 0;
@@ -10765,13 +10777,16 @@ p + a {
   border: 0;
   border-radius: 0;
   background-color: #F6F5F4; }
-  .dropdown-menu .dropdown-item:active {
+  @media (min-width: 992px) {
+    .dropdown-menu {
+      margin-left: -50%; } }
+  @media (min-width: 992px) {
+    .dropdown-menu li {
+      margin-right: 0 !important; } }
+  .dropdown-menu li .dropdown-item:active {
     color: #6D1919;
     text-decoration: none;
     background-color: #F6F5F4; }
-  @media (min-width: 992px) {
-    .dropdown-menu li a {
-      text-align: center; } }
 
 .dropdown-toggle:after {
   -webkit-transition: all .5s;
@@ -10858,7 +10873,10 @@ p + a {
       margin-bottom: 100px; } }
 
 .full-width-image {
-  margin-bottom: 100px; }
+  margin-bottom: 50px; }
+  @media (min-width: 992px) {
+    .full-width-image {
+      margin-bottom: 100px; } }
 
 .parallax {
   min-height: 500px;
@@ -10908,6 +10926,8 @@ p + a {
       #homepage .hero .container-fluid .inner-container h1 {
         font-family: "Freight Big Pro Book";
         margin-bottom: 35px; }
+    #homepage .hero p + a {
+      margin-top: 10px; }
   @media (max-width: 991.98px) {
     #homepage #sectionOne {
       margin-bottom: 50px; } }
@@ -10921,6 +10941,10 @@ p + a {
       text-align: left; } }
   #homepage #sectionThree {
     background-color: rgba(166, 180, 179, 0.3); }
+    @media only screen and (min-width: 993px) and (max-width: 1199px) {
+      #homepage #sectionThree .row {
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap; } }
     #homepage #sectionThree #testimonialImage {
       background-position: center center !important;
       background-size: cover !important;
@@ -10938,6 +10962,9 @@ p + a {
       padding: 50px; }
     #homepage #sectionThree .prev-arrow, #homepage #sectionThree .next-arrow {
       cursor: pointer; }
+      @media (max-width: 991.98px) {
+        #homepage #sectionThree .prev-arrow i, #homepage #sectionThree .next-arrow i {
+          font-size: 20px; } }
     #homepage #sectionThree .prev-arrow {
       margin-right: 5px; }
     #homepage #sectionThree .next-arrow {
@@ -11061,6 +11088,10 @@ p + a {
 #testimonials #sectionTwo .testimonial:first-of-type {
   margin-bottom: 25px; }
 
+@media (max-width: 991.98px) {
+  #testimonials #sectionFour {
+    margin-bottom: 20px; } }
+
 #testimonials #sectionFour .testimonial {
   padding-top: 50px;
   padding-bottom: 50px; }
@@ -11073,6 +11104,12 @@ p + a {
   @media (min-width: 992px) {
     #testimonials #sectionFour .image {
       padding-left: 15px; } }
+
+#testimonials #sectionFive .inner-container {
+  padding: 30px; }
+  @media (min-width: 992px) {
+    #testimonials #sectionFive .inner-container {
+      padding: 60px; } }
 
 #testimonials #sectionSix .image {
   padding-left: 0; }
@@ -11121,8 +11158,9 @@ p + a {
 /*------------------------------------------------*/
 /*-----------[HOME OFFICE ORGANIZING]-------------*/
 /*------------------------------------------------*/
-#homeOfficeOrganizing #sectionOne {
-  margin-bottom: 125px; }
+@media (min-width: 992px) {
+  #homeOfficeOrganizing #sectionOne {
+    margin-bottom: 125px; } }
 
 #homeOfficeOrganizing #sectionTwo {
   display: -webkit-box;
@@ -11135,16 +11173,22 @@ p + a {
           flex-wrap: wrap;
       -webkit-box-pack: center;
           -ms-flex-pack: center;
-              justify-content: center; } }
+              justify-content: center; }
+      #homeOfficeOrganizing #sectionTwo .image-wrapper {
+        margin-bottom: 25px; } }
   @media (min-width: 768px) {
     #homeOfficeOrganizing #sectionTwo .image-wrapper:nth-of-type(1), #homeOfficeOrganizing #sectionTwo .image-wrapper:nth-of-type(2) {
       margin-right: 15px; } }
 
 #homeOfficeOrganizing #sectionThree {
   background-color: rgba(166, 180, 179, 0.4);
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   margin-bottom: 0; }
+  @media (min-width: 992px) {
+    #homeOfficeOrganizing #sectionThree {
+      padding-top: 100px;
+      padding-bottom: 100px; } }
   @media (max-width: 991.98px) {
     #homeOfficeOrganizing #sectionThree .row {
       margin-right: 0; } }
@@ -11203,6 +11247,10 @@ p + a {
     padding: 50px;
     background: rgba(255, 255, 255, 0.95);
     text-align: center; }
+    @media (max-width: 991.98px) {
+      #homeOfficeOrganizing #sectionFour .container-fluid .inner-container {
+        margin: 50px;
+        padding: 25px; } }
 
 /*------------------------------------------------*/
 /*-----------[PACKING DOWNSIZING]-------------*/
@@ -11213,7 +11261,8 @@ p + a {
   display: -ms-flexbox;
   display: flex;
   padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  margin-bottom: 25px; }
   #packingDownsizing #sectionTwo .inner-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -11240,7 +11289,7 @@ p + a {
       @media (max-width: 575.98px) {
         #packingDownsizing #sectionTwo .inner-container img {
           margin-right: 0;
-          margin-bottom: 10px; } }
+          margin-bottom: 20px; } }
     #packingDownsizing #sectionTwo .inner-container .wysiwyg ul {
       margin-bottom: 0; }
 
@@ -11316,9 +11365,13 @@ p + a {
 
 #assisting #sectionFour {
   background-color: rgba(231, 223, 215, 0.4);
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   margin-bottom: 0; }
+  @media (min-width: 992px) {
+    #assisting #sectionFour {
+      padding-top: 100px;
+      padding-bottom: 100px; } }
 
 /*------------------------------------------------*/
 /*-----------[OUR WORK]-------------*/
@@ -11401,6 +11454,8 @@ p + a {
       color: #2D2D2B; }
     #contact #sectionOne #sidebar .inner-container .social-links img {
       height: 28px; }
+  #contact #sectionOne #nf-field-3-container {
+    margin-bottom: 0; }
   @media (max-width: 991.98px) {
     #contact #sectionOne #nf-field-8-container {
       margin-top: 25px; } }
@@ -11516,19 +11571,22 @@ p + a {
           right: 0;
           width: 50%;
           bottom: 0; } }
+      #blog #sectionTwo #featuredPost .post-wrapper .content-wrapper .btn:hover {
+        background-color: transparent !important;
+        color: #6D1919 !important; }
 
 #blog #sectionThree {
   background-color: #E7DFD7;
   padding-top: 50px;
   padding-bottom: 50px;
   margin-bottom: 50px; }
-  #blog #sectionThree #mc_embed_signup p {
-    text-transform: uppercase;
-    font-weight: bold;
+  #blog #sectionThree #mc_embed_signup h5 {
     margin-right: 30px;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-family: "Freight Big Pro Book";
+    color: #6D1919; }
     @media (max-width: 991.98px) {
-      #blog #sectionThree #mc_embed_signup p {
+      #blog #sectionThree #mc_embed_signup h5 {
         margin-right: 0;
         margin-bottom: 25px; } }
   #blog #sectionThree #mc_embed_signup .mc-field-group {
@@ -11826,7 +11884,19 @@ p + a {
 /*-----------[404]]-------------*/
 /*------------------------------------------------*/
 #four-oh-four {
-  maring-top: 50px; }
+  margin-top: 50px; }
+  @media (max-width: 991.98px) {
+    #four-oh-four .links {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      #four-oh-four .links .btn {
+        margin-bottom: 15px;
+        width: 100%;
+        max-width: 250px; } }
+  #four-oh-four .links a:last-of-type .btn {
+    margin-bottom: 0; }
 
 /*------------------------------------------------*/
 /*--------------------[FOOTER]--------------------*/

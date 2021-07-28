@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 				<div class="container-fluid">
 					<div class="row">
 						<?php $img = $one['left_image']; ?>
-						<div class="col-lg-3 pl-lg-0 mb-2 mb-lg-0" data-aos="fade-right" data-aos-duration="2000">
+						<div class="col-lg-3 pl-lg-0 mb-3 mb-lg-0" data-aos="fade-right" data-aos-duration="2000">
 							<img src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 						</div><!-- .col-lg-3 -->
 						<div class="col-lg-6 text-center justify-content-center d-flex flex-column" data-aos="fade-up" data-aos-duration="2000">
@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) || exit;
 								<h1 class="h6 subheader"><?php echo $one['subheader']; ?></h1>
 								<h2 class = "section-title"><?php echo $one['header']; ?></h2>
 								<p><?php echo $one['content']; ?></p>
-								<a href = "<?php echo $one['button_link']; ?>"><button role = "button" class = "btn outline-button"><?php echo $one["button_text"]; ?></button></a>	
+								<a href = "<?php echo $one['button_link']; ?>"><button role = "button" class = "btn outline-button mb-2"><?php echo $one["button_text"]; ?></button></a>	
 							</div><!-- .inner-container -->
 						</div><!-- .col-lg-6 -->
 						<?php $img = $one['right_image']; ?>

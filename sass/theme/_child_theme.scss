@@ -90,6 +90,10 @@ body {
   line-height: 2;
 }
 
+.nav-up {
+  top: -250px !important;
+}
+
 a {
   color: $color;
   text-decoration: none;
@@ -177,6 +181,15 @@ p + a {
 /*------------------------------------------------*/
 /*-------------------[HEADER]---------------------*/
 /*------------------------------------------------*/
+.header-outer-wrapper {
+  position: fixed;
+  top: 0;
+  transition: top .5s ease-in-out;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
+}
+
 #notificationBar {
   background-color: rgba(166,180,179,.59);
   padding: 15px 0;
@@ -253,17 +266,18 @@ p + a {
   border: 0;
   border-radius: 0;
   background-color: #F6F5F4;
-  .dropdown-item {
-    &:active {
-    color: $red;
-    text-decoration: none;
-    background-color: #F6F5F4;
-    }
+  @include media-breakpoint-up(lg) {
+    margin-left: -50%;
   }
   li {
-    a {
-      @include media-breakpoint-up(lg) {
-        text-align: center; 
+    @include media-breakpoint-up(lg) {
+      margin-right: 0 !important;
+    }
+    .dropdown-item {
+      &:active {
+      color: $red;
+      text-decoration: none;
+      background-color: #F6F5F4;
       }
     }
   }
@@ -368,7 +382,10 @@ p + a {
 }
 
 .full-width-image {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 100px;
+  }
 }
 
 .parallax {
@@ -428,6 +445,9 @@ p + a {
         }
       }
     }
+    p+a {
+      margin-top: 10px;
+    }
   }
   #sectionOne {
     @include media-breakpoint-down(md) {
@@ -451,6 +471,11 @@ p + a {
   }
   #sectionThree {
     background-color: rgba(166,180,179,.30);
+    .row {
+      @media only screen and (min-width: 993px) and (max-width: 1199px) {
+        flex-wrap: nowrap;
+      }
+    }
     #testimonialImage {
       background-position: center center !important;
       background-size: cover !important;
@@ -473,6 +498,11 @@ p + a {
     }
     .prev-arrow, .next-arrow {
       cursor: pointer;
+      i {
+        @include media-breakpoint-down(md) {
+          font-size: 20px;
+        }
+      }
     }
     .prev-arrow {
       margin-right: 5px;
@@ -616,6 +646,9 @@ p + a {
     }
   }
   #sectionFour {
+    @include media-breakpoint-down(md) {
+      margin-bottom: 20px;
+    }
     .testimonial {
       padding-top: 50px;
       padding-bottom: 50px;
@@ -627,6 +660,14 @@ p + a {
       }
       @include media-breakpoint-up(lg) {
         padding-left: 15px;
+      }
+    }
+  }
+  #sectionFive {
+    .inner-container {
+      padding: 30px;
+      @include media-breakpoint-up(lg) {
+        padding: 60px;
       }
     }
   }
@@ -695,13 +736,18 @@ p + a {
 /*------------------------------------------------*/
 #homeOfficeOrganizing {
   #sectionOne {
-    margin-bottom: 125px;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 125px;
+    }
   }
   #sectionTwo {
     display: flex;
     @include media-breakpoint-down(sm) {
       flex-wrap: wrap;
       justify-content: center;
+      .image-wrapper {
+        margin-bottom: 25px;
+      }
     }
     @include media-breakpoint-up(md) {
       .image-wrapper {
@@ -714,9 +760,13 @@ p + a {
   }
   #sectionThree {
     background-color: rgba(166,180,179,.40);
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     margin-bottom: 0;
+    @include media-breakpoint-up(lg) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
     .row {
       @include media-breakpoint-down(md) {
         margin-right: 0;
@@ -761,20 +811,24 @@ p + a {
       min-height: 650px;
     }
     .container-fluid {
-    @include media-breakpoint-down(md) {
-       padding-left: 0;
-       padding-right: 0;
-     } 
-    @include media-breakpoint-up(lg) {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%); 
+      @include media-breakpoint-down(md) {
+         padding-left: 0;
+         padding-right: 0;
+      } 
+      @include media-breakpoint-up(lg) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%); 
       } 
       .inner-container {
         padding: 50px;
         background: rgba(255,255,255,.95);
         text-align: center;
+        @include media-breakpoint-down(md) {
+          margin: 50px;
+          padding: 25px;
+        }
       }
     }
   }
@@ -788,6 +842,7 @@ p + a {
     display: flex;
     padding-top: 50px;
     padding-bottom: 50px;
+    margin-bottom: 25px;
     .inner-container {
       display: flex;
       justify-content: center;
@@ -802,7 +857,7 @@ p + a {
         margin-right: 25px;
         @include media-breakpoint-down(xs) {
           margin-right: 0;
-          margin-bottom: 10px;
+          margin-bottom: 20px;
         }
       }
       .wysiwyg {
@@ -878,9 +933,13 @@ p + a {
   }
   #sectionFour {
     background-color: rgba(231,223,215,.4);
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     margin-bottom: 0;
+    @include media-breakpoint-up(lg) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
   }
 }
 /*------------------------------------------------*/
@@ -974,6 +1033,9 @@ p + a {
           }
         }
       }
+    }
+    #nf-field-3-container {
+      margin-bottom: 0;
     }
     #nf-field-8-container {
       @include media-breakpoint-down(md) {
@@ -1078,6 +1140,12 @@ p + a {
             width: 50%;
             bottom: 0;  
           }
+          .btn {
+            &:hover {
+              background-color: transparent !important;
+              color: $red !important;
+            }
+          }
         }
       }
     }  
@@ -1088,11 +1156,11 @@ p + a {
     padding-bottom: 50px;
     margin-bottom: 50px;
     #mc_embed_signup {
-      p {
-        text-transform: uppercase;
-        font-weight: bold;
+      h5 {
         margin-right: 30px;
         margin-bottom: 0;
+        font-family: $freightBigProBook;
+        color: $red;
         @include media-breakpoint-down(md) {
           margin-right: 0;
           margin-bottom: 25px;
@@ -1441,8 +1509,23 @@ p + a {
 /*-----------[404]]-------------*/
 /*------------------------------------------------*/
 #four-oh-four {
-  maring-top: 50px;
+  margin-top: 50px;
   .links {
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      .btn {
+        margin-bottom: 15px;
+        width: 100%;
+        max-width: 250px;
+      }
+    }
+    a {
+      &:last-of-type {
+        .btn {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }
 /*------------------------------------------------*/

@@ -27,14 +27,19 @@ defined( 'ABSPATH' ) || exit;
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
+	<link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+	<link rel="manifest" href="/fav/site.webmanifest">
+	<link rel="mask-icon" href="/fav/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="/fav/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="/fav/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
 	<!-- FACEBOOK AND TWITTER SOCIAL SHARE IMAGES -->
 	<meta property="og:image" content="/wp-content/themes/neater-organizing/img/social_share_image.png">
 	<meta name="twitter:image" content="/wp-content/themes/neater-organizing/img/social_share_image.png">
-
-	<!-- STOPS GOOGLE FROM INDEXING SITE ON STAGING -->
-	<!-- NEED TO REMOVE ON PRODUCTION -->
-	<meta name="robots" content="noindex">
-	<!-- NEED TO REMOVE ON PRODUCTION -->
 
 	<?php wp_head(); ?>
 </head>
@@ -42,16 +47,16 @@ defined( 'ABSPATH' ) || exit;
 <body <?php body_class(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
 
-<div id="notificationBar">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12 text-center">
-				<a href="/services-pricing-organize-your-space/"><span class = "h6 subheader">View Our Services And Pricing Guide</span><img class = "ml-2" src = "<?php echo get_stylesheet_directory_uri() . '/img/long_arrow.png'; ?>"></a>
-			</div><!-- .col-sm-12 -->
-		</div><!-- .row -->
-	</div><!-- .container -->
-</div><!-- #notificationBar -->
-
+<div class="header-outer-wrapper">
+	<div id="notificationBar">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<a href="/services-pricing-organize-your-space/"><span class = "h6 subheader">View Our Services And Pricing Guide</span><img class = "ml-2" src = "<?php echo get_stylesheet_directory_uri() . '/img/long_arrow.png'; ?>"></a>
+				</div><!-- .col-sm-12 -->
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</div><!-- #notificationBar -->
 	<!-- ******************* The Navbar Area ******************* -->
 	<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 
@@ -80,7 +85,6 @@ defined( 'ABSPATH' ) || exit;
 					)
 				); ?>
 			</div><!-- .container -->
-
 		</nav><!-- .site-navigation -->
-
 	</div><!-- #wrapper-navbar end -->
+</div><!-- .header-outer-wrapper -->

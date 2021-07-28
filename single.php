@@ -15,7 +15,7 @@ get_header();
 	<main id="main" class="site-main">
 		<div id="singlePost">
 			<?php $img = get_field('featured_image'); ?>
-			<img class = "full-width-image" src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+			<img class = "full-width-image w-100" src = "<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 			<div class="container">
 				<div class="row">
 					<section id = "thePost" class="col-sm-12">
@@ -36,7 +36,7 @@ get_header();
 						</div><!-- .inner-container -->
 						<div class="post-footer">
 							<div class="back">
-								<a href = "/blog"><button role = "button" class = "btn outline-button mb-3 mb-lg-0"><img class = "mr-2" src = "<?php echo get_stylesheet_directory_uri() . '/img/chevron_left.png'; ?>">Back To Blog</button></a>
+								<a href = "/organization-blog/"><button role = "button" class = "btn outline-button mb-3 mb-lg-0"><img class = "mr-2" src = "<?php echo get_stylesheet_directory_uri() . '/img/chevron_left.png'; ?>">Back To Blog</button></a>
 							</div><!-- .back -->
 							<div class="social-sharing">
 								<h6 class="subheader">Share With A Friend</h6>

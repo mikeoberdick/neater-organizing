@@ -120,30 +120,28 @@ defined( 'ABSPATH' ) || exit;
 							</div>
 							<div class="inner-container pl-3">
 								<div class = "wysiwyg text-center text-lg-left"><?php echo $three['copy']; ?></div>
-								<table class="table">
-								  <thead>
-								    <tr>
-								    	<?php while(have_rows('section_three')) : the_row(); ?>
-								    		<?php while(have_rows('table')) : the_row(); ?>
-								    			<th scope="col"><?php the_sub_field('column_one'); ?></th>
-								    			<th scope="col"><?php the_sub_field('column_two'); ?></th>
-								    			<th scope="col"><?php the_sub_field('column_three'); ?></th>
-								    		<?php endwhile; ?>
-								    	<?php endwhile; ?>
-								    </tr>
-								  </thead>
-								  <tbody>
-								  	<?php while(have_rows('section_three')) : the_row(); ?>
-							    		<?php while(have_rows('table_data')) : the_row(); ?>
-							    			<tr>
-										      <td><?php the_sub_field('column_one'); ?></td>
-										      <td><?php the_sub_field('column_two'); ?></td>
-										      <td><?php the_sub_field('column_three'); ?></td>
+								<?php while(have_rows('section_three')) : the_row(); ?>
+								  <?php if(have_rows('table')) : ?>
+										<table class="table">
+										  <thead>
+										    <tr>
+										    		<?php while(have_rows('table')) : the_row(); ?>
+										    			<th scope="col"><?php the_sub_field('column_one'); ?></th>
+										    			<th scope="col"><?php the_sub_field('column_two'); ?></th>
+										    			<th scope="col"><?php the_sub_field('column_three'); ?></th>
+										    	<?php endwhile; ?>
 										    </tr>
-							    		<?php endwhile; ?>
-							    	<?php endwhile; ?>
-								  </tbody>
-								</table>
+										  </thead>
+										  <tbody>
+									    		<?php while(have_rows('table_data')) : the_row(); ?>
+									    			<tr>
+												      <td><?php the_sub_field('column_one'); ?></td>
+												      <td><?php the_sub_field('column_two'); ?></td>
+												      <td><?php the_sub_field('column_three'); ?></td>
+									    	<?php endwhile; ?>
+										  </tbody>
+										</table>
+									<?php endif; endwhile; ?>
 							</div><!-- .inner-container -->
 						</div><!-- .col-lg-6 -->
 					</div><!-- .row -->

@@ -95,7 +95,7 @@ defined( 'ABSPATH' ) || exit;
 						<?php $testimonials = $five['testimonials']; ?>
 						<?php foreach( $testimonials as $post ) : setup_postdata($post); ?>
         					<div class="testimonial col-lg-4">
-        						<div class="inner-container p-5 text-center">
+        						<div class="inner-container text-center">
         						<?php if (get_field('featured_line')) : ?>
         						<h1 class="h3 pull-quote"><?php the_field('featured_line'); ?></h1>
         						<?php endif; ?>
