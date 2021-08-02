@@ -222,6 +222,9 @@ p + a {
     @include media-breakpoint-up(lg) {
       margin-right: 20px;  
     }
+    &:focus-visible {
+      outline-color: $blue;
+    }
     a {
       font-family: $classicoBold;
       text-transform: uppercase;
